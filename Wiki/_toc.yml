@@ -1,0 +1,37 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+format: jb-book
+root: introduction
+parts:
+  - caption: CMS team 
+    chapters:
+    - file: team 
+  - caption: Services 
+    chapters:
+    - file: services/services-intro
+  - caption: Training 
+    chapters:
+    - file: training/training-intro
+  - caption: Induction 
+    chapters:
+    - file: induction/induction-intro
+    - file: induction/induction-ssh
+    - file: induction/induction-resources
+  - caption: Models
+    chapters:
+    - file: models/models-intro
+    - file: models/models-access
+      sections:
+      - file: models/models-um
+      - file: models/models-mom
+      - file: models/models-cable
+    - file: models/models-wrf
+  - caption: Data
+    chapters:
+    - file: data/data-intro
+    - file: data/data-resources
+    - file: data/data-datasets
+  - caption: Resources 
+    chapters:
+    - file: resources.md
