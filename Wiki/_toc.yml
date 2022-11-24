@@ -10,6 +10,7 @@ parts:
   - caption: Services 
     chapters:
     - file: services/services-intro
+    - file: services/services-help
   - caption: Training 
     chapters:
     - file: training/training-intro
