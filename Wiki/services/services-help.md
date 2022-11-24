@@ -2,9 +2,10 @@
 
 The CMS team supports CLEX members with computational issues: 
 
-+ **Running Models**: we support several models (see navigation bar on the left) and assist with others, subject to limitations of scope and team resources. 
++ **Running Models**: we support several models and assist with others, subject to limitations of scope and team resources. 
 + **Data Analysis**: we assist with analysis and general computing tasks on NCI machines, and offer only limited support on other sites or home machines as we possess neither control over nor familiarity with such systems.
 + **Data Access and publishing**: we offer assistance in publishing data and accessing climate data available at NCI.
+
 The CMS team can be contacted for support through: 
 
 + The Climate Weather Science (CWS) helpdesk cws_help@nci.org.au
@@ -45,4 +46,6 @@ The following are tips on how to make your request more effective and easier for
 + You should expect updates required for current tickets to take at most a week during non-holiday periods
 + Consider if you need some [training](../training/training-intro.md) to improve your skills
 
+```{warning}
 If any of the above expectations are not being met, please contact the CMS team.
+```
