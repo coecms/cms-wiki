@@ -14,11 +14,13 @@ parts:
   - caption: Training 
     chapters:
     - file: training/training-intro
-  - caption: Induction 
+  - caption: Getting started 
     chapters:
-    - file: induction/induction-intro
-    - file: induction/induction-ssh
-    - file: induction/induction-resources
+    - file: starting/starting-intro
+    - file: starting/starting-gadi
+    - file: starting/starting-laptop
+    - file: starting/starting-data
+    - file: starting/starting-resources
   - caption: Models
     chapters:
     - file: models/models-intro
