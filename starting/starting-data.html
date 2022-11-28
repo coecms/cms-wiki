@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Setting ssh keys &#8212; CLEX CMS Wiki</title>
+    <title>Climate data &#8212; CLEX CMS Wiki</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,8 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Resources" href="induction-resources.html" />
-    <link rel="prev" title="Working …" href="induction-intro.html" />
+    <link rel="next" title="Resources" href="starting-resources.html" />
+    <link rel="prev" title="Starting on personal computer" href="starting-laptop.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -143,22 +143,32 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Induction
+  Getting started
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="induction-intro.html">
+  <a class="reference internal" href="starting-intro.html">
    Working …
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="starting-gadi.html">
+   Working on Gadi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="starting-laptop.html">
+   Starting on personal computer
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Setting ssh keys
+   Climate data
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="induction-resources.html">
+  <a class="reference internal" href="starting-resources.html">
    Resources
   </a>
  </li>
@@ -281,7 +291,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/induction/induction-ssh.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/starting/starting-data.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -301,10 +311,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/coecms/cms-wiki/issues/new?title=Issue%20on%20page%20%2Finduction/induction-ssh.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/coecms/cms-wiki/issues/new?title=Issue%20on%20page%20%2Fstarting/starting-data.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/coecms/cms-wiki/edit/main/Wiki/induction/induction-ssh.md"><button
+        <a class="edit-button" href="https://github.com/coecms/cms-wiki/edit/main/Wiki/starting/starting-data.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -324,6 +334,44 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-find-where-data-is">
+   How to find where data is
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-request-new-datasets">
+   How to request new datasets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-manage-your-own-data">
+   How to manage your own data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-publish-data">
+   How to publish data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clex-expectations">
+   CLEX  expectations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-share-manage-data-with-others">
+   How to share/manage data with others
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -331,19 +379,86 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Setting ssh keys</h1>
+                <h1>Climate data</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-find-where-data-is">
+   How to find where data is
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-request-new-datasets">
+   How to request new datasets
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-manage-your-own-data">
+   How to manage your own data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-publish-data">
+   How to publish data
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#clex-expectations">
+   CLEX  expectations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-share-manage-data-with-others">
+   How to share/manage data with others
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="section" id="setting-ssh-keys">
-<h1>Setting ssh keys<a class="headerlink" href="#setting-ssh-keys" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="climate-data">
+<h1>Climate data<a class="headerlink" href="#climate-data" title="Permalink to this headline">¶</a></h1>
+<p>Intro of who and where climate data is stored</p>
+<div class="section" id="how-to-find-where-data-is">
+<h2>How to find where data is<a class="headerlink" href="#how-to-find-where-data-is" title="Permalink to this headline">¶</a></h2>
+<p>re-organise find data page adding oneclimate portal</p>
+</div>
+<div class="section" id="how-to-request-new-datasets">
+<h2>How to request new datasets<a class="headerlink" href="#how-to-request-new-datasets" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="how-to-manage-your-own-data">
+<h2>How to manage your own data<a class="headerlink" href="#how-to-manage-your-own-data" title="Permalink to this headline">¶</a></h2>
+<p>(overlaps a bit with NCI projects/storage)</p>
+</div>
+<div class="section" id="how-to-publish-data">
+<h2>How to publish data<a class="headerlink" href="#how-to-publish-data" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="clex-expectations">
+<h2>CLEX  expectations<a class="headerlink" href="#clex-expectations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>i.e. respect lincesing etc,</p></li>
+<li><p>publishing output</p></li>
+<li><p>expectation from the</p></li>
+<li><p>ackwoledge CLEX as sponsor/funder where appropriate</p></li>
+<li><p>regardless of where data gets publish report it to clever and share it via zenodo</p></li>
+</ul>
+</div>
+<div class="section" id="how-to-share-manage-data-with-others">
+<h2>How to share/manage data with others<a class="headerlink" href="#how-to-share-manage-data-with-others" title="Permalink to this headline">¶</a></h2>
+<p>(point to governance sections)</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -359,7 +474,7 @@
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./induction"
+            path: "./starting"
         },
         predefinedOutput: true
     }
@@ -371,14 +486,14 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="induction-intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="starting-laptop.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Working …</p>
+            <p class="prev-next-title">Starting on personal computer</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="induction-resources.html" title="next page">
+    <a class='right-next' id="next-link" href="starting-resources.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Resources</p>
