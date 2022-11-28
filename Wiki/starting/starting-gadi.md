@@ -77,22 +77,28 @@ w48 has been merged into w40
 We recommend people join all relevant projects but choose one project to work from. This will help people to collaborate with researchers from all the RPs they are part of.
 ```
 
-```{list-table} Data projects (these only have storage)
+```{list-table} Climate data projects 
 :header-rows: 1
 * - Project 
   - Purpose
   - Managed by
 * - **ua8**
-  - various dataset see ... for list
+  - various dataset see (insert link) for list
   - CMS
 * - **ks32**
   - ARCCSS and CLEX published data
   - CMS
 * - **ub4**
-  - [ERA_INTERIM|ECMWF ERA Interim re-analysis 6 hrs data]()
+  - [ECMWF ERA Interim re-analysis 6 hrs data]()
+  - CMS
+* - **ia89**
+  - 400m resolution ACCESS limited-area simulation over Australia
+  - CMS
+* - **gy85**
+  - Himawari-8 GeoCat 1.0.3 Australian Domain
   - CMS
 * - **rq7**
-  - [YOTC|ECMWF Year of Tropical Convection re-analysis]()
+  - [YOTC - ECMWF Year of Tropical Convection re-analysis]()
   - CMS
 * - **ia39**
   - [Australian Community Reference Climate Data Collection](https://aus-ref-clim-data-nci.github.io/aus-ref-clim-data-nci/intro.html)
@@ -104,41 +110,36 @@ We recommend people join all relevant projects but choose one project to work fr
   - [CMIP5 replica]()
   - NCI
 * - **rr3**
-  - [CMIP5 Australian published data]
+  - [CMIP5 Australian published data]()
   - NCI
 * - **oi10**
-  - [CMIP6 replica]
+  - [CMIP6 replica]()
   - NCI
 * - **fs38**
-  - [CMIP6 Australian published data]
+  - [CMIP6 Australian published data]()
   - NCI
 * - **rr7**
-  -  Use only for MERRA2 the other datasets have been removed
-  - BoM
+  - This project is being removed, currently only MERRA2 6hr data is maintained 
+  - BoM & CMS
 * - **cable**
   - Give access to the [CABLE model](https://trac.nci.org.au/trac/cable/wiki CABLE model) and CABLE benchmarking dataset. Please read the [CABLE registration information](https://trac.nci.org.au/trac/cable/wiki/CableRegistration].
-* - CSIRO
+  - CSIRO
 * - **access**
   - Give access to the [Unified Model]() and [ACCESS tools]()
   - CMS, BoM, CSIRO & ACCESS NRI
 * - **rt52**
   - [ERA5|ECMWF ERA5 re-analysis - single and pressure levels]()
   - NCI
-* **zz93**
- - [ERA5|ECMWF ERA5 re-analysis - Land data]
- - NCI
-* **sx70**
-  -  Shared input data for WRF
+* - **zz93**
+  - [ERA5|ECMWF ERA5 re-analysis - Land data]
+  - NCI
+* - **sx70**
+  - Shared input data for WRF
   - CMS
 * - **ik11**
   - Shared data for COSIMA. Inputs and outputs
   - COSIMA
-* - **ia89**
-  - 400m resolution ACCESS limited-area simulation over Australia
-  - CMS
-* - **gy85**
-  - Himawari-8 GeoCat 1.0.3 Australian Domain
-  - CMS
+```
 
 ## Connecting to Gadi
 
