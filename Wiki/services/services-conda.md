@@ -108,3 +108,11 @@ To recreate the environment from the environment file:
 conda env create -f environment.yml
 ```
 
+### Current available environments
+
+--------------------------------- /g/data/hh5/public/modules ---------------------------------
+conda/analysis3-21.10                              conda/cws-radar         
+conda/analysis3-22.01                              conda/esmvaltool-21.08  
+conda/analysis3-22.04(analysis:analysis3:default)  conda/gdal27            
+conda/analysis3-22.07(analysis3-unstable)          conda/python3           
+conda/analysis27-18.10(analysis27)                 conda/python27 
