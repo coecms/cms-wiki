@@ -144,6 +144,7 @@ We recommend people join all relevant projects but choose one project to work fr
 ## Connecting to Gadi
 
 ### Setting ssh keys
+See [[starting-ssh]]
 
 ### ARE
 
