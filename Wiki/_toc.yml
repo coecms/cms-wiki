@@ -40,5 +40,6 @@ parts:
     - file: data/data-datasets
   - caption: Resources 
     chapters:
-    - file: resources.md
+    - file: resources/resources-conda-setup.md
+    - file: resources/resources-list.md
 
