@@ -185,8 +185,8 @@ Then there are numerous skills that each member of the CMS team are specialists 
     <td class="tg-sh07"></td>
     <td class="tg-sh07"></td>
     <td class="tg-sh07"></td>
-    <td class="tg-sh07"></td>
     <td class="tg-sh07">✔</td>
+    <td class="tg-sh07"></td>
     <td class="tg-sh07"></td>
   </tr>
 </tbody>
