@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Services provided &#8212; CLEX CMS Wiki</title>
+    <title>Conda Python Environments &#8212; CLEX CMS Wiki</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,8 +55,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="CMS help" href="services-help.html" />
-    <link rel="prev" title="CMS team" href="../team.html" />
+    <link rel="next" title="Conda environments update history" href="services-conda-updates.html" />
+    <link rel="prev" title="CMS help" href="services-help.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -118,8 +118,8 @@
  </span>
 </p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="services-intro.html">
    Services provided
   </a>
  </li>
@@ -128,8 +128,8 @@
    CMS help
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="services-conda.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Conda Python Environments
   </a>
  </li>
@@ -311,7 +311,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/services/services-intro.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/services/services-conda.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -331,10 +331,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/coecms/cms-wiki/issues/new?title=Issue%20on%20page%20%2Fservices/services-intro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/coecms/cms-wiki/issues/new?title=Issue%20on%20page%20%2Fservices/services-conda.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/coecms/cms-wiki/edit/main/Wiki/services/services-intro.md"><button
+        <a class="edit-button" href="https://github.com/coecms/cms-wiki/edit/main/Wiki/services/services-conda.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -354,6 +354,53 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stable-environment">
+   Stable Environment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unstable-environment">
+   Unstable Environment
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#removed-environments">
+     Removed Environments
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interactive-analysis-jupyter">
+   Interactive Analysis / Jupyter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requesting-new-packages">
+   Requesting new packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-personal-environments">
+   Creating personal environments
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#current-available-environments">
+     Current available environments
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -361,21 +408,161 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Services provided</h1>
+                <h1>Conda Python Environments</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stable-environment">
+   Stable Environment
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unstable-environment">
+   Unstable Environment
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#removed-environments">
+     Removed Environments
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interactive-analysis-jupyter">
+   Interactive Analysis / Jupyter
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#requesting-new-packages">
+   Requesting new packages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-personal-environments">
+   Creating personal environments
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#current-available-environments">
+     Current available environments
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
             
               <div>
                 
-  <div class="section" id="services-provided">
-<h1>Services provided<a class="headerlink" href="#services-provided" title="Permalink to this headline">¶</a></h1>
-<p><strong>Index</strong></p>
-<p><a class="reference internal" href="services-help.html"><span class="doc std std-doc">CWS Helpdesk</span></a></p>
+  <div class="section" id="conda-python-environments">
+<h1>Conda Python Environments<a class="headerlink" href="#conda-python-environments" title="Permalink to this headline">¶</a></h1>
+<p>CMS maintain an Anaconda Python environment at NCI, with a wide variety of climate and weather related libraries.</p>
+<p>You can find the most recent list of libraries at our github repository, or run conda list with an environment loaded.</p>
+<p>To use any of the conda environments:</p>
+<ul class="simple">
+<li><p>Request access to hh5 (to do once)</p></li>
+<li><p>You must first run (to do at each session, a qsub job is a new session)</p></li>
+<li><p>module use /g/data/hh5/public/modules</p></li>
+</ul>
+<p>You can safely put this in your ~/.bashrc file. It can go in the if in_interactive_shell; then section of the file.</p>
+<div class="tip admonition">
+<p class="admonition-title">Using hh5 envs in a PBS job</p>
+<p>If you need to use the conda environment in a PBS job you will need to add the hh5 project to your storage flags, e.g.</p>
+<p>#PBS -l storage=gdata/hh5
+Note that these conda environments will work on gadi login and compute nodes, and in the OOD cloud environment. They do not work on accessdev, as this has a very old system version that is no longer compatible.</p>
+</div>
+<div class="section" id="stable-environment">
+<h2>Stable Environment<a class="headerlink" href="#stable-environment" title="Permalink to this headline">¶</a></h2>
+<p>We update the stable environment once a quarter, around when NCI do their quarterly maintenance of Gadi. Otherwise everything in the environment stays fixed, we don’t update packages or install new packages unless something is very broken.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">conda</span><span class="o">/</span><span class="n">analysis3</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="unstable-environment">
+<h2>Unstable Environment<a class="headerlink" href="#unstable-environment" title="Permalink to this headline">¶</a></h2>
+<p>The unstable environment gets updated more often, as we install new packages or apply updates to existing ones. If you ask for a new package it will be installed here.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">module</span> <span class="n">load</span> <span class="n">conda</span><span class="o">/</span><span class="n">analysis3</span><span class="o">-</span><span class="n">unstable</span>
+</pre></div>
+</div>
+<p>When we do our quarterly update the unstable environment becomes the new stable environment.</p>
+<div class="section" id="removed-environments">
+<h3>Removed Environments<a class="headerlink" href="#removed-environments" title="Permalink to this headline">¶</a></h3>
+<p>Normally after three quarters have passed old environments are removed, to reduce disk space and support burden. Conda environment.yml descriptions of past environments are available at <a class="reference external" href="https://github.com/coecms/conda-history">https://github.com/coecms/conda-history</a>.</p>
+</div>
+</div>
+<div class="section" id="interactive-analysis-jupyter">
+<h2>Interactive Analysis / Jupyter<a class="headerlink" href="#interactive-analysis-jupyter" title="Permalink to this headline">¶</a></h2>
+<p>Jupyter provides a ‘notebook’ interface for working with Python - you can combine Python code, text, latex equations and plots in a web interface.</p>
+<p>The preferred method of running Jupyter at NCI is through the <a class="reference external" href="https://are.nci.org.au"><code class="docutils literal notranslate"><span class="pre">Analysis</span> <span class="pre">Research</span> <span class="pre">Environment</span></code>(ARE) service</a>. This runs a Jupyter instance in NCI’s cloud that you can access directly from your browser. To use CLEX Conda in ARE, start Jupyter with the advanced options:</p>
+<ul class="simple">
+<li><p>Module Directories: /g/data/hh5/public/modules</p></li>
+<li><p>Modules: conda/analysis3</p></li>
+</ul>
+<p>The Centre has developed a script (gadi_jupyter) that can run Jupyter on gadi compute nodes and display the notebook interface on your local computer. These scripts are available at <a class="reference external" href="https://github.com/coecms/nci_scripts">https://github.com/coecms/nci_scripts</a>, see the instructions there for usage.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>As ARE gives you access to the same filesystem as Gadi and to several options of memory/cpus combinations, so includes all the extra features <code class="docutils literal notranslate"><span class="pre">gadi_jupyter</span></code> has compared to the older OOD service. For this reason we are not going to maintain gadi_jupyter anymore.</p>
+</div>
+<p>You can also run Jupyter directly on VDI, by loading the Conda environment and running ‘jupyter lab’.</p>
+<p>Note that on Windows the Jupyter scripts must be run through a Bash terminal (From WSL or Cygwin).</p>
+</div>
+<div class="section" id="requesting-new-packages">
+<h2>Requesting new packages<a class="headerlink" href="#requesting-new-packages" title="Permalink to this headline">¶</a></h2>
+<p>You can ask for a new package to be installed or for an existing package to be updated by emailing <a class="reference external" href="mailto:cws_help&#37;&#52;&#48;nci&#46;org&#46;au">cws_help<span>&#64;</span>nci<span>&#46;</span>org<span>&#46;</span>au</a>. Please include a link to the package documentation to your request.</p>
+<p>It would be appreciated if you can check the package isn’t already installed before putting in a request. To do so, please load the unstable environment and use conda list to list the packages included in that environment</p>
+<p>As a general rule we will only install packages from the ‘conda-forge’ channel. Newly installed packages will be available in the conda/analysis3-unstable environment.</p>
+</div>
+<div class="section" id="creating-personal-environments">
+<h2>Creating personal environments<a class="headerlink" href="#creating-personal-environments" title="Permalink to this headline">¶</a></h2>
+<p>You can create your own environment if needed, but please be cautious of both the size on disk and number of files that Conda environments can create.</p>
+<p>Make a file ~/.condarc like:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>auto_activate_base: false
+envs_dirs:
+  - /scratch/$PROJECT/$USER/conda/envs
+  - /g/data/hh5/public/apps/miniconda3/envs
+pkgs_dirs:
+  - /scratch/$PROJECT/$USER/conda/pkgs
+conda-build:
+  root-dir: /scratch/$PROJECT/$USER/conda/bld
+</pre></div>
+</div>
+<p>This will set up Conda to create environments in /scratch, by default it puts them in your home directory which will rapidly use up your disk quota.</p>
+<p>To create the conda environment, load the conda module, then deactivate it with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">deactivate</span>
+<span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">...</span>
+<span class="n">conda</span> <span class="n">activate</span> <span class="o">...</span>
+</pre></div>
+</div>
+<p>Create an environment file: environment.yml. Files on scratch are deleted if no longer used, so this file allows you to re-create your environment if some of the files are deleted. You can use any name for the environment file. Keep it secure.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">export</span> <span class="o">&gt;</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+<p>To recreate the environment from the environment file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+<div class="section" id="current-available-environments">
+<h3>Current available environments<a class="headerlink" href="#current-available-environments" title="Permalink to this headline">¶</a></h3>
+<p>——————————— /g/data/hh5/public/modules ———————————
+conda/analysis3-21.10                              conda/cws-radar<br />
+conda/analysis3-22.01                              conda/esmvaltool-21.08<br />
+conda/analysis3-22.04(analysis:analysis3:default)  conda/gdal27<br />
+conda/analysis3-22.07(analysis3-unstable)          conda/python3<br />
+conda/analysis27-18.10(analysis27)                 conda/python27</p>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -403,17 +590,17 @@
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../team.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="services-help.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">CMS team</p>
+            <p class="prev-next-title">CMS help</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="services-help.html" title="next page">
+    <a class='right-next' id="next-link" href="services-conda-updates.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">CMS help</p>
+        <p class="prev-next-title">Conda environments update history</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
