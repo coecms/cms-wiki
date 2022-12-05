@@ -21,6 +21,7 @@ parts:
     - file: starting/starting-laptop
     - file: starting/starting-data
     - file: starting/starting-resources
+    - file: faqs
   - caption: Models
     chapters:
     - file: models/models-intro
