@@ -12,6 +12,9 @@ parts:
     - file: services/services-intro
     - file: services/services-help
     - file: services/services-one-on-one
+    - file: services/services-conda
+    - file: services/services-conda-updates
+    - file: services/services-projects
   - caption: Training 
     chapters:
     - file: training/training-intro
@@ -38,4 +41,6 @@ parts:
     - file: data/data-datasets
   - caption: Resources 
     chapters:
-    - file: resources.md
+    - file: resources/resources-conda-setup.md
+    - file: resources/resources-list.md
+
