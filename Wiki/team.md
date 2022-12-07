@@ -4,20 +4,85 @@ The CMS team is here to help you with the technical aspects of your work. A lot 
 
 Some of you will be somewhat familiar with these tasks whereas they will be new to others. We are here to help whatever your technical knowledge is. We are happy to answer any questions, we can't necessarily do everything but feel free to ask as we might have ideas or we might know who you should contact and what to exactly ask.
 
-**The members of the CMS team are**:
+``````{dropdown} **The members of the CMS team are**:
 
-|        | Name | Email | Bio |
-|-------|:-------:|:------:|:------:|
-|<img src="assets/images/Paola.jpg" alt="paola" width="150"/>| **Paola Petrelli (UTAS)**| paola.petrelli@utas.edu.au|Paola is the CMS team leader.|
-|<img src="assets/images/Holger.jpg" alt="holger" width="150"/>| **Holger Wolff (Monash)**| holger.wolff@monash.edu|...|
-|<img src="assets/images/Ramzi.jpg" alt="ramzi" width="150"/>| **Ramzi Kuttah (UNSW)**|ramzi.kutteh@unsw.edu.au|...|
-|<img src="assets/images/sam.jpg" alt="sam" width="150"/>| **Sam Green (UNSW)**|sam.green@unsw.edu.au|...|
-|<img src="assets/images/dale.png" alt="dale" width="150"/>| **Dale Roberts (UniMel)**|dale.roberts@unimelb.edu.au|...|
+`````{tab-set}
+````{tab-item} Paola Petrelli
+```{image} Images/Paola.jpg
+:alt: Paola
+:class: bg-primary mb-1
+:width: 200px
+:height: 200px
+:align: left
+```
+**Located**: University of Tasmania
+
+**Email**: paola.petrelli@utas.edu.au
+
+**BIO**: Paola is the CMS team leader.
+````
+
+````{tab-item} Holger Wolff
+```{image} Images/Holger.jpg
+:alt: Holger
+:class: bg-primary mb-1
+:width: 200px
+:align: left
+```
+**Located**: Monash University
+
+**Email**: holger.wolff@monash.edu
+
+**BIO**:
+````
+
+````{tab-item} Ramzi Kuttah
+```{image} Images/Ramzi.jpg
+:alt: Ramzi
+:class: bg-primary mb-1
+:width: 200px
+:align: left
+```
+**Located**: University of New South Wales
+
+**Email**: ramzi.kutteh@unsw.edu.au
+
+**BIO**:
+````
+
+````{tab-item} Sam Green
+```{image} Images/sam.jpg
+:alt: Sam
+:class: bg-primary mb-1
+:width: 200px
+:align: left
+```
+**Located**: University of New South Wales
+
+**Email**: sam.green@unsw.edu.au
+
+**BIO**:
+````
+
+````{tab-item} Dale Roberts
+```{image} Images/dale.png
+:alt: Dale
+:class: bg-primary mb-1
+:width: 200px
+:align: left
+```
+**Located**: University of Melbourne
+
+**Email**: dale.roberts@unimelb.edu.au
+
+**BIO**:
+````
+`````
+``````
 
 Although we won't ignore emails sent to our individual addresses, our preferred way of contact is through our help desk email address: cws_help@nci.org.au. Contacting the help desk will make sure your email is seen by one of us in case the person at your institution is away for example. Don't worry about the help desk email being an NCI account, you can still ask any question there.
 
 ## CMS team skills
-----------------------
 
 The CMS team has a range of skills where each team member is equally proficient in, these skills include (but not limited to):
 
@@ -191,5 +256,3 @@ Then there are numerous skills that each member of the CMS team are specialists 
   </tr>
 </tbody>
 </table>
-
----------------------
