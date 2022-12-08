@@ -1,5 +1,7 @@
 # CMS Wiki
 
+The CMS Wiki is located at https://climate-cms.org/cms-wiki
+
 ... introduction ...
 
 ## Chapters
@@ -52,6 +54,18 @@ Depending on the magnitude of the changes it might be more efficient to pull the
 * push back your changes if any, or add comments to the request 
 * once satisfied approve the review and the branch can be merged, this will trigger the book deploy action
 
+
+## Adding new Sphinx Extensions
+
+Sometimes you may want to use a Sphinx extension that isn't currently included in this book. To add it you will need to do 2 things. 
+
+1. Add the pip package to the `requirements.txt` file. If a specific version is needed, don't forget to also include it, i.e. `jinja2==3.0.0`.
+2. You will also need to add the extension to the `_config.yaml` file so the book knows to load it. Add the extension name inside the `extra_extenbsion` like `sphinx_inline_tabs` is below:
+```yaml
+sphinx:
+  extra_extensions:
+  - sphinx_inline_tabs
+```
 
 ## Credits
 
