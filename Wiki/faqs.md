@@ -2,28 +2,11 @@
 
 This page lists FAQs/tips for the different models and codes supported by the CMS team, as well as accessing and publishing data.
 
-# Table of Contents
-1. [FAQ Model pages](#faq-model-pages)
-2. [FAQ Gadi](#faq-gadi)
-    
-    2.1 [How to debug issues with gadi jupyter](#gadi-jupyter)
-    
-    2.2 [How to run independent jobs in parallel](#parallel-jobs)
+```{contents}
+```
 
-3. [FAQ Python](#faq-python)
-
-    3.1 [How to transform 1D lat/lon arrays into 2D lat/lon arrays with Python](#transform-latlon)
-    
-    3.2 [Running out of memory when running a relatively small timeseries analysis using xarray/dask](#memory-dask)
-
-4. [FAQ miscellaneous](#faq-miscellaneous)
-
-
-
-
-<a name="faq-model-pages"></a>
 ## 1. FAQ Model pages
-----------------------------------------------------
+
 * UM and ACCESS FAQ 
 * UM error messages
 * WRF FAQ
@@ -36,9 +19,7 @@ This page lists FAQs/tips for the different models and codes supported by the CM
 
 
 ## 3. FAQ Gadi
-----------------------------------------------------
 
-<a name="gadi-jupyter"></a>
 ### 3.1 How to debug issues with gadi jupyter
 
 The script submitted to PBS and the PBS logs are saved under the directory tmp/runjp directory under the user's /scratch directory for the group used to run the script. These will often have more information if the script was started alright but you can't seem to be able to connect to the Jupyer Notebooks. This usually happens when the job started alright but exited due to an error in the script.
@@ -47,15 +28,12 @@ For example, let's say I (ccc561) requests gadi_jupyter to run using the project
 
 If I then run gadi_jupyter again but this time running on w40, the information will be stored under '''/scratch/w40/ccc561/tmp/runjp'''
 
-<a name="parallel-jobs"></a>
 ### 3.2 How to run independent jobs in parallel
 
 If you have to run the same script with a lot of independent sets of inputs, or you have lots of similar scripts to run at NCI. And these scripts run on 1 processor. You could submit each of your jobs independently via PBS but then small jobs are not efficient at NCI. It would probably be better for you to have a master script that dispatches your jobs to available processors. You then submit this master script to PBS and this script requires a lot more processors and hence might be more efficient with the scheduler. There is an example of such a master script [[Embarrassingly_parallel_job|on this page]].
 
 ## 4. FAQ Python
---------------------------------------
 
-<a name="transform-latlon"></a>
 ### How to transform 1D lat/lon arrays into 2D lat/lon arrays with Python
 
 If using numpy or masked arrays, one can use the resize() method. Assuming slat and slon are 1D latitude and longitude arrays, do this:
@@ -68,7 +46,6 @@ slon2D = numpy.resize(slon, (slat.size, slon.size))
 
 If you want masked arrays, replace `numpy` by `numpy.ma`
 
-<a name="memory-dask"></a>
 ### Running out of memory when running a relatively small timeseries analysis using xarray/dask
 
 Xarray loads data lazily, which means that it will only load the data values when you need them. However, the data is stored in the files in chunks and all values in a chunk will be loaded as a block. The most common pattern for chunks in netcdf files is to have a grid stored in the same chunk. So, if you run a calculation for a specific timestep, you will only load one chunk. This means that often timesteps are on separate chunks, often `time` has a chunk size of 1, where all timesteps for a particular grid point are stored on different chunks. If you don’t change the file chunking and try to run a calculation that needs all the timeseries for a single grid point, you will be effectively loading the entire file in memory.
@@ -76,7 +53,7 @@ Xarray loads data lazily, which means that it will only load the data values whe
 If you want to rechunk your data to have all timesteps on the same chunks you can run:
 
 ```python
-array = array.chunk(chunks={‘time’=-1})
+array = array.chunk(chunks={"time"=-1})
 ```
 
 -1 means that the `time` dimension size will be used as chunk size. If you have 100 timesteps, it would be equivalent to set the new chunks as `{time=100}`.
@@ -145,7 +122,6 @@ If this approach doesn't work for you and you need to install a module, make sur
 You will need to setup your institutional Matlab license. We cannot help you troubleshooting any of this, just follow the [https://opus.nci.org.au/display/Help/MATLAB NCI instructions] and contact their Helpdesk if you run into any issue.
 
 ## Obsolete:
--------------------------
 
 ## How do I push my local code changes on gadi&nbsp;back to github using ssh keys?
 
