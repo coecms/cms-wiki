@@ -10,4 +10,4 @@ At the start of each session, we will ask you to provide a brief summary of your
 
 When appropriate we will take a few minutes at the beginning of a session to present a special topic which can include useful new software or language features, interesting blogs or highlight new developments in modelling. These topics will be announced beforehand as they arise.
 
-Please join the 'training-coe' mailing list to receive a weekly reminder for these sessions and info on what the special topic of the week is. If you would like to suggest a topic for us to cover (e.g. How do I use Git branches) please send an email to cws_help@nci.org.au and we will try to cover it in a future session.
+Please join the `training-coe` mailing list to receive a weekly reminder for these sessions and info on what the special topic of the week is. If you would like to suggest a topic for us to cover (e.g. How do I use Git branches) please send an email to cws_help@nci.org.au and we will try to cover it in a future session.
