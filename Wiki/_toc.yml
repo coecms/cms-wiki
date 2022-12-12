@@ -12,6 +12,7 @@ parts:
     - file: services/services-intro
     - file: services/services-help
     - file: services/services-one-on-one
+    - file: services/services-codebreak
     - file: services/services-conda
     - file: services/services-conda-updates
     - file: services/services-projects
