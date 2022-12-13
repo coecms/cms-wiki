@@ -39,3 +39,8 @@ html:
 
 # build only files that are specified in toc file
 only_build_toc_files: true
+
+# Adding extra extensions:
+sphinx:
+  extra_extensions:
+  - sphinx_inline_tabs
