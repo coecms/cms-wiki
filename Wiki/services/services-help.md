@@ -9,9 +9,9 @@ The CMS team supports CLEX members with computational issues: 
 The CMS team can be contacted for support through: 
 
 + The Climate Weather Science (CWS) helpdesk cws_help@nci.org.au
-+ One-on-one videocall
-+ In person meetings with local CMS team members
-+ CodeBreak
++ One-on-one [videocall](services-one-on-one.md)
++ In person meetings with local [CMS Team Members](../team.md)
++ CodeBreak [codebreak](services-codebreak.md)
 
 The CWS help desk is the preferred contact method as it allows the CMS team to prioritize queries so as to set aside time for other CMS duties, provides transparency of open requests to all CMS team members , and gives the CMS team flexibility to cover for team absences. Simply outline your issue in an email to cws_help@nci.org.au to open a ticket on our helpdesk.
 
