@@ -44,4 +44,9 @@ parts:
     chapters:
     - file: resources/resources-conda-setup.md
     - file: resources/resources-list.md
-
+  - caption: FAQS 
+    chapters:
+    - file: faqs/faqs-models
+    - file: faqs/faqs-data
+    - file: faqs/faqs-languages
+    - file: faqs/faqs-gadi
