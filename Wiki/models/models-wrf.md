@@ -134,7 +134,7 @@ the NCAR guides for running your simulation.
 
 -------------------------------------------------------------------------------
 
-  * [Deprecated porting procedure](./models-wrf-6.md)
+  * [Deprecated porting procedure](../resources/models-wrf-6.md)
   * [Current porting procedure](./models-wrf-7.md)
 
 
