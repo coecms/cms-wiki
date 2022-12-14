@@ -35,6 +35,13 @@ parts:
       - file: models/models-mom
       - file: models/models-cable
     - file: models/models-wrf
+      sections:
+      - file: models/models-wrf-1.md
+      - file: models/models-wrf-2.md
+      - file: models/models-wrf-3.md
+      - file: models/models-wrf-4.md
+      - file: models/models-wrf-5.md
+      - file: models/models-wrf-6.md
   - caption: Data
     chapters:
     - file: data/data-intro
@@ -44,6 +51,7 @@ parts:
     chapters:
     - file: resources/resources-conda-setup.md
     - file: resources/resources-list.md
+    - file: resources/wrf-deprecated.md
   - caption: FAQS 
     chapters:
     - file: faqs/faqs-models
