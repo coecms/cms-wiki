@@ -4,11 +4,13 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Model’s FAQs &#8212; CLEX CMS Wiki</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,12 +20,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -33,27 +31,30 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script src="../_static/tabs.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
-    </script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -66,7 +67,21 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -75,9 +90,10 @@
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -95,14 +111,15 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../introduction.html">
-   CMS Wiki
-  </a>
- </li>
-</ul>
-<p class="caption">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../introduction.html">
+                    CMS Wiki
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   CMS team
  </span>
@@ -114,7 +131,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Services
  </span>
@@ -156,7 +173,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Training
  </span>
@@ -168,7 +185,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Getting started
  </span>
@@ -200,7 +217,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Models
  </span>
@@ -281,7 +298,7 @@
   </ul>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Data
  </span>
@@ -303,7 +320,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Resources
  </span>
@@ -325,7 +342,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   FAQS
  </span>
@@ -354,12 +371,17 @@
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
 </div>
 
 
@@ -367,79 +389,167 @@
 
 
           
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
     
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
-            
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
+    <div class="header-article row sticky-top noprint">
         
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/faqs/faqs-models.md"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/coecms/cms-wiki"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/coecms/cms-wiki/issues/new?title=Issue%20on%20page%20%2Ffaqs/faqs-models.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/coecms/cms-wiki/edit/main/Wiki/faqs/faqs-models.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/faqs/faqs-models.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
     </div>
 </div>
 
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/coecms/cms-wiki"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/coecms/cms-wiki/issues/new?title=Issue%20on%20page%20%2Ffaqs/faqs-models.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/coecms/cms-wiki/edit/main/Wiki/faqs/faqs-models.md"><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
-    </div>
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
 </div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-        </div>
     </div>
-</div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Model’s FAQs</h1>
@@ -450,12 +560,371 @@
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
-  <div class="section" id="model-s-faqs">
-<h1>Model’s FAQs<a class="headerlink" href="#model-s-faqs" title="Permalink to this headline">¶</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="model-s-faqs">
+<h1>Model’s FAQs<a class="headerlink" href="#model-s-faqs" title="Permalink to this headline">#</a></h1>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>UM and ACCESS FAQ</strong>:<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Who can gain access to the UM and the ACCESS models?</strong></p>
+<p class="sd-card-text">The full ACCESS model is made up of a number of sub-models for different processes - UM for the atmosphere, MOM for the ocean and CABLE for the land surface. Each of these components was created by different groups with different conditions of use.</p>
+<p class="sd-card-text">The Met Office Unified Model is proprietary software released under a commercial licence. The Australian University community has a sub-licence to use the UM from CAWCR, managed by ARCCSS. Australian researchers outside of ARCCSS may request access to the model by emailing <a class="reference external" href="mailto:access_help&#37;&#52;&#48;nf&#46;nci&#46;org&#46;au">access_help<span>&#64;</span>nf<span>&#46;</span>nci<span>&#46;</span>org<span>&#46;</span>au</a>. Note that our licence is restricted to running the model at NCI and does not permit sharing of model code outside of the UM partnership.</p>
+<p class="sd-card-text">GFDL’s Modular Ocean Model is open-source software available under the GPL. Any researcher is free to use, modify and share the model code.</p>
+<p class="sd-card-text">CSIRO’s CABLE model is proprietary software. See the <a class="reference external" href="http://cawcr.gov.au/projects/access/cable/cable_licence_agreement.pdf">licence agreement</a> for conditions of use.</p>
+<p class="sd-card-text"><strong>What to do to gain access to the UM and the ACCESS models?</strong></p>
+<p class="sd-card-text">ARCCSS researchers can get access to the UM and ACCESS models by contacting the CMS team at <a class="reference external" href="mailto:climate_help&#37;&#52;&#48;nf&#46;nci&#46;org&#46;au">climate_help<span>&#64;</span>nf<span>&#46;</span>nci<span>&#46;</span>org<span>&#46;</span>au</a>. Researchers outside of ARCCSS should contact the general ACCESS helpdesk at <a class="reference external" href="mailto:access_help&#37;&#52;&#48;nf&#46;nci&#46;org&#46;au">access_help<span>&#64;</span>nf<span>&#46;</span>nci<span>&#46;</span>org<span>&#46;</span>au</a>. Using the models requires an account at <a class="reference external" href="http://nci.org.au/">NCI</a>, the Australian national supercomputing centre.</p>
+<p class="sd-card-text"><strong>What to do to use the software in /projects/access/bin?</strong></p>
+<p class="sd-card-text">Several tools useful for working with ACCESS are available at NCI under the path <code class="docutils literal notranslate"><span class="pre">/projects/access/bin</span></code>. These tools include output viewers and converters between the UM file format and standard formats like NetCDF and GRIB. To access these tools you must be registered as an ACCESS user (see above).</p>
+<p class="sd-card-text"><strong>How to convert UM hybrid vertical coordinates to pressure levels</strong></p>
+<p class="sd-card-text">The formula for the vertical coordinate is <a class="reference external" href="http://climate-cms.wikis.unsw.edu.au/Vertical_Coordinates">http://climate-cms.wikis.unsw.edu.au/Vertical_Coordinates</a></p>
+<p class="sd-card-text">Iris will compute the height variable directly if the file you read in has the orography in.</p>
+<p class="sd-card-text">If you have the pressure field in your file as well, Metpy might then help you to interpolate your fields to specific pressure levels: <a class="reference external" href="https://unidata.github.io/MetPy/latest/examples/sigma_to_pressure_interpolation.html#sphx-glr-examples-sigma-to-pressure-interpolation-py">https://unidata.github.io/MetPy/latest/examples/sigma_to_pressure_interpolation.html#sphx-glr-examples-sigma-to-pressure-interpolation-py</a></p>
 </div>
+</details></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>UM Errors</strong>:<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="53846df0-0672-4db5-9c19-4c89fe328ec5" name="913c4f48-484e-408b-8e13-7714d425f718" type="radio">
+</input><label class="sd-tab-label" for="53846df0-0672-4db5-9c19-4c89fe328ec5">
+Extracting</label><div class="sd-tab-content docutils">
+<p class="sd-card-text">When compiling the UM, the first step is for the UMUI(x) to extract the source code. If an error occurs, check for these things:</p>
+<ol class="simple">
+<li><p class="sd-card-text">Did the error occur during the base, model, or reconfiguration extraction?</p></li>
+<li><p class="sd-card-text">Check for the extraction log, it is either in
+<code class="docutils literal notranslate"><span class="pre">~/UM_OUTPUT/&lt;JOBID&gt;/&lt;umbase</span> <span class="pre">or</span> <span class="pre">ummodel</span> <span class="pre">or</span> <span class="pre">umrecon&gt;/ext.out</span></code>
+or
+<code class="docutils literal notranslate"><span class="pre">/scratch/users/$USER/&lt;JOBID&gt;/&lt;umbase</span> <span class="pre">or</span> <span class="pre">ummodel</span> <span class="pre">or</span> <span class="pre">umrecon&gt;/ext.out</span></code></p></li>
+</ol>
+<p class="sd-card-text">The final lines typically show at which command the error occurred.</p>
+<p class="sd-card-text"><strong>SVN errors</strong></p>
+<p class="sd-card-text">If you get a permission denied error from an SVN, it might be because svn needed your password, and didn’t get it. The solution is to run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>svn ls https://access-svn.nci.org.au/svn/um/branches/
+</pre></div>
+</div>
+<p class="sd-card-text">If you get asked for a password, you need to supply your NCI password. And then it will ask you whether it should store it in plain text.
+As much as I hate to say it: you need to answer ‘yes’.</p>
+<p class="sd-card-text">And immediately afterwards, you have to run the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod -R go-rwx <span class="nv">$HOME</span>/.subversion
+</pre></div>
+</div>
+<p class="sd-card-text"><strong>SCP and RSYNC errors</strong></p>
+<p class="sd-card-text">If you get an error like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir: cannot create directory <span class="s1">&#39;/abc123&#39;</span>: Permission denied
+</pre></div>
+</div>
+<p class="sd-card-text">(where abc123 is your username), the most likely explanation is that you haven’t set the DATAOUTPUT environment variable on accessdev.
+If you are using bash, add this line to your <code class="docutils literal notranslate"><span class="pre">$HOME/.bashrc</span></code> file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">DATAOUTPUT</span><span class="o">=</span>/short/<span class="si">${</span><span class="nv">PROJECT</span><span class="si">}</span>/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/UM_ROUTDIR
+</pre></div>
+</div>
+<p class="sd-card-text">If you are using tcsh or csh, add this line to your $HOME/.login</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>setenv DATAOUTPUT /short/<span class="si">${</span><span class="nv">PROJECT</span><span class="si">}</span>/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/UM_ROUTDIR
+</pre></div>
+</div>
+<p class="sd-card-text">Then log out of accessdev and log back in, open up umuix again, and check whether the error went away.</p>
+</div>
+<input id="4cc278f7-87d9-4c77-849d-bdf3a2690542" name="913c4f48-484e-408b-8e13-7714d425f718" type="radio">
+</input><label class="sd-tab-label" for="4cc278f7-87d9-4c77-849d-bdf3a2690542">
+Submiting</label><div class="sd-tab-content docutils">
+<p class="sd-card-text">My second tab</p>
+</div>
+<input id="b83ef22a-1c1a-461b-87cb-27c1a75889e0" name="913c4f48-484e-408b-8e13-7714d425f718" type="radio">
+</input><label class="sd-tab-label" for="b83ef22a-1c1a-461b-87cb-27c1a75889e0">
+Compiling</label><div class="sd-tab-content docutils">
+<p class="sd-card-text">My third tab</p>
+</div>
+<input id="db90b90a-8ce4-49a4-996b-4249b79850ad" name="913c4f48-484e-408b-8e13-7714d425f718" type="radio">
+</input><label class="sd-tab-label" for="db90b90a-8ce4-49a4-996b-4249b79850ad">
+Running</label><div class="sd-tab-content docutils">
+<p class="sd-card-text"><strong>REPLANCA: PP HEADERS ON ANCILLARY FILE DO NOT MATCH</strong></p>
+<p class="sd-card-text">The model is trying to update an ancillary field, but it is looking for a date that is past the end of the ancillary file. For instance, say an ancillary file is valid for dates between 1850-01-01 and 2001-01-01 and the model is trying to update fields for the date 2001-02-01. The model can’t find this data in the file, so it crashes.</p>
+<p class="sd-card-text">Near the end of the <code class="docutils literal notranslate"><span class="pre">.leave</span></code> file there will be a block that looks like</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>  STASH code in dataset                    122   STASH code requested
+                    58
+ &#39;Start&#39; position of lookup tables for dataset in overall lookup array
+                   481
+                   122                    58                    39
+  UP_ANCIL : Error in REPLANCA.
+
+ &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;*
+ UM ERROR (Model aborting) :
+ Routine generating error: UP_ANCIL
+ Error code:                    239
+ Error message:
+REPLANCA: PP HEADERS ON ANCILLARY FILE DO NOT MATCH
+ &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;*
+</pre></div>
+</div>
+<p class="sd-card-text">The important bit here is <code class="docutils literal notranslate"><span class="pre">STASH</span> <span class="pre">code</span> <span class="pre">requested</span></code>, which is in this case was <code class="docutils literal notranslate"><span class="pre">58</span></code>. Internally the UM refers to each model field (U, V, temperature, etc.) by a numeric STASH code. You can check field is represented by a code by going to <a class="reference external" href="https://accessdev.nci.org.au/umdocs/7.3/stash_browse">https://accessdev.nci.org.au/umdocs/7.3/stash_browse</a>. The STASH codes are divided into different sections, for errors like this you’ll find the variable in section <code class="docutils literal notranslate"><span class="pre">0)</span> <span class="pre">Prognostic</span> <span class="pre">Variables</span></code>. Scroll down the item list to find the name for the error code - the code <code class="docutils literal notranslate"><span class="pre">58</span></code> corresponds to <code class="docutils literal notranslate"><span class="pre">SULPHUR</span> <span class="pre">DIOXIDE</span> <span class="pre">EMISSIONS</span></code>.</p>
+<p class="sd-card-text">To find out which file this corresponds to you’ll need to go back to the UMUI, and check the screen <code class="docutils literal notranslate"><span class="pre">Atmosphere</span> <span class="pre">-&gt;</span> <span class="pre">Ancillary</span> <span class="pre">and</span> <span class="pre">Input</span> <span class="pre">data</span> <span class="pre">files</span> <span class="pre">-&gt;</span> <span class="pre">Climatologies</span></code>. It should be fairly simple to work out the entry to use (in our example you’d look at <code class="docutils literal notranslate"><span class="pre">Sulphur-Cycle</span> <span class="pre">Emissions</span></code>) but if you have trouble check with the helpdesk. You’ll need to replace the file here with one that covers the next part of your model run.</p>
+<p class="sd-card-text">Its common for this error to occur when running an AMIP-type simulation and going past 2001, where the data changes from Historical to the RCP scenarios. If this is the case you’ll need to change Ozone (files starting with SPARCO3), 2d Sulphur Cycle (sulp) Soot (BC_hi), Biomass (Bio), and OCFF (OCFF). You can find ancillary files for the different scenarios under <code class="docutils literal notranslate"><span class="pre">/projects/access/data/ancil/CMIP5</span></code>, or ask the CMS team at <a class="reference external" href="mailto:climate_help&#37;&#52;&#48;nf&#46;nci&#46;org&#46;au">climate_help<span>&#64;</span>nf<span>&#46;</span>nci<span>&#46;</span>org<span>&#46;</span>au</a> and we’ll help you locate the right ancillary file.</p>
+<p class="sd-card-text"><strong>INANCILA: Insufficient space for LOOKUP headers</strong></p>
+<p class="sd-card-text">This section is currently tested. Ask Holger if you still see this message after 1/6/2018.</p>
+<p class="sd-card-text">Error message is something along these lines:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Field:                    128 OCFFEMIS
+ Opening Anc File: /projects/access/data/ancil/CMIP5/OCFF_RCP85_1850_2100.N96
+ No room in LOOKUP table for Ancillary File                     47
+ INANCCTL: Error return from INANCILA                     14
+ INANCILA: Insufficient space for LOOKUP headers                               
+
+ Failure in call to INANCCTL
+ &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;*
+ UM ERROR (Model aborting) :
+ Routine generating error: INITIAL
+ Error code:                     14
+ Error message:
+INANCILA: Insufficient space for LOOKUP headers
+ &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;*
+</pre></div>
+</div>
+<p class="sd-card-text">The UM needs an initial guess on how big the ancillary files are. It needs to reserve a little bit of memory for every level at every time step of every field. This number can be set at</p>
+<p class="sd-card-text">Model Selection -&gt; Atmosphere -&gt; Ancillary and input data files -&gt; In file related options &gt;&gt; Header record sizes.</p>
+<p class="sd-card-text"><strong>DRLANDF1 : Error in FILE_OPEN</strong></p>
+<p class="sd-card-text">Symptom: The UM aborts with the error message:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span> &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;*
+ UM ERROR (Model aborting) :
+ Routine generating error: UM_SHELL
+ Error code:                      1
+ Error message:
+ DRLANDF1 : Error in FILE_OPEN.
+ &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;*
+</pre></div>
+</div>
+<p class="sd-card-text">This indicates that the start dump (NRUN) or restart dump (CRUN) could not be opened. Search the leave file for the string “Unit 21”. You should find a line like this:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>OPEN:  File &lt;somefile&gt; to be Opened on Unit <span class="m">21</span> does not Exist
+</pre></div>
+</div>
+<p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">somefile</span></code> might be empty, in which case there will be 2 spaces between <code class="docutils literal notranslate"><span class="pre">File</span></code>and <code class="docutils literal notranslate"><span class="pre">to</span> <span class="pre">be</span> <span class="pre">Opened</span></code>.
+Otherwise, check that the file exists and that you have read permissions.</p>
+<p class="sd-card-text">If this happens during an NRUN, check the settings in
+<code class="docutils literal notranslate"><span class="pre">Model</span> <span class="pre">Selection</span> <span class="pre">-&gt;</span> <span class="pre">Atmosphere</span> <span class="pre">-&gt;</span> <span class="pre">Ancillary</span> <span class="pre">and</span> <span class="pre">input</span> <span class="pre">data</span> <span class="pre">files</span> <span class="pre">--&gt;</span> <span class="pre">Start</span> <span class="pre">dump</span></code>.
+Check the settings under “Specify initial dump”</p>
+<p class="sd-card-text">If the file name is an empty string, and you are running a CRUN, open
+<code class="docutils literal notranslate"><span class="pre">Model</span> <span class="pre">Selection</span> <span class="pre">-&gt;</span> <span class="pre">Atmosphere</span> <span class="pre">-&gt;</span> <span class="pre">Control</span> <span class="pre">-&gt;</span> <span class="pre">Post</span> <span class="pre">processing,</span> <span class="pre">Dumping</span> <span class="pre">&amp;</span> <span class="pre">Meaning</span> <span class="pre">--&gt;</span> <span class="pre">Dumping</span> <span class="pre">and</span> <span class="pre">meaning</span></code>
+and ensure that the restart dump frequency is consistent with your per-submission run length.
+(That is, if your run length is 1 year, you may have monthly or yearly restart dumps, but not 5-yearly restart dumps.)</p>
+<p class="sd-card-text"><strong>Unable to WGDOS pack to this accuracy</strong></p>
+<p class="sd-card-text">Symptom: The UM aborts with the error message:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>????????????????????????????????????????????????????????????????????????????????
+???!!!???!!!???!!!???!!!???!!!       ERROR        ???!!!???!!!???!!!???!!!???!!!
+?  Error code: 2
+?  Error from routine: COEX (cmps_all)
+?  Error message: Unable to WGDOS pack to this accuracy
+?  Error from processor: 0
+?  Error number: 85
+????????????????????????????????????????????????????????????????????????????????
+</pre></div>
+</div>
+<p class="sd-card-text">There has been an error compressing one of the output files. Check the model output streams and ‘Dumping and Meaning’ sections, setting the ‘packing profile’ to 0 to turn off compression.</p>
+</div>
+</div>
+</div>
+</details></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>WRF FAQ</strong>:<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Tips to reduce WRF outputs size</strong></p>
+<ul class="simple">
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">netCDF4</span> <span class="pre">compression</span></code>: you are probably using netCDF v4.0 or newer. In that case, you can enable compression directly in WRF code so the output is compressed at creation time. If you ever want an output file in classic format, you can then use the namelist option <code class="docutils literal notranslate"><span class="pre">use_netcdf_classic=.true.</span></code> in the <code class="docutils literal notranslate"><span class="pre">&amp;time_control</span> </code>section. The choice of netcdf happens at the configuration step so if you already have compiled the code, clean it up with</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clean -a 
+</pre></div>
+</div>
+<p class="sd-card-text">Then follow these steps:</p>
+<p class="sd-card-text">Define the NETCDF4 environment variable:</p>
+<div class="highlight-csh notranslate"><div class="highlight"><pre><span></span><span class="c">#for csh</span>
+<span class="nb">setenv </span>NETCDF4 1
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#for bash</span>
+<span class="n">export</span> <span class="n">NETCDF4</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p class="sd-card-text">Configure and compile as usual.</p>
+<ul class="simple">
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">a</span> <span class="pre">subset</span> <span class="pre">of</span> <span class="pre">variables</span></code>: WRF comes with a built-in mechanism to choose which variables to output or not. So you don’t have to output all the default variables (and you can add some non-default ones). The details can be found in the <a class="reference external" href="http://www2.mmm.ucar.edu/wrf/users/docs/user_guide_V3.8/users_guide_chap5.htm#runtimeio">WRF User’s guide</a></p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">clean</span> <span class="pre">up</span> <span class="pre">the</span> <span class="pre">output</span> <span class="pre">file</span></code>: After creation, it can be useful to clean up the output file. For example, all variables have a Time dimension even if they are constant in time (latitudes and longitudes are usually constants unless you use a moving nest). So it can save storage space to remove this dimension. For example by using NCO:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncwa -a Time -v XLONG wrfout_d01_2000-01-24_12<span class="se">\:</span><span class="m">00</span><span class="se">\:</span><span class="m">00</span> time0.nc
+ncks -x -v XLONG wrfout_d01_2000-01-24_12<span class="se">\:</span><span class="m">00</span><span class="se">\:</span><span class="m">00</span> no_longitude.nc
+ncks -A -v XLONG time0.nc no_longitude.nc
+mv no_longitude.nc wrfout_d01_2000-01-24_12<span class="se">\:</span><span class="m">00</span><span class="se">\:</span><span class="m">00</span> 
+</pre></div>
+</div>
+<p class="sd-card-text">Obviously you can list more than 1 variable at once in the commands.</p>
+<p class="sd-card-text"><strong>What to do if WRF does not compile on Raijin?</strong>
+You need to make sure that you are using the WRF version that is stored on /projects/WRF on Raijin. Then you should first try to compile using the <code class="docutils literal notranslate"><span class="pre">dmpar</span></code> option. For this, clean (<code class="docutils literal notranslate"><span class="pre">./clean</span> <span class="pre">-a</span></code>) and run configure again and choose option #3 (<code class="docutils literal notranslate"><span class="pre">dmpar</span></code>). Then WRF should compile the code without problems. WRF has not yet been successfully compiled on Raijin using the other options.</p>
+<p class="sd-card-text"><strong>Which processor crashed in my WRF simulation?</strong>
+WRF output the standard output in rsl.out and the error in rsl.error. There is a pair of files for each processor. If you are running on a large number of processors, checking each file is very time-consuming.
+The first thing to do when your simulation stops is to check the output file for your script. If your script to launch WRF is called <code class="docutils literal notranslate"><span class="pre">script.pbs</span></code>, then at the end of the job PBS will create a <code class="docutils literal notranslate"><span class="pre">script.pbs.o1234567</span></code> where <code class="docutils literal notranslate"><span class="pre">1234567</span></code> is to be replaced by your job ID. Open this file and check the end. If you see a message like:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>--------------------------------------------------------------------------
+mpirun has exited due to process rank 50 with PID 32659 on
+node r2059 exiting improperly. There are two reasons this could occur:
+
+1. this process did not call &quot;init&quot; before exiting, but others in
+the job did. This can cause a job to hang indefinitely while it waits
+for all processes to call &quot;init&quot;. By rule, if one process calls &quot;init&quot;,
+then ALL processes must call &quot;init&quot; prior to termination.
+
+2. this process called &quot;init&quot;, but exited without calling &quot;finalize&quot;.
+By rule, all processes that call &quot;init&quot; MUST call &quot;finalize&quot; prior to
+exiting or it will be considered an &quot;abnormal termination&quot;
+
+This may have caused other processes in the application to be
+terminated by signals sent by mpirun (as reported here).
+--------------------------------------------------------------------------
+</pre></div>
+</div>
+<p class="sd-card-text">Then it means the simulation did not finish normally. The first line of the message gives the processor number that finished abnormally: “due to <code class="docutils literal notranslate"><span class="pre">process</span> <span class="pre">rank</span> <span class="pre">50</span></code>”. So in this case, the problem happened on the processor 50 and the error message should then be located in <code class="docutils literal notranslate"><span class="pre">rsl.error.0050</span></code>. Note you might want to check <code class="docutils literal notranslate"><span class="pre">rsl.out.0050</span></code> as well just in case a message was written to the output first.</p>
+<p class="sd-card-text"><strong>What to do if I get a segmentation fault error with WRF?</strong>
+If in <code class="docutils literal notranslate"><span class="pre">rsl.error</span></code> you get a message like this one:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span> &lt;nowiki&gt;forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image PC Routine Line Source
+wrf.exe 00000000017F59A1 Unknown Unknown Unknown
+wrf.exe 00000000017F3655 Unknown Unknown Unknown
+wrf.exe 0000000001ACFA07 Unknown Unknown Unknown
+wrf.exe 0000000001387C8A Unknown Unknown Unknown
+wrf.exe 0000000000EC4CDD Unknown Unknown Unknown
+wrf.exe 0000000000DCCAB7 Unknown Unknown Unknown&lt;/nowiki&gt;
+</pre></div>
+</div>
+<p class="sd-card-text">you have a segmentation fault error. These can have multiple causes, the best way to find out what is causing the error is to recompile WRF using the debugging options and re-run.</p>
+<ol class="simple">
+<li><p class="sd-card-text">Clean the previous compilation in <code class="docutils literal notranslate"><span class="pre">WRF/</span></code> with .<code class="docutils literal notranslate"><span class="pre">/clean</span> <span class="pre">-a</span></code></p></li>
+<li><p class="sd-card-text">Re-run the compilation with the -<code class="docutils literal notranslate"><span class="pre">d</span></code> option: <code class="docutils literal notranslate"><span class="pre">./run_compile</span> <span class="pre">-d</span></code></p></li>
+</ol>
+</div>
+</details></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>LIS FAQ</strong>:<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>My LIS outputs are empty</strong></p>
+<p class="sd-card-text">Please check what filename you have for the following option in <code class="docutils literal notranslate"><span class="pre">lis.config</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Model output attributes file
+</pre></div>
+</div>
+<p class="sd-card-text">Then make sure you have this file in your run directory. And run again.</p>
+</div>
+</details></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>MOM FAQ</strong>:<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text"><strong>Problem with collating outputs with payu</strong></p>
+<p class="sd-card-text">Your simulation runs correctly but the collating of the outputs does not work and you have this error message in the log file:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
+  File <span class="s2">&quot;/jobfs/local/pbs/mom_priv/jobs/268316.r-man2.SC&quot;</span>, line <span class="m">9</span>, <span class="k">in</span> &lt;module&gt;
+    collate_cmd.runscript<span class="o">()</span>
+  File <span class="s2">&quot;/apps/payu/0.6/lib/payu/subcommands/collate_cmd.py&quot;</span>, line <span class="m">93</span>, <span class="k">in</span> runscript
+    expt.collate<span class="o">()</span>
+  File <span class="s2">&quot;/apps/payu/0.6/lib/payu/experiment.py&quot;</span>, line <span class="m">606</span>, <span class="k">in</span> collate
+    model.collate<span class="o">()</span>
+  File <span class="s2">&quot;/apps/payu/0.6/lib/payu/models/fms.py&quot;</span>, line <span class="m">78</span>, <span class="k">in</span> collate
+    assert mppnc_path
+AssertionError
+</pre></div>
+</div>
+<p class="sd-card-text">This probably means you don’t have a <code class="docutils literal notranslate"><span class="pre">mppnccombine</span></code> executable in you <code class="docutils literal notranslate"><span class="pre">mom/bin</span></code> directory. If you need such a file please contact <code class="docutils literal notranslate"><span class="pre">climate_help&#64;nci.org.au</span></code> to know where to find it. Include a copy of the error message with your email please.</p>
+<p class="sd-card-text"><strong>Locating log files</strong></p>
+<p class="sd-card-text">Log files from a Payu run will be in:</p>
+<ul class="simple">
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">$EXPERIMENT</span></code> (Directory containing the <code class="docutils literal notranslate"><span class="pre">config.yaml</span></code> file):</p>
+<ul>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">$RUNID.out</span></code>, <code class="docutils literal notranslate"><span class="pre">$RUNID.err</span></code>: Stdout and stderr of model run</p></li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">$RUNID.o123456</span></code>, <code class="docutils literal notranslate"><span class="pre">$RUNID.e123456</span></code>: PBS logs</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">$WORK</span></code> (‘work’ symlink in <code class="docutils literal notranslate"><span class="pre">$EXPERIMENT</span></code>, or found under the laboratory path if that’s not accessible)</p>
+<ul>
+<li><p class="sd-card-text">Any log files output by the component models</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">$ARCHIVE</span></code> (‘archive’ symlink in <code class="docutils literal notranslate"><span class="pre">$EXPERIMENT</span></code>, or found under the laboratory path)</p>
+<ul>
+<li><p class="sd-card-text">Log files from previous submissions</p></li>
+</ul>
+</li>
+</ul>
+<p class="sd-card-text">The laboratory path is configurable in config.yaml, normally it will be <code class="docutils literal notranslate"><span class="pre">/scratch/$PROJECT/$USER/$MODEL</span></code></p>
+</div>
+</details></div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<strong>CESM FAQ</strong>:<div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">CMS doesn’t generally support CESM, but these are some things that may be helpful for users of the model</p>
+<p class="sd-card-text"><strong>CESM2 configuration</strong></p>
+<p class="sd-card-text">A basic configuration for running CESM2 on Gadi is available at <a class="reference external" href="https://github.com/coecms/cesm2-gadi">https://github.com/coecms/cesm2-gadi</a></p>
+<p class="sd-card-text"><strong>Installing XML::LibXML</strong></p>
+<p class="sd-card-text">CESM requires the Perl module <code class="docutils literal notranslate"><span class="pre">XML::LibXML</span></code>. You’ll need to install this yourself, which you can do on Gadi by running</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cpan XML::LibXML
+</pre></div>
+</div>
+<p class="sd-card-text">If you’ve not used Perl before it will ask you some questions on where to install it, the defaults are fine and will install it into your home directory at <code class="docutils literal notranslate"><span class="pre">~/perl5</span></code>.</p>
+<p class="sd-card-text">You may need to run the command twice to properly install the library</p>
+</div>
+</details></div>
+</div>
+</div>
+</div>
+</div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -479,9 +948,11 @@
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../resources/wrf-deprecated.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -497,24 +968,28 @@
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By CLEX-CMS<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By CLEX-CMS<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
