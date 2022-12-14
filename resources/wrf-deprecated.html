@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NCI project management guidelines &#8212; CLEX CMS Wiki</title>
+    <title>WRF porting to NCI machine (Deprecated) &#8212; CLEX CMS Wiki</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -57,8 +57,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Training offered" href="../training/training-intro.html" />
-    <link rel="prev" title="Conda environments update history" href="services-conda-updates.html" />
+    <link rel="next" title="Model’s FAQs" href="../faqs/faqs-models.html" />
+    <link rel="prev" title="Resources" href="resources-list.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -119,39 +119,39 @@
   Services
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="services-intro.html">
+  <a class="reference internal" href="../services/services-intro.html">
    Services provided
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="services-help.html">
+  <a class="reference internal" href="../services/services-help.html">
    CMS help
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="services-one-on-one.html">
+  <a class="reference internal" href="../services/services-one-on-one.html">
    One-on-one Meetings
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="services-codebreak.html">
+  <a class="reference internal" href="../services/services-codebreak.html">
    Codebreak
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="services-conda.html">
+  <a class="reference internal" href="../services/services-conda.html">
    Conda Python Environments
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="services-conda-updates.html">
+  <a class="reference internal" href="../services/services-conda-updates.html">
    Conda environments update history
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../services/services-projects.html">
    NCI project management guidelines
   </a>
  </li>
@@ -308,19 +308,19 @@
   Resources
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../resources/resources-conda-setup.html">
+  <a class="reference internal" href="resources-conda-setup.html">
    Conda hh5 environment setup
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../resources/resources-list.html">
+  <a class="reference internal" href="resources-list.html">
    Resources
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../resources/wrf-deprecated.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    WRF porting to NCI machine (Deprecated)
   </a>
  </li>
@@ -392,7 +392,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/services/services-projects.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/resources/wrf-deprecated.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -412,10 +412,10 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/coecms/cms-wiki/issues/new?title=Issue%20on%20page%20%2Fservices/services-projects.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/coecms/cms-wiki/issues/new?title=Issue%20on%20page%20%2Fresources/wrf-deprecated.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/coecms/cms-wiki/edit/main/Wiki/services/services-projects.md"><button
+        <a class="edit-button" href="https://github.com/coecms/cms-wiki/edit/main/Wiki/resources/wrf-deprecated.md"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -440,31 +440,14 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#project-representative">
-   Project Representative
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   WRF porting to NCI machine (Deprecated)
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#project-members">
-   Project Members
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#general-expectations">
-     General expectations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#compute-resources">
-     Compute Resources
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cms-team-role">
-   CMS Team role
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jenkins-setup">
+   Jenkins setup
   </a>
  </li>
 </ul>
@@ -477,7 +460,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>NCI project management guidelines</h1>
+                <h1>WRF porting to NCI machine (Deprecated)</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -487,31 +470,14 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#project-representative">
-   Project Representative
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   WRF porting to NCI machine (Deprecated)
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#project-members">
-   Project Members
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#general-expectations">
-     General expectations
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#compute-resources">
-     Compute Resources
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cms-team-role">
-   CMS Team role
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jenkins-setup">
+   Jenkins setup
   </a>
  </li>
 </ul>
@@ -523,65 +489,51 @@
             
               <div>
                 
-  <div class="section" id="nci-project-management-guidelines">
-<h1>NCI project management guidelines<a class="headerlink" href="#nci-project-management-guidelines" title="Permalink to this headline">¶</a></h1>
-<p>…</p>
-<div class="section" id="project-representative">
-<h2>Project Representative<a class="headerlink" href="#project-representative" title="Permalink to this headline">¶</a></h2>
-<p>A project representative is either the Lead Chief Investigator listed on the project application, or their delegate in charge of resource management.</p>
-<p>Resource allocation at NCI happens quarterly, however within the Centre we try and balance resource usage between our projects more frequently.</p>
-<p>Project representatives are responsible for:</p>
+  <div class="section" id="wrf-porting-to-nci-machine-deprecated">
+<h1>WRF porting to NCI machine (Deprecated)<a class="headerlink" href="#wrf-porting-to-nci-machine-deprecated" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
+<hr class="docutils" />
+<p>These are the steps to follow to install new WRF versions on an NCI
+machine. Only for admins within the wrf group at NCI. If starting from
+scratch:</p>
 <ul class="simple">
-<li><p>Estimating quarterly SU requirements in collaboration with all project members, to ensure that there are available resources for all members</p></li>
-<li><p>Communicating with CMS the project’s SU and storage requirements, so that resource usage can be balanced across the centre</p></li>
-<li><p>Reading and replying (when necessary) to usage update emails sent by CMS</p></li>
-<li><p>Reviewing project membership regularly</p></li>
+<li><p>Under your own project, clone the WRF github repo <a class="reference external" href="https://github.com/coecms/WRF">https://github.com/coecms/WRF</a>
+and create a new branch for the new
+version (named Vx.x.x), starting from the most recent HEAD (not
+master)</p></li>
+<li><p>Add <a class="reference external" href="https://github.com/wrf-model/WPS.git">https://github.com/wrf-model/WPS.git</a> and <a class="reference external" href="https://github.com/wrf-model/WRF.git">https://github.com/wrf-model/WRF.git</a>
+as remotes (named NCAR_WPS and
+NCAS_WRF if you want to copy-paste the commands) and fetch</p></li>
+<li><p>In the new branch, run the command:</p></li>
 </ul>
-<p>You will have lower priority for access to Centre’s resources if there are underused resources in other projects you have access to.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git merge -s recursive -Xsubtree<span class="o">=</span>WRFV3 --allow-unrelated-histories NCAR_WRF/master
+</pre></div>
 </div>
-<div class="section" id="project-members">
-<h2>Project Members<a class="headerlink" href="#project-members" title="Permalink to this headline">¶</a></h2>
-<p>All members of a NCI project have requirements for using Centre resources. Resources are shared by all members of the project, please make sure that other members are able to do their work.</p>
-<div class="section" id="general-expectations">
-<h3>General expectations<a class="headerlink" href="#general-expectations" title="Permalink to this headline">¶</a></h3>
+<p>You may need another branch than master to pick up a specific release.</p>
 <ul class="simple">
-<li><p>Everyone is responsible for communicating their compute time requirements to their project representative before the start of each quarter.</p></li>
-<li><p>Everyone is responsible to know their projects CIs (<a class="reference external" href="https://my.nci.org.au">https://my.nci.org.au</a>) and how their project is organised (who does what). Write an email to your project Lead CI if you don’t know.</p></li>
-<li><p>Everyone is responsible to plan their usage in compute time and storage.
-Keep your contact details up to date on <a class="reference external" href="https://my.nci.org.au">https://my.nci.org.au</a>, even after leaving the Centre if you still need access - we will use these details when contacting project members.</p></li>
-<li><p>Before leaving the Centre you need to tidy up your space following the best practices guides (this will be handled as part of the Centre exit process).</p></li>
+<li><p>You may need to update the crtm coeffs. You’ll probably get a conflict
+on the file WRFV3/var/run/crtm_coeffs. This is a link to
+/projects/WRF/data/WRFDA_files/crtm_coeff_X. Check the version the
+remote points to. If different from local, download the updates from
+<a class="reference external" href="http://www2.mmm.ucar.edu/wrf/users/wrfda/download/crtm_coeffs.html">http://www2.mmm.ucar.edu/wrf/users/wrfda/download/crtm_coeffs.html</a></p></li>
+<li><p>After resolving conflicts, run WRFV3/configure. See what options are
+correct for the machine architecture. Update WRFV3/run_compile
+appropriately.</p></li>
+<li><p>Clone into /projects/WRF with wrf group
+ownership. Make sure the master branch there points to the new version
+branch.</p></li>
 </ul>
-<p>###Data Resources
-The ARC requires the Centre to abide to the Open Access policy. Existing CMS policies already comply with Open Access requirements for publishing data. Guidelines are online.</p>
+<p>Follow same steps for WPS, but remote is called NCAR_WPS and -Xsubtree=WPS.</p>
+</div>
+<div class="section" id="jenkins-setup">
+<h1>Jenkins setup<a class="headerlink" href="#jenkins-setup" title="Permalink to this headline">¶</a></h1>
+<hr class="docutils" />
 <ul class="simple">
-<li><p>Everyone is encouraged to fill in a data management plan to better keep track of your data and storage requirements.</p></li>
-<li><p>Everyone is responsible to know the best practices for each file system at NCI. Please ensure any data in group spaces (/scratch, /g/data, massdata) are readable by your group:
-/home link <a class="reference external" href="https://opus.nci.org.au/display/Help/Files+and+Filesystems#FilesandFilesystems-/home">https://opus.nci.org.au/display/Help/Files+and+Filesystems#FilesandFilesystems-/home</a>
-/g/data
-Massdata link <a class="reference external" href="https://opus.nci.org.au/display/Help/Files+and+Filesystems#FilesandFilesystems-massdata">https://opus.nci.org.au/display/Help/Files+and+Filesystems#FilesandFilesystems-massdata</a>
-/scratch link</p></li>
-<li><p>Check the central data store (data wiki page, NCI data catalogue, Python conda install, modules) and request your data or software package centrally if not already there. Do not download / install yourself before asking for central resources, we want to avoid duplicating data as much as possible</p></li>
+<li><p>Add a new parameter for the version. Just the numbers,
+no “V”.</p></li>
+<li><p>Create a branch for that version in wrf-testing repo. Exact
+same name as the previous step parameter.</p></li>
 </ul>
-</div>
-<div class="section" id="compute-resources">
-<h3>Compute Resources<a class="headerlink" href="#compute-resources" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Large simulations should be approved by the Lead CI. Large is more than 50% of the usual quarterly time allocation for the project</p></li>
-<li><p>Very large simulations should be approved by the Research Program. Very large is more than 100% of the usual quarterly time allocation for the project (i.e. will cover multiple quarters)</p></li>
-</ul>
-</div>
-</div>
-<div class="section" id="cms-team-role">
-<h2>CMS Team role<a class="headerlink" href="#cms-team-role" title="Permalink to this headline">¶</a></h2>
-<p>The CMS team is here to provide support in managing project resources. We will:</p>
-<ul class="simple">
-<li><p>Send frequent usage updates to project representatives</p></li>
-<li><p>Maintain the Grafana based analystics tool to monitor SU and storage usage</p></li>
-<li><p>Provide resource usage estimates for commonly used model configurations</p></li>
-<li><p>Liaise with NCI to set quarterly compute resources, and modify resources within quarters if required</p></li>
-<li><p>Give generic and specific advice to users in managing their resources</p></li>
-</ul>
-</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -597,7 +549,7 @@ Massdata link <a class="reference external" href="https://opus.nci.org.au/displa
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./services"
+            path: "./resources"
         },
         predefinedOutput: true
     }
@@ -609,17 +561,17 @@ Massdata link <a class="reference external" href="https://opus.nci.org.au/displa
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="services-conda-updates.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="resources-list.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Conda environments update history</p>
+            <p class="prev-next-title">Resources</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../training/training-intro.html" title="next page">
+    <a class='right-next' id="next-link" href="../faqs/faqs-models.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Training offered</p>
+        <p class="prev-next-title">Model’s FAQs</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
