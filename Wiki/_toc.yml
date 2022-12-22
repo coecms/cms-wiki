@@ -25,6 +25,7 @@ parts:
     - file: starting/starting-gadi
     - file: starting/starting-laptop
     - file: starting/starting-data
+    - file: starting/starting-leaving
     - file: starting/starting-resources
   - caption: Models
     chapters:
