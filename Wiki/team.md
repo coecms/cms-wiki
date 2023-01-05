@@ -12,14 +12,13 @@ Some of you will be somewhat familiar with these tasks whereas they will be new 
 :alt: Paola
 :class: bg-primary mb-1
 :width: 200px
-:height: 200px
 :align: left
 ```
 **Located**: University of Tasmania
 
 **Email**: paola.petrelli@utas.edu.au
 
-**BIO**: Paola is the CMS team leader.
+**BIO**: Paola is the CMS team leader and data expert. Paola started in her role as data expert with the previous ARC Centre of Excellence for Climate System Science. Before joining the centre she managed oceanographic and climate datasets for the Tasmanian Partnership for Advanced Computing (TPAC), acquiring extensive experience in web services and software used by the earth science research community. She received a Science PhD from the University of Siena (Italy) in 2005, with a project involving modelling of Antarctic polinyas. Paola sets the centre strategy and provides advice on data management practices. She leads the data collaborations with our partners and NCI to manage shared data resources. An important part of her role is to publish CLEX data and metadata on public repositories such as the NCI data services, ESGF and ANDS Research Data Australia (RDA). Contact her if you need advice for your data management plan and to access, download, store, share and/or publish data. She also provides support with data analysis, in particular using python.
 ````
 
 ````{tab-item} Holger Wolff

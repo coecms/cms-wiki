@@ -52,6 +52,7 @@ parts:
     chapters:
     - file: resources/resources-conda-setup.md
     - file: resources/resources-list.md
+    - file: resources/resources-policy.md
     - file: resources/wrf-deprecated.md
   - caption: FAQS 
     chapters:

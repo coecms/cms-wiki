@@ -112,7 +112,7 @@ You should publish your files if the files are frequently used by several other 
 
 If your files are at NCI, that is all you need to do. If your files are held at your institution, you may need to make sure there is a copy that is accessible by others and owned by someone who is likely to stay for years to come. This might depend on your institution data services.
 
-### Sharing files without publication
+**Sharing files without publication**
 
 Some files might be useful to a small cluster of people but not be worth publishing. In that case, you simply need to change the ownership of the files: get the files to be owned by someone who stays after you.
 
@@ -130,7 +130,7 @@ Make sure to quit all NCI projects you don't need access to anymore. You can be 
 
 Some projects have strict license terms attached (e.g. access). Your membership might be revoked at any time after you leave the Centre if you haven't negotiated extended access to those projects. Please contact the Lead CI or the project manager to discuss your needs.
 
-### Transferring files
+**Transferring files**
 
 If you need to transfer files to a different machine (for example from NCI to your University or personal computer):
 
