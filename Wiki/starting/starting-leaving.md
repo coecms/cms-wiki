@@ -54,7 +54,7 @@ While what exactly should be kept, removed or published will depend on your spec
 
 **Codes**
 
-No matter what the details of your projects are you should always keep the code you used. This means keeping a reference to the exact version and document how you used codes developed by others (e.g. climate models). If you modified them in any way this should also be documented. 
+Regardless of your project details, always keep the code you used with a reference to its exact version, and document your usage of codes developed by others (e.g., climate models). Document also any modifications you made to these codes. 
 
 If your modifications are extensive or you wrote the code yourself, you should make the code available via GitHub and publish it (preferably on Zenodo ).
 
@@ -75,16 +75,16 @@ This can be a tricky one, as there is not a one-size-fits-all format to save thi
 This description should clearly describe step by step what someone should do to reproduce your work.
 
 ```{warning}
-Information on your PhD or published paper has to be kept for at least 5 years. The time requirements differ slightly depending on institutions and funding bodies.
+Information on your PhD or published papers must be kept for at least 5 years. The time requirements differ slightly depending on institutions and funding bodies.
 ```
 
-### To delete, always
+### Always delete
 
-You do not need to keep files that are not necessary to reproduce your work:
+No need to keep files not necessary to reproduce your work:
 
 * log files
-* failed experiments
-* temporary files such as created from successive cdo/nco commands.
+* failed experiments files
+* temporary files such as those created from successive cdo/nco commands.
 
 ```{tip}
 Occasionaly log files might have some information which is relevant to the workflow, still just keeping them makes this information virtually inaccessible to anyone else. The right thing to do in this case is to extract what is useful and add it to the workflow documentation, then getting rid of the files.
