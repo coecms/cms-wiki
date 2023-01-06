@@ -116,7 +116,7 @@ If your files are at NCI, there is nothing else to. If your files are held at yo
 
 For files that might be useful to a small cluster of people but not worth publishing you simply need to change the ownership of the files: get the files to be owned by someone who is present after you leave.
 
-If the files are at NCI, you can not change the files' ownership. You and the Lead CI of the project owning the files will need to contact help@nci.org.au so NCI staff can do it for you.
+You cannot change the ownership of files that reside at NCI. You and the Lead CI of the project owning the files need to contact help@nci.org.au so NCI staff can do it for you.
 
 ```{warning}
 Often researchers shared data with others without publishing it even when this data is used for new publication, this should be avoided at any cost. It does create an issue for the creator of the data who won't get recognition and for the user who might struggle to refer to the exact data when publishing a paper. As it is now a requirement to publish data associated with a paper it is always bets to publish before sharing!
@@ -124,11 +124,11 @@ Often researchers shared data with others without publishing it even when this d
 
 ## Your NCI account
 
-When you leave, you will keep your NCI credentials IF you keep your contact details up to date through https://my.nci.org.au
+When you leave you can retain your NCI credentials if you keep your contact details up to date through https://my.nci.org.au
 
 Make sure to quit all NCI projects you don't need access to anymore. You can be ruthless as it is quite easy to regain access to those projects later on if needed.
 
-Some projects have strict license terms attached (e.g. access). Your membership might be revoked at any time after you leave the Centre if you haven't negotiated extended access to those projects. Please contact the Lead CI or the project manager to discuss your needs.
+Some projects have strict license terms attached (e.g., ACCESS). Your membership might be revoked any time after you leave the Centre if you haven't negotiated extended access to those projects. Please contact the Lead CI or project manager to discuss your needs.
 
 **Transferring files**
 
@@ -141,6 +141,6 @@ use copyq if you want to queue a job
 
 ## Institutional account
 
-Most universities will close your university and e-mail account. Often university data services are accessible only via your university account. If that is the case, you need to arrange access for yourself by contacting the IT services or the CI of projects that you used to deposit data before you leave. Specifics on university data services and advice on what happens when you leave can be found following the relevant link in the data services page.
+Most universities will close your university and e-mail account after you leave. Often university data services are accessible only via your university account. In this case, you need to arrange access for yourself by contacting the IT services or the CI of projects that you used to deposit data before you leave. Specifics of university data services and advice on what happens when you leave can be found by following the relevant link in the data services page.
 
 
