@@ -29,7 +29,7 @@ The NCAR guides which we link to give instructions for compilation. DO NOT USE T
 
 ## Updates 
 
-If you have any corrections, comments or contributions, please email us on cws_help@nci.org.au so that we can continue to update over time. UPP hasn't been ported to Gadi yet.
+If you have any corrections, comments or contributions, please email us on cws_help@nci.org.au so that we can continue to update over time. UPP hasn't been ported to Gadi yet.
 
 ### 20 November 2022: Version v4.4.1
 

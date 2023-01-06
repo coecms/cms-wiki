@@ -1,6 +1,6 @@
 # Current WRF porting to NCI
 
-These are the steps to install new WRF versions on the NCI machine, intended only for admins within the `wrf` group at NCI. If starting from
+These are the steps to install new WRF versions on the NCI machine, intended only for admins within the `wrf` group at NCI. If starting from
 scratch and assuming WRF V4.4.1:
 
   * git clone --recursive git@github.com:coecms/WRF.git 

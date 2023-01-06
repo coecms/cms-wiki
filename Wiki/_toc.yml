@@ -23,6 +23,8 @@ parts:
     chapters:
     - file: starting/starting-intro
     - file: starting/starting-gadi
+      sections:
+      - file: starting/starting-gadi-scratch
     - file: starting/starting-laptop
     - file: starting/starting-data
     - file: starting/starting-leaving
@@ -53,6 +55,7 @@ parts:
     - file: resources/resources-conda-setup.md
     - file: resources/resources-list.md
     - file: resources/resources-policy.md
+    - file: resources/resources-vscode.md
     - file: resources/wrf-deprecated.md
   - caption: FAQS 
     chapters:
