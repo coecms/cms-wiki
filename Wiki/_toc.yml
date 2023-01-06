@@ -25,6 +25,7 @@ parts:
     - file: starting/starting-gadi
     - file: starting/starting-laptop
     - file: starting/starting-data
+    - file: starting/starting-leaving
     - file: starting/starting-resources
   - caption: Models
     chapters:
@@ -51,6 +52,7 @@ parts:
     chapters:
     - file: resources/resources-conda-setup.md
     - file: resources/resources-list.md
+    - file: resources/resources-policy.md
     - file: resources/wrf-deprecated.md
   - caption: FAQS 
     chapters:
