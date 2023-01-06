@@ -1,6 +1,6 @@
 # Leaving CLEX guidelines
 
-When leaving the Centre it is important to document and organise the data and code you are leaving beyond. This is both to ensure that unecessary files are removed and storage freed up in shared projects and that anything of value to your future self and/or others is properly stored and documented. 
+When leaving the Centre it is important to document and organise the data and code you are leaving behind. This arrangement ensures that unecessary files are removed, storage space is freed up in shared projects, and anything of future value to yourself or others is properly stored and documented. 
 
 These guidelines are provided to cover the most common workflow. 
 
