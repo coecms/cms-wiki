@@ -43,7 +43,7 @@ You may need to consider the following questions with your supervisor:
 * What files won't be useful to others? Should they be archived or deleted?
 
 ```{note}
-If you need specific advice on how to actually transfer or archive your files, you can always ask for assistance to our helpdesk: cws_help@nci.org.au.
+If you need specific advice on how to actually transfer or archive your files, you can request assistance from our helpdesk: cws_help@nci.org.au.
 ```
 
 ## What to do
