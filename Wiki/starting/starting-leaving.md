@@ -103,18 +103,18 @@ As model output includes raw output, restart files and post-processed output, th
 
 **Output of lengthy processing**
 
- It might feel necessary to keep those files but we would argue it is usually not worth the cost of the storage unless there is a clear indication they will be used again soon. The first reason is that with current modern programming techniques a lot of lengthy processing can be shortened significantly. The second reason is the very real cost of the storage is not worth the very hypothetical time saved in the future.
+It is tempting to keep those files but usually not worth the storage cost unless it is clear they will be reused soon, as with current modern programming techniques a lot of lengthy processing can be significantly shortened, and the very real storage cost outweighs any hypothetical time savings in the future.
 
 
 ## Publishing data and code
 
-You should publish your files if the files are frequently used by several other persons. Ideally, that data should be published as soon as its usefulness to others is clear, not just when you leave.
+Publish your files if they are frequently used by others, ideally as soon as their usefulness to others is evident, not just before you leave.
 
-If your files are at NCI, that is all you need to do. If your files are held at your institution, you may need to make sure there is a copy that is accessible by others and owned by someone who is likely to stay for years to come. This might depend on your institution data services.
+If your files are at NCI, there is nothing else to. If your files are held at your institution, you may need to make sure there is a copy accessible to others and owned by someone likely to stay for years to come, all subject to your institution data services.
 
 **Sharing files without publication**
 
-Some files might be useful to a small cluster of people but not be worth publishing. In that case, you simply need to change the ownership of the files: get the files to be owned by someone who stays after you.
+For files that might be useful to a small cluster of people but not worth publishing you simply need to change the ownership of the files: get the files to be owned by someone who is present after you leave.
 
 If the files are at NCI, you can not change the files' ownership. You and the Lead CI of the project owning the files will need to contact help@nci.org.au so NCI staff can do it for you.
 
