@@ -62,7 +62,7 @@ If your modifications are extensive or you wrote the code yourself, you should m
 It is perfectly acceptable to create a repository per project or paper containing all your codes. You can then use the README file from the GitHub repository to explain how your results can be reproduced. Clearly reference everything needed in addition to this repository. You can also have a repository per code, especially if you anticipate you'll reuse the same code for other work.
 ```
 
-**Configuration files for running the codes and some input files**
+**Configuration and other files necessary to run the code**
 
 In addition to the codes, keep everything required to run them the same way you did. Usually, the most complicated configurations are for climate models. Some climate models will save your configurations in version control repositories (e.g. UM, ACCESS, ACCESS-OM2), in which case you simply need to keep the information on how to retrieve these configurations. Some models don't save your configurations and you need to do it yourself.
 
@@ -70,9 +70,7 @@ For input files, some are published data, in which case you need to keep the ref
 
 **Workflow**
 
-Workflows can be tricky as there is no one-size-fits-all format to save such information. You could write a README file and archive it with other project files that need archiving, or have a special GitHub repository just for this README file, or a repository for all your projects with READMEs for each project. Whatever you choose, this information must be publicly available (unless your project was restricted), not a personal note, and clearly describe step by step what someone should do to reproduce your work.
-
-This description should clearly describe step by step what someone should do to reproduce your work.
+Workflows can be tricky as there is no one-size-fits-all format to save such information. You could write a README file and archive it with other project files that need archiving, or have a special GitHub repository just for this README file, or a repository for all your projects with READMEs for each project. Whatever you choose, this information must be publicly available (unless your project was restricted), not a personal note, and clearly describe step by step what someone should do to reproduce your work. This description should clearly describe step by step what someone should do to reproduce your work.
 
 ```{warning}
 Information on your PhD or published papers must be kept for at least 5 years. The time requirements differ slightly depending on institutions and funding bodies.
@@ -87,10 +85,10 @@ No need to keep files not necessary to reproduce your work:
 * temporary files such as those created from successive cdo/nco commands.
 
 ```{tip}
-Occasionaly log files might have some information which is relevant to the workflow, still just keeping them makes this information virtually inaccessible to anyone else. The right thing to do in this case is to extract what is useful and add it to the workflow documentation, then getting rid of the files.
+Occasionally log files might contain information relevant to the workflow, but but this is hard to access from the files themselves. Accordingly, in this case extract what is useful, add it to the workflow documentation, and delete the files.
 ```
 
-### keep or delete?
+### Keep or delete?
 Some data is harder to categorise, and deciding whether to keep it or delete it requires careful consideration to avoid deleting useful data or wasting storage space.
 
 **Model outputs**
@@ -99,7 +97,7 @@ These are usually reproducible, although bitwise reproducibility may not be poss
 The decision to keep or delete model outputs must be weighed against the cost, in money and time, of reproducing your work.
 On the other hand, data storage can also be expensive as model outputs are usually large, and useless if not done properly.
 Discuss this matter with your supervisor, and possibly other collaborators, as the answer might vary depending on how likely someone else might find this data useful.
-As model output includes raw output, restart files and post-processed output, they should all be treated differently. usually if keeping raw output this is stored on tape, it is a bit harder to retrieve but tape is less expensive than other storage. Only some of the restart files are kept (if any). Ideally, post-processed should be published if it has been used for publication or if it's going to be shared with others. 
+As model output includes raw output, restart files, and post-processed output, they should all be treated differently. Usually retained raw output is stored on tape even though it is a bit harder to retrieve, because tape is less expensive than other storage alternatives. Only some of the restart files are kept (if any). Ideally, post-processed output should be published if it has been used for publications or if it's going to be shared with others.
 
 **Output of lengthy processing**
 
@@ -119,7 +117,7 @@ For files that might be useful to a small cluster of people but not worth publis
 You cannot change the ownership of files that reside at NCI. You and the Lead CI of the project owning the files need to contact help@nci.org.au so NCI staff can do it for you.
 
 ```{warning}
-Often researchers shared data with others without publishing it even when this data is used for new publication, this should be avoided at any cost. It does create an issue for the creator of the data who won't get recognition and for the user who might struggle to refer to the exact data when publishing a paper. As it is now a requirement to publish data associated with a paper it is always bets to publish before sharing!
+Researchers often share data with others without publishing it even when this data is later on used for a new publication. This practice should be avoided at any cost. It creates an issue for the creator of the data who won't get recognition, and for the user who might struggle to refer to the exact data when publishing a paper. As it is now a requirement to publish data associated with a paper, it is always best to publish before sharing!
 ```
 
 ## Your NCI account
@@ -132,12 +130,11 @@ Some projects have strict license terms attached (e.g., ACCESS). Your membership
 
 **Transferring files**
 
-If you need to transfer files to a different machine (for example from NCI to your University or personal computer):
+If you need to transfer files to a different machine (for example from NCI to your University or personal computer) use `sftp`, `scp` or `rsync` to do it securely; `rsync` can be resumed if the transfer is interrupted.
 
-use sftp, scp or rsync to transfer files securely ( rsync can be resumed )
-if transferring from/to NCI:
-use the dedicated data-mover nodes if transferring from/to NCI: g-dm.nci.org.au
-use copyq if you want to queue a job
+If transferring from/to NCI:
+- use the dedicated data-mover nodes: `g-dm.nci.org.au`
+- use copyq if you want to queue a job
 
 ## Institutional account
 
