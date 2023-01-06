@@ -90,8 +90,8 @@ No need to keep files not necessary to reproduce your work:
 Occasionaly log files might have some information which is relevant to the workflow, still just keeping them makes this information virtually inaccessible to anyone else. The right thing to do in this case is to extract what is useful and add it to the workflow documentation, then getting rid of the files.
 ```
 
-### To keep or to delete?
-Some of the data is harder to categorise, and need some careful consideration to decide if it needs to be kept or deleted. Neglecting to do so might result in the deletion of useful data or waste of storage
+### keep or delete?
+Some data is harder to categorise, and deciding whether to keep it or delete it requires careful consideration to avoid deleting useful data or wasting storage space.
 
 **Model outputs**
 
