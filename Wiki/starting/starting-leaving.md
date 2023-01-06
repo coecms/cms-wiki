@@ -9,7 +9,7 @@ Any data you own on tape should be accessible for read and write by other people
 
 ## Your Exit Email Notification
 
-About 2 months before you leave, you should receive the following email:
+About 2 months prior to your departure, you should receive the following email:
 
 ```{dropdown}
 Dear xxxx,
