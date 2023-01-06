@@ -39,7 +39,7 @@ Although you will receive the above email reminder of what needs to be done, goi
 You may need to consider the following questions with your supervisor:
 
 * Will you require access to the files after you leave (e.g. for a paper review)?
-* What files will be useful to others? Should they be published?
+* What files could be useful to others? Should they be published?
 * What files won't be useful to others? Should they be archived or deleted?
 
 ```{note}
