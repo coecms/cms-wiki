@@ -7,7 +7,7 @@ These guidelines are provided to cover the most common workflow.
 You should not own any data on disk when you leave or shortly after you leave
 Any data you own on tape should be accessible for read and write by other people
 
-## The Exit Email
+## Your Exit Email Notification
 
 About 2 months before you leave, you should receive the following email:
 
