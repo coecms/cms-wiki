@@ -97,7 +97,7 @@ Some data is harder to categorise, and deciding whether to keep it or delete it 
 
 These are usually reproducible, although bitwise reproducibility may not be possible if underlying libraries change or the machine you have used has been retired. 
 The decision to keep or delete model outputs must be weighed against the cost, in money and time, of reproducing your work.
-On the other side storing the data can also be expensive, as the model output are usually large,  and of little use if not done properly.
+On the other hand, data storage can also be expensive as model outputs are usually large, and useless if not done properly.
 That is where you need to discuss with your supervisor, and possibly other collaborators, as the answer might vary depending on how likely someone else might find this data useful.
 As model output includes raw output, restart files and post-processed output, they should all be treated differently. usually if keeping raw output this is stored on tape, it is a bit harder to retrieve but tape is less expensive than other storage. Only some of the restart files are kept (if any). Ideally, post-processed should be published if it has been used for publication or if it's going to be shared with others. 
 
