@@ -27,10 +27,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -212,6 +212,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../starting/starting-leaving.html">
+   Leaving CLEX guidelines
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../starting/starting-resources.html">
    Resources
   </a>
@@ -334,6 +339,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../resources/resources-list.html">
    Resources
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/resources-policy.html">
+   ARC Centre of Excellence for Climate Extremes: Data strategies
   </a>
  </li>
  <li class="toctree-l1">
@@ -671,12 +681,12 @@ surface fields.</p>
 <h2>Automatic WPS<a class="headerlink" href="#automatic-wps" title="Permalink to this headline">#</a></h2>
 <p>We have a script available at <a class="reference external" href="https://github.com/coecms/wps-era">wps-era on Github</a> that will run all WPS
 steps automatically for you using the pressure level dataset. You can download the script with git:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/coecms/wps-era
-<span class="nb">cd</span> wps-era
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/coecms/wps-era
+<span class="nb">cd</span><span class="w"> </span>wps-era
 </pre></div>
 </div>
 <p>Edit the <code class="docutils literal notranslate"><span class="pre">namelist.wps</span></code> file as appropriate for your model, then run WPS with</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make <span class="nv">WPSDIR</span><span class="o">=</span>/path/to/WPS
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span><span class="nv">WPSDIR</span><span class="o">=</span>/path/to/WPS
 </pre></div>
 </div>
 <p>WPSDIR should be the path where you compiled WPS. The script will read the run dates from the namelist, and link in only the files required for the period you’re using.</p>
@@ -686,20 +696,20 @@ steps automatically for you using the pressure level dataset. You can download t
 <section id="time-dependent-data">
 <h3>Time dependent data<a class="headerlink" href="#time-dependent-data" title="Permalink to this headline">#</a></h3>
 <p>To run ungrib on both the surface and vertical data you can either create a temporary directory with both types of files, and run <code class="docutils literal notranslate"><span class="pre">link_grib.csh</span></code> on that directory:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir era-tmp
-ln -s /g/data/ub4/erai/grib/oper_an_pl/fullres/2006/ei_oper_an_pl_075x075_90N0E90S35925E_200603* era-tmp
-ln -s /g/data/ub4/erai/grib/oper_an_sfc/fullres/ei_oper_an_sfc_075x075_90N0E90S35925E_200603* era-tmp
-./link_grib.csh era-tmp/*
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>era-tmp
+ln<span class="w"> </span>-s<span class="w"> </span>/g/data/ub4/erai/grib/oper_an_pl/fullres/2006/ei_oper_an_pl_075x075_90N0E90S35925E_200603*<span class="w"> </span>era-tmp
+ln<span class="w"> </span>-s<span class="w"> </span>/g/data/ub4/erai/grib/oper_an_sfc/fullres/ei_oper_an_sfc_075x075_90N0E90S35925E_200603*<span class="w"> </span>era-tmp
+./link_grib.csh<span class="w"> </span>era-tmp/*
 ./ungrib.exe
 </pre></div>
 </div>
 <p>OR you can use different ungrib prefixes for the surface and vertical fields, combining the files with metgrid:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./link_grib.csh /g/data/ub4/erai/grib/oper_an_pl/fullres/2006/ei_oper_an_pl_075x075_90N0E90S35925E_200603*
-nano namelist.wps <span class="c1"># Set ungrib/prefix to &#39;PL&#39;</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./link_grib.csh<span class="w"> </span>/g/data/ub4/erai/grib/oper_an_pl/fullres/2006/ei_oper_an_pl_075x075_90N0E90S35925E_200603*
+nano<span class="w"> </span>namelist.wps<span class="w"> </span><span class="c1"># Set ungrib/prefix to &#39;PL&#39;</span>
 ./ungrib.exe
 
-./link_grib.csh /g/data/ub4/erai/grib/oper_an_sfc/fullres/ei_oper_an_sfc_075x075_90N0E90S35925E_200603*
-nano namelist.wps <span class="c1"># Set ungrib/prefix to &#39;SFC&#39;</span>
+./link_grib.csh<span class="w"> </span>/g/data/ub4/erai/grib/oper_an_sfc/fullres/ei_oper_an_sfc_075x075_90N0E90S35925E_200603*
+nano<span class="w"> </span>namelist.wps<span class="w"> </span><span class="c1"># Set ungrib/prefix to &#39;SFC&#39;</span>
 ./ungrib.exe
 </pre></div>
 </div>
@@ -708,17 +718,17 @@ nano namelist.wps <span class="c1"># Set ungrib/prefix to &#39;SFC&#39;</span>
 <h3>Invariant Data<a class="headerlink" href="#invariant-data" title="Permalink to this headline">#</a></h3>
 <p>You will also need to generate the invariant data, which includes the land-sea mask used for interpolating the ERA Interim source dataset to your model’s target resolution The invariant data is only defined at 19890101T1200Z, so you need to set the start and end dates in <code class="docutils literal notranslate"><span class="pre">namelist.wps</span></code> to this value (if you’re using multiple nests set all of the dates)</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="p">&amp;</span>share
-    ! Keep other settings the same, change dates to
-    <span class="nv">start_date</span> <span class="o">=</span> <span class="s1">&#39;1989-01-01_12:00:00&#39;</span>,
-    <span class="nv">end_date</span> <span class="o">=</span> <span class="s1">&#39;1989-01-01_12:00:00&#39;</span>,
+<span class="w">    </span>!<span class="w"> </span>Keep<span class="w"> </span>other<span class="w"> </span>settings<span class="w"> </span>the<span class="w"> </span>same,<span class="w"> </span>change<span class="w"> </span>dates<span class="w"> </span>to
+<span class="w">    </span><span class="nv">start_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1989-01-01_12:00:00&#39;</span>,
+<span class="w">    </span><span class="nv">end_date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;1989-01-01_12:00:00&#39;</span>,
 /
 <span class="p">&amp;</span>ungrib
-     <span class="nv">out_format</span> <span class="o">=</span> <span class="s1">&#39;WPS&#39;</span>
-     <span class="nv">prefix</span> <span class="o">=</span> <span class="s1">&#39;INV&#39;</span>
+<span class="w">     </span><span class="nv">out_format</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;WPS&#39;</span>
+<span class="w">     </span><span class="nv">prefix</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;INV&#39;</span>
 /
 </pre></div>
 </div>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./link_grib.csh /g/data/ub4/erai/grib/invariant/ei_oper_an_sfc_075x075_90N0E90S3585E_invariant
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>./link_grib.csh<span class="w"> </span>/g/data/ub4/erai/grib/invariant/ei_oper_an_sfc_075x075_90N0E90S3585E_invariant
 ./ungrib.exe
 </pre></div>
 </div>
@@ -729,9 +739,9 @@ nano namelist.wps <span class="c1"># Set ungrib/prefix to &#39;SFC&#39;</span>
 datasets. In <code class="docutils literal notranslate"><span class="pre">namelist.wps</span></code> set <code class="docutils literal notranslate"><span class="pre">fg_name</span></code> to a list of the time
 dependent datasets, and set <code class="docutils literal notranslate"><span class="pre">constants_name</span></code> to <code class="docutils literal notranslate"><span class="pre">INV:1989-01-01_12</span></code></p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="p">&amp;</span>metgrid
- <span class="nv">fg_name</span> <span class="o">=</span> <span class="s1">&#39;SFC&#39;</span>, <span class="s1">&#39;PL&#39;</span>
- <span class="nv">io_form_metgrid</span> <span class="o">=</span> <span class="m">2</span>,
- <span class="nv">constants_name</span> <span class="o">=</span> <span class="s1">&#39;INV:1989-01-01_12&#39;</span>
+<span class="w"> </span><span class="nv">fg_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;SFC&#39;</span>,<span class="w"> </span><span class="s1">&#39;PL&#39;</span>
+<span class="w"> </span><span class="nv">io_form_metgrid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span>,
+<span class="w"> </span><span class="nv">constants_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;INV:1989-01-01_12&#39;</span>
 /
 </pre></div>
 </div>

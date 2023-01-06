@@ -27,10 +27,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -211,6 +211,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../starting/starting-leaving.html">
+   Leaving CLEX guidelines
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../starting/starting-resources.html">
    Resources
   </a>
@@ -333,6 +338,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../resources/resources-list.html">
    Resources
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/resources-policy.html">
+   ARC Centre of Excellence for Climate Extremes: Data strategies
   </a>
  </li>
  <li class="toctree-l1">
@@ -584,11 +594,11 @@ title="Print to PDF"
 <p class="sd-card-text"><strong>Why do I get segfaults?</strong></p>
 <p class="sd-card-text">A segmentation fault means the program you are using has tried to read or write a memory location it does not have access to. This can mean there is an error in the code, or there is a system limit set. If the program runs for others, but not you, it may well be a system limit issue. This seems to be quite common when trying to write netcdf files. In some cases this can be overcome by setting your stack size to unlimited</p>
 <p class="sd-card-text">For tcsh/csh add this to your .cshrc:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>limit stacksize unlimited
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>limit<span class="w"> </span>stacksize<span class="w"> </span>unlimited
 </pre></div>
 </div>
 <p class="sd-card-text">For bash add this to your .bashrc:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">ulimit</span> -s unlimited
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">ulimit</span><span class="w"> </span>-s<span class="w"> </span>unlimited
 </pre></div>
 </div>
 <p class="sd-card-text">Note: you must log out and log back in again for this change to take effect.</p>
@@ -620,7 +630,7 @@ title="Print to PDF"
 <p class="sd-card-text"><strong>No files found or non-existent path error while running a PBS job</strong></p>
 <p class="sd-card-text">When submitting a job on gadi you need to declare explicitly what gdata and/or scratch projects your script need to access.</p>
 <p class="sd-card-text">This is done by setting the storage flag in the job you are submitting:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PBS -l <span class="nv">storage</span><span class="o">=</span>gdata/hh5+gdata/ua8+gdata/e14
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>PBS<span class="w"> </span>-l<span class="w"> </span><span class="nv">storage</span><span class="o">=</span>gdata/hh5+gdata/ua8+gdata/e14
 </pre></div>
 </div>
 <p class="sd-card-text">In the above case I want to use input data from gdata/ua8 save my results to gdata/e14 and use the conda modules which are in gdata/hh5</p>

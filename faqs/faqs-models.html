@@ -27,10 +27,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -212,6 +212,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../starting/starting-leaving.html">
+   Leaving CLEX guidelines
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../starting/starting-resources.html">
    Resources
   </a>
@@ -334,6 +339,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../resources/resources-list.html">
    Resources
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/resources-policy.html">
+   ARC Centre of Excellence for Climate Extremes: Data strategies
   </a>
  </li>
  <li class="toctree-l1">
@@ -606,8 +616,8 @@ title="Print to PDF"
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="sd-tab-set docutils">
-<input checked="checked" id="53846df0-0672-4db5-9c19-4c89fe328ec5" name="913c4f48-484e-408b-8e13-7714d425f718" type="radio">
-</input><label class="sd-tab-label" for="53846df0-0672-4db5-9c19-4c89fe328ec5">
+<input checked="checked" id="63bab97b-d98e-4f4b-aed0-80e476e2d880" name="ef6ebe8e-8f23-4f52-a343-17816aa9bf74" type="radio">
+</input><label class="sd-tab-label" for="63bab97b-d98e-4f4b-aed0-80e476e2d880">
 Extracting</label><div class="sd-tab-content docutils">
 <p class="sd-card-text">When compiling the UM, the first step is for the UMUI(x) to extract the source code. If an error occurs, check for these things:</p>
 <ol class="simple">
@@ -620,43 +630,43 @@ or
 <p class="sd-card-text">The final lines typically show at which command the error occurred.</p>
 <p class="sd-card-text"><strong>SVN errors</strong></p>
 <p class="sd-card-text">If you get a permission denied error from an SVN, it might be because svn needed your password, and didn’t get it. The solution is to run</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>svn ls https://access-svn.nci.org.au/svn/um/branches/
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>svn<span class="w"> </span>ls<span class="w"> </span>https://access-svn.nci.org.au/svn/um/branches/
 </pre></div>
 </div>
 <p class="sd-card-text">If you get asked for a password, you need to supply your NCI password. And then it will ask you whether it should store it in plain text.
 As much as I hate to say it: you need to answer ‘yes’.</p>
 <p class="sd-card-text">And immediately afterwards, you have to run the command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod -R go-rwx <span class="nv">$HOME</span>/.subversion
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>chmod<span class="w"> </span>-R<span class="w"> </span>go-rwx<span class="w"> </span><span class="nv">$HOME</span>/.subversion
 </pre></div>
 </div>
 <p class="sd-card-text"><strong>SCP and RSYNC errors</strong></p>
 <p class="sd-card-text">If you get an error like this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir: cannot create directory <span class="s1">&#39;/abc123&#39;</span>: Permission denied
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir:<span class="w"> </span>cannot<span class="w"> </span>create<span class="w"> </span>directory<span class="w"> </span><span class="s1">&#39;/abc123&#39;</span>:<span class="w"> </span>Permission<span class="w"> </span>denied
 </pre></div>
 </div>
 <p class="sd-card-text">(where abc123 is your username), the most likely explanation is that you haven’t set the DATAOUTPUT environment variable on accessdev.
 If you are using bash, add this line to your <code class="docutils literal notranslate"><span class="pre">$HOME/.bashrc</span></code> file:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">DATAOUTPUT</span><span class="o">=</span>/short/<span class="si">${</span><span class="nv">PROJECT</span><span class="si">}</span>/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/UM_ROUTDIR
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">DATAOUTPUT</span><span class="o">=</span>/short/<span class="si">${</span><span class="nv">PROJECT</span><span class="si">}</span>/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/UM_ROUTDIR
 </pre></div>
 </div>
 <p class="sd-card-text">If you are using tcsh or csh, add this line to your $HOME/.login</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>setenv DATAOUTPUT /short/<span class="si">${</span><span class="nv">PROJECT</span><span class="si">}</span>/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/UM_ROUTDIR
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>setenv<span class="w"> </span>DATAOUTPUT<span class="w"> </span>/short/<span class="si">${</span><span class="nv">PROJECT</span><span class="si">}</span>/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/UM_ROUTDIR
 </pre></div>
 </div>
 <p class="sd-card-text">Then log out of accessdev and log back in, open up umuix again, and check whether the error went away.</p>
 </div>
-<input id="4cc278f7-87d9-4c77-849d-bdf3a2690542" name="913c4f48-484e-408b-8e13-7714d425f718" type="radio">
-</input><label class="sd-tab-label" for="4cc278f7-87d9-4c77-849d-bdf3a2690542">
+<input id="f51e86f9-054f-44a4-9bc8-a8b6eeb3a3ce" name="ef6ebe8e-8f23-4f52-a343-17816aa9bf74" type="radio">
+</input><label class="sd-tab-label" for="f51e86f9-054f-44a4-9bc8-a8b6eeb3a3ce">
 Submiting</label><div class="sd-tab-content docutils">
 <p class="sd-card-text">My second tab</p>
 </div>
-<input id="b83ef22a-1c1a-461b-87cb-27c1a75889e0" name="913c4f48-484e-408b-8e13-7714d425f718" type="radio">
-</input><label class="sd-tab-label" for="b83ef22a-1c1a-461b-87cb-27c1a75889e0">
+<input id="6fd82343-7df5-4902-b2a3-d6c2754b9ec1" name="ef6ebe8e-8f23-4f52-a343-17816aa9bf74" type="radio">
+</input><label class="sd-tab-label" for="6fd82343-7df5-4902-b2a3-d6c2754b9ec1">
 Compiling</label><div class="sd-tab-content docutils">
 <p class="sd-card-text">My third tab</p>
 </div>
-<input id="db90b90a-8ce4-49a4-996b-4249b79850ad" name="913c4f48-484e-408b-8e13-7714d425f718" type="radio">
-</input><label class="sd-tab-label" for="db90b90a-8ce4-49a4-996b-4249b79850ad">
+<input id="e6cc306f-0105-42ef-a3e3-ab10834bed77" name="ef6ebe8e-8f23-4f52-a343-17816aa9bf74" type="radio">
+</input><label class="sd-tab-label" for="e6cc306f-0105-42ef-a3e3-ab10834bed77">
 Running</label><div class="sd-tab-content docutils">
 <p class="sd-card-text"><strong>REPLANCA: PP HEADERS ON ANCILLARY FILE DO NOT MATCH</strong></p>
 <p class="sd-card-text">The model is trying to update an ancillary field, but it is looking for a date that is past the end of the ancillary file. For instance, say an ancillary file is valid for dates between 1850-01-01 and 2001-01-01 and the model is trying to update fields for the date 2001-02-01. The model can’t find this data in the file, so it crashes.</p>
@@ -713,7 +723,7 @@ INANCILA: Insufficient space for LOOKUP headers
 </pre></div>
 </div>
 <p class="sd-card-text">This indicates that the start dump (NRUN) or restart dump (CRUN) could not be opened. Search the leave file for the string “Unit 21”. You should find a line like this:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>OPEN:  File &lt;somefile&gt; to be Opened on Unit <span class="m">21</span> does not Exist
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>OPEN:<span class="w">  </span>File<span class="w"> </span>&lt;somefile&gt;<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>Opened<span class="w"> </span>on<span class="w"> </span>Unit<span class="w"> </span><span class="m">21</span><span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>Exist
 </pre></div>
 </div>
 <p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">somefile</span></code> might be empty, in which case there will be 2 spaces between <code class="docutils literal notranslate"><span class="pre">File</span></code>and <code class="docutils literal notranslate"><span class="pre">to</span> <span class="pre">be</span> <span class="pre">Opened</span></code>.
@@ -758,7 +768,7 @@ and ensure that the restart dump frequency is consistent with your per-submissio
 <ul class="simple">
 <li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">netCDF4</span> <span class="pre">compression</span></code>: you are probably using netCDF v4.0 or newer. In that case, you can enable compression directly in WRF code so the output is compressed at creation time. If you ever want an output file in classic format, you can then use the namelist option <code class="docutils literal notranslate"><span class="pre">use_netcdf_classic=.true.</span></code> in the <code class="docutils literal notranslate"><span class="pre">&amp;time_control</span> </code>section. The choice of netcdf happens at the configuration step so if you already have compiled the code, clean it up with</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clean -a 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>clean<span class="w"> </span>-a<span class="w"> </span>
 </pre></div>
 </div>
 <p class="sd-card-text">Then follow these steps:</p>
@@ -776,10 +786,10 @@ and ensure that the restart dump frequency is consistent with your per-submissio
 <li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">Output</span> <span class="pre">a</span> <span class="pre">subset</span> <span class="pre">of</span> <span class="pre">variables</span></code>: WRF comes with a built-in mechanism to choose which variables to output or not. So you don’t have to output all the default variables (and you can add some non-default ones). The details can be found in the <a class="reference external" href="http://www2.mmm.ucar.edu/wrf/users/docs/user_guide_V3.8/users_guide_chap5.htm#runtimeio">WRF User’s guide</a></p></li>
 <li><p class="sd-card-text"><code class="docutils literal notranslate"><span class="pre">clean</span> <span class="pre">up</span> <span class="pre">the</span> <span class="pre">output</span> <span class="pre">file</span></code>: After creation, it can be useful to clean up the output file. For example, all variables have a Time dimension even if they are constant in time (latitudes and longitudes are usually constants unless you use a moving nest). So it can save storage space to remove this dimension. For example by using NCO:</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncwa -a Time -v XLONG wrfout_d01_2000-01-24_12<span class="se">\:</span><span class="m">00</span><span class="se">\:</span><span class="m">00</span> time0.nc
-ncks -x -v XLONG wrfout_d01_2000-01-24_12<span class="se">\:</span><span class="m">00</span><span class="se">\:</span><span class="m">00</span> no_longitude.nc
-ncks -A -v XLONG time0.nc no_longitude.nc
-mv no_longitude.nc wrfout_d01_2000-01-24_12<span class="se">\:</span><span class="m">00</span><span class="se">\:</span><span class="m">00</span> 
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ncwa<span class="w"> </span>-a<span class="w"> </span>Time<span class="w"> </span>-v<span class="w"> </span>XLONG<span class="w"> </span>wrfout_d01_2000-01-24_12<span class="se">\:</span><span class="m">00</span><span class="se">\:</span><span class="m">00</span><span class="w"> </span>time0.nc
+ncks<span class="w"> </span>-x<span class="w"> </span>-v<span class="w"> </span>XLONG<span class="w"> </span>wrfout_d01_2000-01-24_12<span class="se">\:</span><span class="m">00</span><span class="se">\:</span><span class="m">00</span><span class="w"> </span>no_longitude.nc
+ncks<span class="w"> </span>-A<span class="w"> </span>-v<span class="w"> </span>XLONG<span class="w"> </span>time0.nc<span class="w"> </span>no_longitude.nc
+mv<span class="w"> </span>no_longitude.nc<span class="w"> </span>wrfout_d01_2000-01-24_12<span class="se">\:</span><span class="m">00</span><span class="se">\:</span><span class="m">00</span><span class="w"> </span>
 </pre></div>
 </div>
 <p class="sd-card-text">Obviously you can list more than 1 variable at once in the commands.</p>
@@ -860,15 +870,15 @@ wrf.exe 0000000000DCCAB7 Unknown Unknown Unknown&lt;/nowiki&gt;
 </summary><div class="sd-summary-content sd-card-body docutils">
 <p class="sd-card-text"><strong>Problem with collating outputs with payu</strong></p>
 <p class="sd-card-text">Your simulation runs correctly but the collating of the outputs does not work and you have this error message in the log file:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Traceback <span class="o">(</span>most recent call last<span class="o">)</span>:
-  File <span class="s2">&quot;/jobfs/local/pbs/mom_priv/jobs/268316.r-man2.SC&quot;</span>, line <span class="m">9</span>, <span class="k">in</span> &lt;module&gt;
-    collate_cmd.runscript<span class="o">()</span>
-  File <span class="s2">&quot;/apps/payu/0.6/lib/payu/subcommands/collate_cmd.py&quot;</span>, line <span class="m">93</span>, <span class="k">in</span> runscript
-    expt.collate<span class="o">()</span>
-  File <span class="s2">&quot;/apps/payu/0.6/lib/payu/experiment.py&quot;</span>, line <span class="m">606</span>, <span class="k">in</span> collate
-    model.collate<span class="o">()</span>
-  File <span class="s2">&quot;/apps/payu/0.6/lib/payu/models/fms.py&quot;</span>, line <span class="m">78</span>, <span class="k">in</span> collate
-    assert mppnc_path
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
+<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;/jobfs/local/pbs/mom_priv/jobs/268316.r-man2.SC&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">9</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+<span class="w">    </span>collate_cmd.runscript<span class="o">()</span>
+<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;/apps/payu/0.6/lib/payu/subcommands/collate_cmd.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">93</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>runscript
+<span class="w">    </span>expt.collate<span class="o">()</span>
+<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;/apps/payu/0.6/lib/payu/experiment.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">606</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>collate
+<span class="w">    </span>model.collate<span class="o">()</span>
+<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;/apps/payu/0.6/lib/payu/models/fms.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">78</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>collate
+<span class="w">    </span>assert<span class="w"> </span>mppnc_path
 AssertionError
 </pre></div>
 </div>
@@ -913,7 +923,7 @@ AssertionError
 <p class="sd-card-text">A basic configuration for running CESM2 on Gadi is available at <a class="reference external" href="https://github.com/coecms/cesm2-gadi">https://github.com/coecms/cesm2-gadi</a></p>
 <p class="sd-card-text"><strong>Installing XML::LibXML</strong></p>
 <p class="sd-card-text">CESM requires the Perl module <code class="docutils literal notranslate"><span class="pre">XML::LibXML</span></code>. You’ll need to install this yourself, which you can do on Gadi by running</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cpan XML::LibXML
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cpan<span class="w"> </span>XML::LibXML
 </pre></div>
 </div>
 <p class="sd-card-text">If you’ve not used Perl before it will ask you some questions on where to install it, the defaults are fine and will install it into your home directory at <code class="docutils literal notranslate"><span class="pre">~/perl5</span></code>.</p>

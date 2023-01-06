@@ -1,0 +1,883 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Leaving CLEX guidelines &#8212; CLEX CMS Wiki</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Resources" href="starting-resources.html" />
+    <link rel="prev" title="Climate data" href="starting-data.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/CLEX-logo.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">CLEX CMS Wiki</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../introduction.html">
+                    CMS Wiki
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  CMS team
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../team.html">
+   CMS team
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Services
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../services/services-intro.html">
+   Services provided
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../services/services-help.html">
+   CMS help
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../services/services-one-on-one.html">
+   One-on-one Meetings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../services/services-codebreak.html">
+   Codebreak
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../services/services-conda.html">
+   Conda Python Environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../services/services-conda-updates.html">
+   Conda environments update history
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../services/services-projects.html">
+   NCI project management guidelines
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Training
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../training/training-intro.html">
+   Training offered
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Getting started
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="starting-intro.html">
+   Working …
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="starting-gadi.html">
+   Working on Gadi
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="starting-laptop.html">
+   Starting on personal computer
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="starting-data.html">
+   Climate data
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Leaving CLEX guidelines
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="starting-resources.html">
+   Resources
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Models
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../models/models-intro.html">
+   Models
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../models/models-access.html">
+   ACCESS
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../models/models-um.html">
+     UM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../models/models-mom.html">
+     MOM
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../models/models-cable.html">
+     CABLE
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../models/models-wrf.html">
+   WRF
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../models/models-wrf-1.html">
+     How to run WRF
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../models/models-wrf-2.html">
+     How to run WRF with ERA-Interim data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../models/models-wrf-3.html">
+     How to run WRF with inputs in netcdf format
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../models/models-wrf-4.html">
+     Tips and Tricks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../models/models-wrf-5.html">
+     WRF performance
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../models/models-wrf-6.html">
+     Current WRF porting to NCI
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data/data-intro.html">
+   Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data/data-resources.html">
+   Resources
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data/data-datasets.html">
+   Datasets
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Resources
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/resources-conda-setup.html">
+   Conda hh5 environment setup
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/resources-list.html">
+   Resources
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/resources-policy.html">
+   ARC Centre of Excellence for Climate Extremes: Data strategies
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/wrf-deprecated.html">
+   WRF porting to NCI machine (Deprecated)
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  FAQS
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faqs/faqs-models.html">
+   Model’s FAQs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faqs/faqs-data.html">
+   Data FAQs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faqs/faqs-languages.html">
+   Coding Language’s FAQs
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../faqs/faqs-gadi.html">
+   Gadi FAQs
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/coecms/cms-wiki"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/coecms/cms-wiki/issues/new?title=Issue%20on%20page%20%2Fstarting/starting-leaving.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/coecms/cms-wiki/edit/main/Wiki/starting/starting-leaving.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/starting/starting-leaving.md"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.md</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#your-exit-email-notification">
+   Your Exit Email Notification
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-to-do">
+   What to do
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#always-keep">
+     Always Keep
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#always-delete">
+     Always delete
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keep-or-delete">
+     Keep or delete?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#publishing-data-and-code">
+   Publishing data and code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#your-nci-account">
+   Your NCI account
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#institutional-account">
+   Institutional account
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Leaving CLEX guidelines</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#your-exit-email-notification">
+   Your Exit Email Notification
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-to-do">
+   What to do
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#always-keep">
+     Always Keep
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#always-delete">
+     Always delete
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keep-or-delete">
+     Keep or delete?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#publishing-data-and-code">
+   Publishing data and code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#your-nci-account">
+   Your NCI account
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#institutional-account">
+   Institutional account
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="leaving-clex-guidelines">
+<h1>Leaving CLEX guidelines<a class="headerlink" href="#leaving-clex-guidelines" title="Permalink to this headline">#</a></h1>
+<p>When leaving the Centre it is important to document and organise the data and code you are leaving behind. This arrangement ensures that unecessary files are removed, storage space is freed up in shared projects, and anything of future value to yourself or others is properly stored and documented.</p>
+<p>These guidelines are provided to cover the most common workflow.</p>
+<p>You should not own any data on disk when you leave or shortly after you leave
+Any data you own on tape should be accessible for read and write by other people</p>
+<section id="your-exit-email-notification">
+<h2>Your Exit Email Notification<a class="headerlink" href="#your-exit-email-notification" title="Permalink to this headline">#</a></h2>
+<p>About 2 months prior to your departure, you should receive the following email:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-kebab-horizontal" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M6 12a2 2 0 11-4 0 2 2 0 014 0zm8 0a2 2 0 11-4 0 2 2 0 014 0zm6 2a2 2 0 100-4 2 2 0 000 4z"></path></svg><div class="sd-summary-down docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="sd-summary-up docutils">
+<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Dear xxxx,</p>
+<p class="sd-card-text">Given that your contract is due to end in 2 months time, we ask that you start considering how data in your accounts will be managed in future. Specifically:</p>
+<ul class="simple">
+<li><p class="sd-card-text">please delete anything that is not required</p></li>
+<li><p class="sd-card-text">please send an email to the CMS team (copied on this email), detailing the nature of what will remain. This should outline major directories and explain:</p>
+<ul>
+<li><p class="sd-card-text">what they contain</p></li>
+<li><p class="sd-card-text">why they’re important to keep</p></li>
+<li><p class="sd-card-text">what is required to access them - which repository / scripts?</p></li>
+<li><p class="sd-card-text">if this data is stored anywhere else</p></li>
+<li><p class="sd-card-text">when can they be deleted (date)</p></li>
+<li><p class="sd-card-text">where this data should be stored when your account is shut down (please consult with a CLEX CI)</p></li>
+<li><p class="sd-card-text">who in CLEX should have access to this data?</p></li>
+<li><p class="sd-card-text">please also let the CMS team if compute access will be required after your contract ends</p></li>
+</ul>
+</li>
+<li><p class="sd-card-text">please reply to both the admin and CMS teams with future contact details when you have them</p></li>
+</ul>
+<p class="sd-card-text">The CMS team can help with tools and techniques to help you manage your data. Please understand that storage is extremely limited, so that a lack of response to the questions above will likely result in your data being archived as soon as your contract ends.</p>
+<p class="sd-card-text">Regards,</p>
+<p class="sd-card-text">The CLEX Admin Team</p>
+</div>
+</details><p>Although you will receive the above email reminder of what needs to be done, going through all of your files might take longer than anticipated, so it is important to remain organised at every stage of your project. Please consider then performing the following suggested actions at various stages of your project as needed.</p>
+<p>You may need to consider the following questions with your supervisor:</p>
+<ul class="simple">
+<li><p>Will you require access to the files after you leave (e.g. for a paper review)?</p></li>
+<li><p>What files could be useful to others? Should they be published?</p></li>
+<li><p>What files won’t be useful to others? Should they be archived or deleted?</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you need specific advice on how to actually transfer or archive your files, you can request assistance from our helpdesk: <a class="reference external" href="mailto:cws_help&#37;&#52;&#48;nci&#46;org&#46;au">cws_help<span>&#64;</span>nci<span>&#46;</span>org<span>&#46;</span>au</a>.</p>
+</div>
+</section>
+<section id="what-to-do">
+<h2>What to do<a class="headerlink" href="#what-to-do" title="Permalink to this headline">#</a></h2>
+<p>While what to keep, remove, or publish, will depend on your specific project and working group, some universal principles are applicable to any situation.</p>
+<section id="always-keep">
+<h3>Always Keep<a class="headerlink" href="#always-keep" title="Permalink to this headline">#</a></h3>
+<p><strong>Codes</strong></p>
+<p>Regardless of your project details, always keep the code you used with a reference to its exact version, and document your usage of codes developed by others (e.g., climate models). Document also any modifications you made to these codes.</p>
+<p>If your modifications are extensive or you wrote the code yourself, you should make the code available via GitHub and publish it (preferably on Zenodo ).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is perfectly acceptable to create a repository per project or paper containing all your codes. You can then use the README file from the GitHub repository to explain how your results can be reproduced. Clearly reference everything needed in addition to this repository. You can also have a repository per code, especially if you anticipate you’ll reuse the same code for other work.</p>
+</div>
+<p><strong>Configuration and other files necessary to run the code</strong></p>
+<p>In addition to the codes, keep everything required to run them the same way you did. Usually, the most complicated configurations are for climate models. Some climate models will save your configurations in version control repositories (e.g. UM, ACCESS, ACCESS-OM2), in which case you simply need to keep the information on how to retrieve these configurations. Some models don’t save your configurations and you need to do it yourself.</p>
+<p>For input files, some are published data, in which case you need to keep the reference to this data (including the version). If you have written several codes, the output of one will be the input to the next, in which case you do not necessarily need to keep that data, but you should describe your workflow.</p>
+<p><strong>Workflow</strong></p>
+<p>Workflows can be tricky as there is no one-size-fits-all format to save such information. You could write a README file and archive it with other project files that need archiving, or have a special GitHub repository just for this README file, or a repository for all your projects with READMEs for each project. Whatever you choose, this information must be publicly available (unless your project was restricted), not a personal note, and clearly describe step by step what someone should do to reproduce your work. This description should clearly describe step by step what someone should do to reproduce your work.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Information on your PhD or published papers must be kept for at least 5 years. The time requirements differ slightly depending on institutions and funding bodies.</p>
+</div>
+</section>
+<section id="always-delete">
+<h3>Always delete<a class="headerlink" href="#always-delete" title="Permalink to this headline">#</a></h3>
+<p>No need to keep files not necessary to reproduce your work:</p>
+<ul class="simple">
+<li><p>log files</p></li>
+<li><p>failed experiments files</p></li>
+<li><p>temporary files such as those created from successive cdo/nco commands.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Occasionally log files might contain information relevant to the workflow, but but this is hard to access from the files themselves. Accordingly, in this case extract what is useful, add it to the workflow documentation, and delete the files.</p>
+</div>
+</section>
+<section id="keep-or-delete">
+<h3>Keep or delete?<a class="headerlink" href="#keep-or-delete" title="Permalink to this headline">#</a></h3>
+<p>Some data is harder to categorise, and deciding whether to keep it or delete it requires careful consideration to avoid deleting useful data or wasting storage space.</p>
+<p><strong>Model outputs</strong></p>
+<p>These are usually reproducible, although bitwise reproducibility may not be possible if underlying libraries change or the machine you have used has been retired.
+The decision to keep or delete model outputs must be weighed against the cost, in money and time, of reproducing your work.
+On the other hand, data storage can also be expensive as model outputs are usually large, and useless if not done properly.
+Discuss this matter with your supervisor, and possibly other collaborators, as the answer might vary depending on how likely someone else might find this data useful.
+As model output includes raw output, restart files, and post-processed output, they should all be treated differently. Usually retained raw output is stored on tape even though it is a bit harder to retrieve, because tape is less expensive than other storage alternatives. Only some of the restart files are kept (if any). Ideally, post-processed output should be published if it has been used for publications or if it’s going to be shared with others.</p>
+<p><strong>Output of lengthy processing</strong></p>
+<p>It is tempting to keep those files but usually not worth the storage cost unless it is clear they will be reused soon, as with current modern programming techniques a lot of lengthy processing can be significantly shortened, and the very real storage cost outweighs any hypothetical time savings in the future.</p>
+</section>
+</section>
+<section id="publishing-data-and-code">
+<h2>Publishing data and code<a class="headerlink" href="#publishing-data-and-code" title="Permalink to this headline">#</a></h2>
+<p>Publish your files if they are frequently used by others, ideally as soon as their usefulness to others is evident, not just before you leave.</p>
+<p>If your files are at NCI, there is nothing else to. If your files are held at your institution, you may need to make sure there is a copy accessible to others and owned by someone likely to stay for years to come, all subject to your institution data services.</p>
+<p><strong>Sharing files without publication</strong></p>
+<p>For files that might be useful to a small cluster of people but not worth publishing you simply need to change the ownership of the files: get the files to be owned by someone who is present after you leave.</p>
+<p>You cannot change the ownership of files that reside at NCI. You and the Lead CI of the project owning the files need to contact <a class="reference external" href="mailto:help&#37;&#52;&#48;nci&#46;org&#46;au">help<span>&#64;</span>nci<span>&#46;</span>org<span>&#46;</span>au</a> so NCI staff can do it for you.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Researchers often share data with others without publishing it even when this data is later on used for a new publication. This practice should be avoided at any cost. It creates an issue for the creator of the data who won’t get recognition, and for the user who might struggle to refer to the exact data when publishing a paper. As it is now a requirement to publish data associated with a paper, it is always best to publish before sharing!</p>
+</div>
+</section>
+<section id="your-nci-account">
+<h2>Your NCI account<a class="headerlink" href="#your-nci-account" title="Permalink to this headline">#</a></h2>
+<p>When you leave you can retain your NCI credentials if you keep your contact details up to date through <a class="reference external" href="https://my.nci.org.au">https://my.nci.org.au</a></p>
+<p>Make sure to quit all NCI projects you don’t need access to anymore. You can be ruthless as it is quite easy to regain access to those projects later on if needed.</p>
+<p>Some projects have strict license terms attached (e.g., ACCESS). Your membership might be revoked any time after you leave the Centre if you haven’t negotiated extended access to those projects. Please contact the Lead CI or project manager to discuss your needs.</p>
+<p><strong>Transferring files</strong></p>
+<p>If you need to transfer files to a different machine (for example from NCI to your University or personal computer) use <code class="docutils literal notranslate"><span class="pre">sftp</span></code>, <code class="docutils literal notranslate"><span class="pre">scp</span></code> or <code class="docutils literal notranslate"><span class="pre">rsync</span></code> to do it securely; <code class="docutils literal notranslate"><span class="pre">rsync</span></code> can be resumed if the transfer is interrupted.</p>
+<p>If transferring from/to NCI:</p>
+<ul class="simple">
+<li><p>use the dedicated data-mover nodes: <code class="docutils literal notranslate"><span class="pre">g-dm.nci.org.au</span></code></p></li>
+<li><p>use copyq if you want to queue a job</p></li>
+</ul>
+</section>
+<section id="institutional-account">
+<h2>Institutional account<a class="headerlink" href="#institutional-account" title="Permalink to this headline">#</a></h2>
+<p>Most universities will close your university and e-mail account after you leave. Often university data services are accessible only via your university account. In this case, you need to arrange access for yourself by contacting the IT services or the CI of projects that you used to deposit data before you leave. Specifics of university data services and advice on what happens when you leave can be found by following the relevant link in the data services page.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./starting"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="starting-data.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Climate data</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="starting-resources.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Resources</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By CLEX-CMS<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

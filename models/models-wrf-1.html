@@ -27,10 +27,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -212,6 +212,11 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="../starting/starting-leaving.html">
+   Leaving CLEX guidelines
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="../starting/starting-resources.html">
    Resources
   </a>
@@ -334,6 +339,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../resources/resources-list.html">
    Resources
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/resources-policy.html">
+   ARC Centre of Excellence for Climate Extremes: Data strategies
   </a>
  </li>
  <li class="toctree-l1">
@@ -697,9 +707,9 @@ simulation on a short time to see the effect.</p>
 <p>By default, the compilation is done for OpenMPI and OpenMP so you
 don’t need to recompile. Below is an example of a mpirun command with
 OpenMP in bash:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="m">2</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">OMP_NUM_THREADS</span><span class="o">=</span><span class="m">2</span>
 <span class="nv">NCORE</span><span class="o">=</span><span class="nv">$PBS_NCPUS</span>/<span class="nv">$OMP_NUM_THREADS</span>
-mpirun -np <span class="nv">$NCORE</span> --map-by node:PE<span class="o">=</span><span class="nv">$OMP_NUM_THREADS</span> --rank-by core ./wrf.exe
+mpirun<span class="w"> </span>-np<span class="w"> </span><span class="nv">$NCORE</span><span class="w"> </span>--map-by<span class="w"> </span>node:PE<span class="o">=</span><span class="nv">$OMP_NUM_THREADS</span><span class="w"> </span>--rank-by<span class="w"> </span>core<span class="w"> </span>./wrf.exe
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">OMP_NUM_THREADS</span></code> indicates the number of OpenMP threads you want to use:</p>
