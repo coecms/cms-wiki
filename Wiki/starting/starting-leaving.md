@@ -70,7 +70,7 @@ For input files, some are published data, in which case you need to keep the ref
 
 **Workflow**
 
-This can be a tricky one, as there is not a one-size-fits-all format to save this information. It is fine to write a README file and archive it with other files from the project that need archiving. You can also have a special Github repository just for this README file, or a repository for all your projects with READMEs for each project. Whatever format you choose, it is important for this information to be publicly available (unless your project was restricted) and not a personal note.
+Workflows can be tricky as there is no one-size-fits-all format to save such information. You could write a README file and archive it with other project files that need archiving, or have a special GitHub repository just for this README file, or a repository for all your projects with READMEs for each project. Whatever you choose, this information must be publicly available (unless your project was restricted), not a personal note, and clearly describe step by step what someone should do to reproduce your work.
 
 This description should clearly describe step by step what someone should do to reproduce your work.
 
