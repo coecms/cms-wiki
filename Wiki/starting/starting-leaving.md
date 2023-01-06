@@ -36,7 +36,7 @@ The CLEX Admin Team
 
 Although you will receive the above email reminder of what needs to be done, going through all of your files might take longer than anticipated, so it is important to remain organised at every stage of your project. Please consider then performing the following suggested actions at various stages of your project as needed.
 
-You might need to discuss the following questions with your supervisor:
+You may need to consider the following questions with your supervisor:
 
 * Will you require access to the files after you leave (e.g. for a paper review)?
 * What files will be useful to others? Should they be published?
