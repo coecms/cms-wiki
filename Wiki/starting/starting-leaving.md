@@ -56,17 +56,17 @@ While what exactly should be kept, removed or published will depend on your spec
 
 No matter what the details of your projects are you should always keep the code you used. This means keeping a reference to the exact version and document how you used codes developed by others (e.g. climate models). If you modified them in any way this should also be documented. 
 
-If you modfication are extensive or you have written the code yourself then you should make it available via GitHub and publish it (Zenodo is the most indicated for this).
+If your modifications are extensive or you wrote the code yourself, you should make the code available via GitHub and publish it (preferably on Zenodo ).
 
 ```{note}
-It is absolutely fine to create a repository per project or paper with all your codes in. You can then use the README file from the GitHub repository to explain how to reproduce your results. Don't forget to clearly reference everything one might need in addition to this repository. Or you can have a repository per code especially if you envision you'll reuse the same code for other work.
+It is perfectly acceptable to create a repository per project or paper containing all your codes. You can then use the README file from the GitHub repository to explain how your results can be reproduced. Clearly reference everything needed in addition to this repository. You can also have a repository per code, especially if you anticipate you'll reuse the same code for other work.
 ```
 
 **Configuration files for running the codes and some input files**
 
-In addition to the codes themselves, you need to keep everything that enables someone to run the codes in the same way you have done so. Usually, the most complicated configurations are for climate models. Some climate models will save your configurations in version control repositories (e.g. UM, ACCESS, ACCESS-OM2), in which case you simply need to keep the information on how to retrieve these configurations. Some models don't save your configurations and you need to do it yourself.
+In addition to the codes, keep everything required to run them the same way you did. Usually, the most complicated configurations are for climate models. Some climate models will save your configurations in version control repositories (e.g. UM, ACCESS, ACCESS-OM2), in which case you simply need to keep the information on how to retrieve these configurations. Some models don't save your configurations and you need to do it yourself.
 
-For the input files, some inputs are published data in which case you need to keep the reference to this data (including the version). If you have written several codes, the output of a piece of code will be the input of the next piece of code, in which case you do not necessarily need to keep that data,  but you need to describe your workflow.
+For input files, some are published data, in which case you need to keep the reference to this data (including the version). If you have written several codes, the output of one will be the input to the next, in which case you do not necessarily need to keep that data, but you should describe your workflow.
 
 **Workflow**
 
