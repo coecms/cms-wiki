@@ -13,10 +13,16 @@ The `hh5` conda environment can be loaded in the same way the legacy environment
 $ module use /g/data/hh5/public/modules
 $ module load conda/analysis3-22.10
 ```
-The stable/unstable structure will continue to be maintained, with new unstable releases every 3 months, roughly coinciding with NCI maintenance periods. Note that the module takes up to 30 seconds to load, do not Ctrl-C the `module load`, it is working. Note that `conda activate analysis3-22.10` does not work at time of writing. Loading the module performs the equivalent of a `conda activate`.
+The stable/unstable structure will continue to be maintained, with new unstable releases every 3 months, roughly coinciding with NCI maintenance periods. 
+```{note}
+The module takes up to 30 seconds to load, do not Ctrl-C the `module load`, it is working.
+```
+```{note}
+`conda activate analysis3-22.10` does not work at time of writing. Loading the module performs the equivalent of a `conda activate`.
+```
 
 ### ARE
-A special module is provided for the ARE that allows interactive access to all conda environments via a jupyter notebook, and activates the current stable environment. To use it, change the following settings on the ARE launch page:
+A special module is provided for the ARE that allows interactive access to all conda environments via a jupyter notebook and activates the current stable environment. To use it, change the following settings on the ARE launch page:
 
 ![conda-are-settings](../Images/conda-are-settings.png)
 
@@ -52,7 +58,7 @@ The containerised conda environment is comprised of the following components:
 * An install script designed to be run by a CI implementation that will install and update squashfs environments
 * An initialisation script that will create the base environment.
 
-All of these components (apart from the squashfs themselves) can be found in the `cms-conda-singularity` repository on the coecms github.
+All these components (apart from the squashfs themselves) can be found in the `cms-conda-singularity` repository on the coecms github.
 
 ### Layout
 The above components are installed into the `/g/data/hh5/public` area as follows:
@@ -64,17 +70,19 @@ $ ls -l /g/data/hh5/public/apps
 drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 miniconda3
 drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 conda-scripts
 ```
-Note that this is the ideal case, the file ownership displayed is contingent on the availability of a service user to use for software deployment. This caveat will apply every time the `hh5_apps` user appears on this page
+```{note}
+This is the ideal case, the file ownership displayed is contingent on the availability of a service user to use for software deployment. This caveat will apply every time the `hh5_apps` user appears on this page
+```
 
 The `apps` directory contains the base, uncontainerised conda environment, the squashfs files containing each analysis environment (in the `miniconda3` subdirectory) and the machinery that enables commands to be executed inside the container as necessary (in the `conda-scripts` directory). The `modules` directory contains the environment modules needed to load the conda environments.
 
 ### The launcher script
-The launcher script is designed to be the interface between the standard Gadi user environment and the contents of a conda environment squashfs file. It performs a number of checks in order to generate the correct `singularity` launcher line from outside the container, or run the correct command directly if it is invoked from inside the container. Its workflow is as follows:
+The launcher script is designed to be the interface between the standard Gadi user environment and the contents of a conda environment squashfs file. It performs several checks in order to generate the correct `singularity` launcher line from outside the container or run the correct command directly if it is invoked from inside the container. Its workflow is as follows:
 
 * Source its configuration script - There are some settings that are loaded at runtime, these are derived from a script named `launcher_conf.sh` that resides in the same directory as `launcher.sh`. 
 * Parse out its own command line arguments - `launcher.sh` has some dedicated command line arguments to supply information to it in the case of the environment not being able to be set beforehand (e.g. when invoking `ssh`). Since `launcher.sh` can invoke arbitrary commands, these arguments must be processed and removed from the list of arguments to launch
 * Determine the path to the `singularity` binary - Usually this will be in the conf script or provided by a command line argument. If neither of those things has happened, it will attempt to load the `singularity` module and query the location using the `which` command.
-* Determine whether it is running a command, or being invoked directly - if a command linked to `launcher.sh` has been run, the full argument list, minus the `launcher.sh`-specific arguments will be passed to `singularity exec`. If `launcher.sh` has been invoked directly, the program to run and its arguments are assumed to be in the arguments following `launcher.sh`.
+* Determine whether it is running a command or being invoked directly - if a command linked to `launcher.sh` has been run, the full argument list, minus the `launcher.sh`-specific arguments will be passed to `singularity exec`. If `launcher.sh` has been invoked directly, the program to run and its arguments are assumed to be in the arguments following `launcher.sh`.
 * Determine if it is being invoked from within a container - if `launcher.sh` determines that it is already inside a singularity container, it will substitute the real path to the binary in place of its own path, and run the binary directly.
 * Determine if there is an override script for the command being run - If there is, run this instead of `singularity exec`
 * Determine which squashfs environment(s) are required, and configure the singularity launch options as appropriate. 
@@ -93,14 +101,20 @@ Ensure that `environment.yml` is correct and creates a valid conda environment. 
 Add the new package to the `environment.yml` file in the `scripts` directory in the repository. Test the installation by setting the `$CONDA_BASE` environment variable to the path of a test environment and run `install.sh`. If the tests pass interactively, push the updated `environment.yml` to the repository. The update to the production installation will be automatically deployed by Jenkins.
 
 ### Update stable/unstable environment links/modules
-In `install_config.sh`, change the `STABLE_VERSION` and/or `UNSTABLE_VERSION` variables to the conda environments that are becoming the stable and unstable variants. Push the updated `install_config.sh`, the symlinks and module aliases will be automatically updated by Jenkins. Note that this will also trigger an update for the a analysis environment corresponding to the `VERSION_TO_MODIFY` variable.
+In `install_config.sh`, change the `STABLE_VERSION` and/or `UNSTABLE_VERSION` variables to the conda environments that are becoming the stable and unstable variants. Push the updated `install_config.sh`, the symlinks and module aliases will be 
+automatically updated by Jenkins. 
+```{note}
+This will also trigger an update for the a analysis environment corresponding to the `VERSION_TO_MODIFY` variable.
+```
 
 ### Revert a bad update
 In most cases, if an update fails, it will be discarded and the original retained. If the build and all tests pass, but a user discovers a problem after the new update is deployed, the old one is backed up in the `admin` directory. Restore it as follows:
 ```
 $ mv /g/data/hh5/admin/analysis-22.10.sqsh.bak /g/data/hh5/public/apps/miniconda3/envs/analysis-22.10.sqsh
 ```
-Note the backup must be *moved*, not copied. Using `mv` makes the change between environments atomic, whereas copying will cause a partially written squashfs to be present for the duration of the copy.
+```{warning}
+The backup must be *moved*, not copied. Using `mv` makes the change between environments atomic, whereas copying will cause a partially written squashfs to be present for the duration of the copy.
+```
 
 ## Technical Details
 
@@ -114,7 +128,9 @@ lrwxrwxrwx  1 hh5_apps hh5         26 Jan 12 13:23 analysis3-22.10 -> /opt/conda
 -rw-rwx---+ 1 hh5_apps hh5 9634836480 Jan 12 13:23 analysis3-22.10.sqsh
 lrwxrwxrwx  1 hh5_apps hh5         15 Dec 23 11:12 analysis3-unstable -> analysis3-22.10
 ```
+```{note}
 Note that the symlink targets refer to paths that only exist inside the corresponding `.sqsh` files, and as such, they appear broken unless inspected from inside the container with the correct squashfs mounted. 
+```
 
 On loading an `analysis3-xx.yy` module (after running `module use /g/data/hh5/public/modules`), a `conda activate` command is run from inside the container in order to set the environment outside of the container to what would be expected had a `conda activate` command been run on an uncontainerised environment. The exception is that the `bin` directory inside the environment is translated to the appropriate subdirectory of `scripts`. For example, the path:
 ```
@@ -124,12 +140,16 @@ becomes
 ```
 /g/data/hh5/public/apps/conda-scripts/analysis3-22.10.d/bin
 ```
-There are also environment variables set that are interpreted by the launcher script required to access commands within the squashfs conda environment. 
+The module also sets the `SINGULARITYENV_PREPEND_PATH` environment variable. This variable is modifies the linux `PATH` environment variable only within the container, and is required to ensure the `PATH` inside the container matches `PATH` outside of the container.
 
-Every entry in the in-container `envs/analysis3-22.10/bin` directory is symlinked to the launcher script placed in the `analysis3-22.10.d/bin` directory. These links are programmatically generated during installation, and invoke singularity with the correct squashfs mounted, and then inspect the link name to determine which command execute the command from within the container. The launcher script also has provisions for command overrides and configuration to alter the behaviour of commands in the container if necessary. The launcher script can also be invoked directly in order to run arbitrary commands inside the container. For example, running `launcher.sh bash` will launch an interactive shell inside the container with all correct bind, overlay and squashfs mounts in place.
+Every entry in the in-container `envs/analysis3-22.10/bin` directory is symlinked to the launcher script placed in the `analysis3-22.10.d/bin` directory. These links are programmatically generated during installation, and invoke singularity with the correct squashfs mounted, and then inspect the link name to determine which command execute the command from within the container. The launcher script also has provisions for command overrides and configuration to alter the behaviour of commands in the container if necessary. The launcher script can also be invoked directly to run arbitrary commands inside the container. For example, running `launcher.sh bash` will launch an interactive shell inside the container with all correct bind, overlay and squashfs mounts in place.
 
 The actual container used as the base of the environment contains only enough components to create a functional environment. The container does not contain its own operating system, instead, it is comprised of a series of empty directories and symlinks. The necessary components of Gadi's operating systems are bind-mounted in at launch time through the launcher script. Though this does make the environment entirely unportable, which goes against the philosophy of containerisation, the container itself only needs to be constructed once for any given system, and reconstruction is trivial. The advantage of this approach is that the conda environment is separate to the container, and therefore multiple conda environments can be present 'in' the same container. This also means that the container can never be out of sync as Gadi's OS receives updates. This allows us to make modifications to the conda environment after installation that enhance the functionality of the environment. 
 
-As a part of the installation process, the `openssh` packages are removed from the conda installation, which forces use of the system `ssh` and, more importantly, its configuration. The `openmpi` package is also replaced by the `openmpi` distribution installed in `/apps` on Gadi. This ensures that the conda environment has a fully compatible MPI distribution with the host, which solves the problem of conda installing incorrectly configured MPI distributions, and addresses the drawbacks outlined in the [Singularity documentation](https://docs.sylabs.io/guides/3.3/user-guide/mpi.html).
+As a part of the installation process, the `openssh` packages are removed from the conda installation, which forces use of the system `ssh` and, more importantly, its configuration. The `openmpi` package is also replaced by an  `openmpi` distribution installed in `/apps` on Gadi. 
+```{admonition} OpenMPI in Conda
+:class: tip
+This means that conda environment has a fully compatible MPI distribution with the Gadi, which solves the problem of conda installing incorrectly configured MPI distributions, and addresses the drawbacks outlined in the [Singularity documentation](https://docs.sylabs.io/guides/3.3/user-guide/mpi.html).
+```
 
-Some external programs are also linked into the scripts directory in order to modify their behaviour to take into account the containerised environments. For example `pbs_tmrsh`, if invoked when a conda environment is loaded, is modified to load the environment on the remote node before executing the command to be run. In time, `ssh` will also be modified to do this, however, this is significantly more complicated. There is a generic framework to add commands, remove OS packages and symlink `/apps` packages into the squashfs conda environments, determined by the contents of arrays in the `install_config.sh` file.
+Some external programs are also linked into the scripts directory to modify their behaviour to take into account the containerised environments. For example `pbs_tmrsh`, if invoked when a conda environment is loaded, is modified to load the environment on the remote node before executing the command to be run. In time, `ssh` will also be modified to do this, however, this is significantly more complicated. There is a generic framework to add commands, remove OS packages and symlink `/apps` packages into the squashfs conda environments, determined by the contents of arrays in the `install_config.sh` file.
