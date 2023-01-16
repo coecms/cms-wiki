@@ -118,7 +118,7 @@ The backup must be *moved*, not copied. Using `mv` makes the change between envi
 
 ## Technical Details
 
-The key difference between a standard conda environment setup and the `hh5` conda is the `envs` directory. In a standard conda environment setup, the envs directory contains a series of directories corresponding to each environment. Each of these directories is a fully self-contained environment, often comprising more than 250,000 individual files. Though these files are usually [hardlinked to central package caches](https://www.anaconda.com/blog/understanding-and-improving-condas-performance), this is not reflected in filesystem quotas, and hardlinked files are multiply counted for the purposes of quota enforcement on NCI systems. In the `hh5` environment, the `envs` directory appears as follows:
+The key difference between a standard conda environment setup and the `hh5` conda is the `envs` directory. In a standard conda environment setup, the envs directory contains a series of directories corresponding to each environment. Each of these directories is a fully self-contained environment, often comprising more than 250,000 individual files. Though these files are usually [hardlinked to central package caches](https://www.anaconda.com/blog/understanding-and-improving-condas-performance), this is not reflected in filesystem quotas. Each path to a hardlinked inode is treated as a separate inode for the purposes of quota enforcement. In the `hh5` environment, the `envs` directory appears as follows:
 ```
 $ ls -l /g/data/hh5/public/apps/miniconda3/envs
 lrwxrwxrwx  1 hh5_apps hh5         15 Dec 23 11:12 analysis3 -> analysis3-22.07
@@ -129,7 +129,7 @@ lrwxrwxrwx  1 hh5_apps hh5         26 Jan 12 13:23 analysis3-22.10 -> /opt/conda
 lrwxrwxrwx  1 hh5_apps hh5         15 Dec 23 11:12 analysis3-unstable -> analysis3-22.10
 ```
 ```{note}
-Note that the symlink targets refer to paths that only exist inside the corresponding `.sqsh` files, and as such, they appear broken unless inspected from inside the container with the correct squashfs mounted. 
+The symlink targets refer to paths that only exist inside the corresponding `.sqsh` files, and as such, they appear broken unless inspected from inside the container with the correct squashfs mounted. 
 ```
 
 On loading an `analysis3-xx.yy` module (after running `module use /g/data/hh5/public/modules`), a `conda activate` command is run from inside the container in order to set the environment outside of the container to what would be expected had a `conda activate` command been run on an uncontainerised environment. The exception is that the `bin` directory inside the environment is translated to the appropriate subdirectory of `scripts`. For example, the path:
