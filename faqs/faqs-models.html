@@ -27,10 +27,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -196,10 +196,28 @@ const thebe_selector_output = ".output, .cell_output"
    Working …
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../starting/starting-gadi.html">
    Working on Gadi
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../starting/starting-gadi-scratch.html">
+     NCI
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       scratch
+      </span>
+     </code>
+     file management policy
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../starting/starting-laptop.html">
@@ -237,8 +255,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../models/models-access.html">
    ACCESS
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -264,8 +282,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../models/models-wrf.html">
    WRF
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -344,6 +362,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../resources/resources-policy.html">
    ARC Centre of Excellence for Climate Extremes: Data strategies
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/resources-vscode.html">
+   VS Code
   </a>
  </li>
  <li class="toctree-l1">
@@ -616,8 +639,8 @@ title="Print to PDF"
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="sd-tab-set docutils">
-<input checked="checked" id="63bab97b-d98e-4f4b-aed0-80e476e2d880" name="ef6ebe8e-8f23-4f52-a343-17816aa9bf74" type="radio">
-</input><label class="sd-tab-label" for="63bab97b-d98e-4f4b-aed0-80e476e2d880">
+<input checked="checked" id="9c2bd5e0-20b8-460d-9945-0f819c619e28" name="cb9e2772-b678-4f02-ac28-7045393cca03" type="radio">
+</input><label class="sd-tab-label" for="9c2bd5e0-20b8-460d-9945-0f819c619e28">
 Extracting</label><div class="sd-tab-content docutils">
 <p class="sd-card-text">When compiling the UM, the first step is for the UMUI(x) to extract the source code. If an error occurs, check for these things:</p>
 <ol class="simple">
@@ -655,18 +678,18 @@ If you are using bash, add this line to your <code class="docutils literal notra
 </div>
 <p class="sd-card-text">Then log out of accessdev and log back in, open up umuix again, and check whether the error went away.</p>
 </div>
-<input id="f51e86f9-054f-44a4-9bc8-a8b6eeb3a3ce" name="ef6ebe8e-8f23-4f52-a343-17816aa9bf74" type="radio">
-</input><label class="sd-tab-label" for="f51e86f9-054f-44a4-9bc8-a8b6eeb3a3ce">
+<input id="c3506fd5-bc76-47ec-b20e-3db6f031312b" name="cb9e2772-b678-4f02-ac28-7045393cca03" type="radio">
+</input><label class="sd-tab-label" for="c3506fd5-bc76-47ec-b20e-3db6f031312b">
 Submiting</label><div class="sd-tab-content docutils">
 <p class="sd-card-text">My second tab</p>
 </div>
-<input id="6fd82343-7df5-4902-b2a3-d6c2754b9ec1" name="ef6ebe8e-8f23-4f52-a343-17816aa9bf74" type="radio">
-</input><label class="sd-tab-label" for="6fd82343-7df5-4902-b2a3-d6c2754b9ec1">
+<input id="2ea375b4-6734-4ac8-a7f2-adbd4f1fd620" name="cb9e2772-b678-4f02-ac28-7045393cca03" type="radio">
+</input><label class="sd-tab-label" for="2ea375b4-6734-4ac8-a7f2-adbd4f1fd620">
 Compiling</label><div class="sd-tab-content docutils">
 <p class="sd-card-text">My third tab</p>
 </div>
-<input id="e6cc306f-0105-42ef-a3e3-ab10834bed77" name="ef6ebe8e-8f23-4f52-a343-17816aa9bf74" type="radio">
-</input><label class="sd-tab-label" for="e6cc306f-0105-42ef-a3e3-ab10834bed77">
+<input id="c2d7d108-668a-4558-9a57-065af0af3068" name="cb9e2772-b678-4f02-ac28-7045393cca03" type="radio">
+</input><label class="sd-tab-label" for="c2d7d108-668a-4558-9a57-065af0af3068">
 Running</label><div class="sd-tab-content docutils">
 <p class="sd-card-text"><strong>REPLANCA: PP HEADERS ON ANCILLARY FILE DO NOT MATCH</strong></p>
 <p class="sd-card-text">The model is trying to update an ancillary field, but it is looking for a date that is past the end of the ancillary file. For instance, say an ancillary file is valid for dates between 1850-01-01 and 2001-01-01 and the model is trying to update fields for the date 2001-02-01. The model can’t find this data in the file, so it crashes.</p>

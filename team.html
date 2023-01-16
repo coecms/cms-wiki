@@ -27,10 +27,10 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="_static/admonitions.css" />
-    <link rel="stylesheet" type="text/css" href="_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -196,10 +196,28 @@ const thebe_selector_output = ".output, .cell_output"
    Working …
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="starting/starting-gadi.html">
    Working on Gadi
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="starting/starting-gadi-scratch.html">
+     NCI
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       scratch
+      </span>
+     </code>
+     file management policy
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="starting/starting-laptop.html">
@@ -237,8 +255,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="models/models-access.html">
    ACCESS
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -264,8 +282,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="models/models-wrf.html">
    WRF
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -344,6 +362,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="resources/resources-policy.html">
    ARC Centre of Excellence for Climate Extremes: Data strategies
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="resources/resources-vscode.html">
+   VS Code
   </a>
  </li>
  <li class="toctree-l1">
@@ -623,40 +646,40 @@ title="Print to PDF"
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="sd-tab-set docutils">
-<input checked="checked" id="9be2d622-11dd-48d0-bac9-8fe0488fd671" name="95152cbb-c2be-4110-b2a3-4ef0bc9e2b53" type="radio">
-</input><label class="sd-tab-label" for="9be2d622-11dd-48d0-bac9-8fe0488fd671">
+<input checked="checked" id="639e4a91-fece-448a-996c-ab379bd99e1b" name="edbfd9e3-30e5-4f21-b3e9-a0f168fca529" type="radio">
+</input><label class="sd-tab-label" for="639e4a91-fece-448a-996c-ab379bd99e1b">
 Paola Petrelli</label><div class="sd-tab-content docutils">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/Paola.jpg"><img alt="Paola" class="bg-primary mb-1 align-left" src="_images/Paola.jpg" style="width: 200px;" /></a>
 <p class="sd-card-text"><strong>Located</strong>: University of Tasmania</p>
 <p class="sd-card-text"><strong>Email</strong>: <a class="reference external" href="mailto:paola&#46;petrelli&#37;&#52;&#48;utas&#46;edu&#46;au">paola<span>&#46;</span>petrelli<span>&#64;</span>utas<span>&#46;</span>edu<span>&#46;</span>au</a></p>
 <p class="sd-card-text"><strong>BIO</strong>: Paola is the CMS team leader and data expert. Paola started in her role as data expert with the previous ARC Centre of Excellence for Climate System Science. Before joining the centre she managed oceanographic and climate datasets for the Tasmanian Partnership for Advanced Computing (TPAC), acquiring extensive experience in web services and software used by the earth science research community. She received a Science PhD from the University of Siena (Italy) in 2005, with a project involving modelling of Antarctic polinyas. Paola sets the centre strategy and provides advice on data management practices. She leads the data collaborations with our partners and NCI to manage shared data resources. An important part of her role is to publish CLEX data and metadata on public repositories such as the NCI data services, ESGF and ANDS Research Data Australia (RDA). Contact her if you need advice for your data management plan and to access, download, store, share and/or publish data. She also provides support with data analysis, in particular using python.</p>
 </div>
-<input id="b1ea96f4-93d7-4e94-89a3-53d7376cb9b6" name="95152cbb-c2be-4110-b2a3-4ef0bc9e2b53" type="radio">
-</input><label class="sd-tab-label" for="b1ea96f4-93d7-4e94-89a3-53d7376cb9b6">
+<input id="6286e214-a463-4fd3-aa6d-955930cac292" name="edbfd9e3-30e5-4f21-b3e9-a0f168fca529" type="radio">
+</input><label class="sd-tab-label" for="6286e214-a463-4fd3-aa6d-955930cac292">
 Holger Wolff</label><div class="sd-tab-content docutils">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/Holger.jpg"><img alt="Holger" class="bg-primary mb-1 align-left" src="_images/Holger.jpg" style="width: 200px;" /></a>
 <p class="sd-card-text"><strong>Located</strong>: Monash University</p>
 <p class="sd-card-text"><strong>Email</strong>: <a class="reference external" href="mailto:holger&#46;wolff&#37;&#52;&#48;monash&#46;edu">holger<span>&#46;</span>wolff<span>&#64;</span>monash<span>&#46;</span>edu</a></p>
 <p class="sd-card-text"><strong>BIO</strong>:</p>
 </div>
-<input id="8b0bb2cc-f8b6-4406-a3fa-79fa46b8f611" name="95152cbb-c2be-4110-b2a3-4ef0bc9e2b53" type="radio">
-</input><label class="sd-tab-label" for="8b0bb2cc-f8b6-4406-a3fa-79fa46b8f611">
+<input id="7f39c398-ba80-449e-8d8b-e40b2ed85485" name="edbfd9e3-30e5-4f21-b3e9-a0f168fca529" type="radio">
+</input><label class="sd-tab-label" for="7f39c398-ba80-449e-8d8b-e40b2ed85485">
 Ramzi Kuttah</label><div class="sd-tab-content docutils">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/Ramzi.jpg"><img alt="Ramzi" class="bg-primary mb-1 align-left" src="_images/Ramzi.jpg" style="width: 200px;" /></a>
 <p class="sd-card-text"><strong>Located</strong>: University of New South Wales</p>
 <p class="sd-card-text"><strong>Email</strong>: <a class="reference external" href="mailto:ramzi&#46;kutteh&#37;&#52;&#48;unsw&#46;edu&#46;au">ramzi<span>&#46;</span>kutteh<span>&#64;</span>unsw<span>&#46;</span>edu<span>&#46;</span>au</a></p>
 <p class="sd-card-text"><strong>BIO</strong>:</p>
 </div>
-<input id="3b783d6a-b5cd-45bd-9d6e-ae41764af43c" name="95152cbb-c2be-4110-b2a3-4ef0bc9e2b53" type="radio">
-</input><label class="sd-tab-label" for="3b783d6a-b5cd-45bd-9d6e-ae41764af43c">
+<input id="544a46ff-4662-401c-8998-52e755a4313c" name="edbfd9e3-30e5-4f21-b3e9-a0f168fca529" type="radio">
+</input><label class="sd-tab-label" for="544a46ff-4662-401c-8998-52e755a4313c">
 Sam Green</label><div class="sd-tab-content docutils">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/sam.jpg"><img alt="Sam" class="bg-primary mb-1 align-left" src="_images/sam.jpg" style="width: 200px;" /></a>
 <p class="sd-card-text"><strong>Located</strong>: University of New South Wales</p>
 <p class="sd-card-text"><strong>Email</strong>: <a class="reference external" href="mailto:sam&#46;green&#37;&#52;&#48;unsw&#46;edu&#46;au">sam<span>&#46;</span>green<span>&#64;</span>unsw<span>&#46;</span>edu<span>&#46;</span>au</a></p>
 <p class="sd-card-text"><strong>BIO</strong>:</p>
 </div>
-<input id="0fb092c6-a9ff-41a7-84cf-742050b12803" name="95152cbb-c2be-4110-b2a3-4ef0bc9e2b53" type="radio">
-</input><label class="sd-tab-label" for="0fb092c6-a9ff-41a7-84cf-742050b12803">
+<input id="dae045dd-fc39-4096-b7c2-c68ce55986e7" name="edbfd9e3-30e5-4f21-b3e9-a0f168fca529" type="radio">
+</input><label class="sd-tab-label" for="dae045dd-fc39-4096-b7c2-c68ce55986e7">
 Dale Roberts</label><div class="sd-tab-content docutils">
 <a class="bg-primary mb-1 reference internal image-reference" href="_images/dale.png"><img alt="Dale" class="bg-primary mb-1 align-left" src="_images/dale.png" style="width: 200px;" /></a>
 <p class="sd-card-text"><strong>Located</strong>: University of Melbourne</p>

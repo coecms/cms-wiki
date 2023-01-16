@@ -27,10 +27,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -196,10 +196,28 @@ const thebe_selector_output = ".output, .cell_output"
    Working …
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../starting/starting-gadi.html">
    Working on Gadi
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../starting/starting-gadi-scratch.html">
+     NCI
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       scratch
+      </span>
+     </code>
+     file management policy
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../starting/starting-laptop.html">
@@ -237,8 +255,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../models/models-access.html">
    ACCESS
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -264,8 +282,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../models/models-wrf.html">
    WRF
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -344,6 +362,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../resources/resources-policy.html">
    ARC Centre of Excellence for Climate Extremes: Data strategies
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/resources-vscode.html">
+   VS Code
   </a>
  </li>
  <li class="toctree-l1">
@@ -577,8 +600,8 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="coding-language-s-faqs">
 <h1>Coding Language’s FAQs<a class="headerlink" href="#coding-language-s-faqs" title="Permalink to this headline">#</a></h1>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="30392ee8-a55f-4408-b220-9cce6c8efe7a" name="d451c598-d42f-46a1-bd55-29ee270a05d1" type="radio">
-</input><label class="sd-tab-label" for="30392ee8-a55f-4408-b220-9cce6c8efe7a">
+<input checked="checked" id="6d5a72f1-847c-4cf1-b762-1a49202d7e75" name="e648653f-8e26-4087-ae18-400580225d6b" type="radio">
+</input><label class="sd-tab-label" for="6d5a72f1-847c-4cf1-b762-1a49202d7e75">
 Python</label><div class="sd-tab-content docutils">
 <p><strong>1.How to transform 1D lat/lon arrays into 2D lat/lon arrays with Python</strong></p>
 <p>If using numpy or masked arrays, one can use the resize() method. Assuming slat and slon are 1D latitude and longitude arrays, do this:</p>
@@ -596,18 +619,18 @@ Python</label><div class="sd-tab-content docutils">
 </div>
 <p>-1 means that the <code class="docutils literal notranslate"><span class="pre">time</span></code> dimension size will be used as chunk size. If you have 100 timesteps, it would be equivalent to set the new chunks as <code class="docutils literal notranslate"><span class="pre">{time=100}</span></code>.</p>
 </div>
-<input id="3f366896-f4a4-48e6-8c9e-77a6a473a243" name="d451c598-d42f-46a1-bd55-29ee270a05d1" type="radio">
-</input><label class="sd-tab-label" for="3f366896-f4a4-48e6-8c9e-77a6a473a243">
+<input id="46895f41-3581-42df-8ff5-1107b7cd9a04" name="e648653f-8e26-4087-ae18-400580225d6b" type="radio">
+</input><label class="sd-tab-label" for="46895f41-3581-42df-8ff5-1107b7cd9a04">
 Fortan</label><div class="sd-tab-content docutils">
 <p>stuff</p>
 </div>
-<input id="247c31d1-5e43-47b2-b3c2-c3f643df52ed" name="d451c598-d42f-46a1-bd55-29ee270a05d1" type="radio">
-</input><label class="sd-tab-label" for="247c31d1-5e43-47b2-b3c2-c3f643df52ed">
+<input id="89c7574c-e457-4e10-80c3-e26178efe477" name="e648653f-8e26-4087-ae18-400580225d6b" type="radio">
+</input><label class="sd-tab-label" for="89c7574c-e457-4e10-80c3-e26178efe477">
 C++</label><div class="sd-tab-content docutils">
 <p>stuff</p>
 </div>
-<input id="8e7b8df8-2a59-4c3e-940f-886ebf13a108" name="d451c598-d42f-46a1-bd55-29ee270a05d1" type="radio">
-</input><label class="sd-tab-label" for="8e7b8df8-2a59-4c3e-940f-886ebf13a108">
+<input id="16cedd99-2443-4430-b245-7e84de82b8d5" name="e648653f-8e26-4087-ae18-400580225d6b" type="radio">
+</input><label class="sd-tab-label" for="16cedd99-2443-4430-b245-7e84de82b8d5">
 Bash</label><div class="sd-tab-content docutils">
 <p>stuff</p>
 </div>

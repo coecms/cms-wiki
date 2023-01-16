@@ -27,10 +27,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -59,7 +59,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Model’s FAQs" href="../faqs/faqs-models.html" />
-    <link rel="prev" title="ARC Centre of Excellence for Climate Extremes: Data strategies" href="resources-policy.html" />
+    <link rel="prev" title="VS Code" href="resources-vscode.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -196,10 +196,28 @@ const thebe_selector_output = ".output, .cell_output"
    Working …
   </a>
  </li>
- <li class="toctree-l1">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="../starting/starting-gadi.html">
    Working on Gadi
   </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../starting/starting-gadi-scratch.html">
+     NCI
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       scratch
+      </span>
+     </code>
+     file management policy
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../starting/starting-laptop.html">
@@ -237,8 +255,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../models/models-access.html">
    ACCESS
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -264,8 +282,8 @@ const thebe_selector_output = ".output, .cell_output"
   <a class="reference internal" href="../models/models-wrf.html">
    WRF
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
@@ -344,6 +362,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="resources-policy.html">
    ARC Centre of Excellence for Climate Extremes: Data strategies
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="resources-vscode.html">
+   VS Code
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -572,12 +595,7 @@ title="Print to PDF"
     </div>
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   WRF porting to NCI machine (Deprecated)
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#jenkins-setup">
    Jenkins setup
   </a>
@@ -601,12 +619,7 @@ title="Print to PDF"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   WRF porting to NCI machine (Deprecated)
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#jenkins-setup">
    Jenkins setup
   </a>
@@ -623,19 +636,11 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="wrf-porting-to-nci-machine-deprecated">
 <h1>WRF porting to NCI machine (Deprecated)<a class="headerlink" href="#wrf-porting-to-nci-machine-deprecated" title="Permalink to this headline">#</a></h1>
-<hr class="docutils" />
-<hr class="docutils" />
-<p>These are the steps to follow to install new WRF versions on an NCI
-machine. Only for admins within the wrf group at NCI. If starting from
-scratch:</p>
+<p>These are the steps to follow to install new WRF versions on an NCI machine. Only for admins within the wrf group at NCI. If starting from scratch:</p>
 <ul class="simple">
-<li><p>Under your own project, clone the WRF github repo <a class="reference external" href="https://github.com/coecms/WRF">https://github.com/coecms/WRF</a>
-and create a new branch for the new
-version (named Vx.x.x), starting from the most recent HEAD (not
-master)</p></li>
-<li><p>Add <a class="reference external" href="https://github.com/wrf-model/WPS.git">https://github.com/wrf-model/WPS.git</a> and <a class="reference external" href="https://github.com/wrf-model/WRF.git">https://github.com/wrf-model/WRF.git</a>
-as remotes (named NCAR_WPS and
-NCAS_WRF if you want to copy-paste the commands) and fetch</p></li>
+<li><p>Under your own project, clone the <a class="reference external" href="https://github.com/coecms/WRF">WRF github repo</a> and create a new branch for the new version (named Vx.x.x), starting from the most recent HEAD (not master)</p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">https://github.com/wrf-model/WPS.git</span></code> and <code class="docutils literal notranslate"><span class="pre">https://github.com/wrf-model/WRF.git</span></code>
+as remotes (named NCAR_WPS and NCAS_WRF if you want to copy-paste the commands) and fetch</p></li>
 <li><p>In the new branch, run the command:</p></li>
 </ul>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>merge<span class="w"> </span>-s<span class="w"> </span>recursive<span class="w"> </span>-Xsubtree<span class="o">=</span>WRFV3<span class="w"> </span>--allow-unrelated-histories<span class="w"> </span>NCAR_WRF/master
@@ -643,29 +648,18 @@ NCAS_WRF if you want to copy-paste the commands) and fetch</p></li>
 </div>
 <p>You may need another branch than master to pick up a specific release.</p>
 <ul class="simple">
-<li><p>You may need to update the crtm coeffs. You’ll probably get a conflict
-on the file WRFV3/var/run/crtm_coeffs. This is a link to
-/projects/WRF/data/WRFDA_files/crtm_coeff_X. Check the version the
-remote points to. If different from local, download the updates from
-<a class="reference external" href="http://www2.mmm.ucar.edu/wrf/users/wrfda/download/crtm_coeffs.html">http://www2.mmm.ucar.edu/wrf/users/wrfda/download/crtm_coeffs.html</a></p></li>
-<li><p>After resolving conflicts, run WRFV3/configure. See what options are
-correct for the machine architecture. Update WRFV3/run_compile
-appropriately.</p></li>
-<li><p>Clone into /projects/WRF with wrf group
-ownership. Make sure the master branch there points to the new version
-branch.</p></li>
+<li><p>You may need to update the crtm coeffs. You’ll probably get a conflict on the file <code class="docutils literal notranslate"><span class="pre">WRFV3/var/run/crtm_coeffs</span></code>. This is a link to <code class="docutils literal notranslate"><span class="pre">/projects/WRF/data/WRFDA_files/crtm_coeff_X</span></code>. Check the version the remote points to. If different from local, <a class="reference external" href="http://www2.mmm.ucar.edu/wrf/users/wrfda/download/crtm_coeffs.html">download the updates</a>.</p></li>
+<li><p>After resolving conflicts, run WRFV3/configure. See what options are correct for the machine architecture. Update WRFV3/run_compile appropriately.</p></li>
+<li><p>Clone into /projects/WRF with wrf group ownership. Make sure the master branch there points to the new version branch.</p></li>
 </ul>
 <p>Follow same steps for WPS, but remote is called NCAR_WPS and -Xsubtree=WPS.</p>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="jenkins-setup">
-<h1>Jenkins setup<a class="headerlink" href="#jenkins-setup" title="Permalink to this headline">#</a></h1>
-<hr class="docutils" />
+<section id="jenkins-setup">
+<h2>Jenkins setup<a class="headerlink" href="#jenkins-setup" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
-<li><p>Add a new parameter for the version. Just the numbers,
-no “V”.</p></li>
-<li><p>Create a branch for that version in wrf-testing repo. Exact
-same name as the previous step parameter.</p></li>
+<li><p>Add a new parameter for the version. Just the numbers, no “V”.</p></li>
+<li><p>Create a branch for that version in wrf-testing repo. Exact same name as the previous step parameter.</p></li>
 </ul>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -695,11 +689,11 @@ same name as the previous step parameter.</p></li>
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="resources-policy.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="resources-vscode.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">ARC Centre of Excellence for Climate Extremes: Data strategies</p>
+            <p class="prev-next-title">VS Code</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../faqs/faqs-models.html" title="next page">
