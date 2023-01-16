@@ -83,7 +83,7 @@ The launcher script is designed to be the interface between the standard Gadi us
 * Parse out its own command line arguments - `launcher.sh` has some dedicated command line arguments to supply information to it in the case of the environment not being able to be set beforehand (e.g. when invoking `ssh`). Since `launcher.sh` can invoke arbitrary commands, these arguments must be processed and removed from the list of arguments to launch
 * Determine the path to the `singularity` binary - Usually this will be in the conf script or provided by a command line argument. If neither of those things has happened, it will attempt to load the `singularity` module and query the location using the `which` command.
 * Determine whether it is running a command or being invoked directly - if a command linked to `launcher.sh` has been run, the full argument list, minus the `launcher.sh`-specific arguments will be passed to `singularity exec`. If `launcher.sh` has been invoked directly, the program to run and its arguments are assumed to be in the arguments following `launcher.sh`.
-* Determine if it is being invoked from within a container - if `launcher.sh` determines that it is already inside a singularity container, it will substitute the real path to the binary in place of its own path, and run the binary directly.
+* Determine if it is being invoked from within a container - if `launcher.sh` determines that it is already inside a singularity container, it will substitute the real path to the binary in place of its own path and run the binary directly.
 * Determine if there is an override script for the command being run - If there is, run this instead of `singularity exec`
 * Determine which squashfs environment(s) are required, and configure the singularity launch options as appropriate. 
 * Run `singularity exec` with all the configuration gathered during the launch process.
@@ -92,7 +92,7 @@ The launcher script is designed to be the interface between the standard Gadi us
 This conda environment is designed to be deployed and maintained entirely by a CI system. This includes its initial deployment. The `install.sh` script handles every action that may need to occur over the lifetime of the `hh5` conda environment. The procedure to perform common operations is detailed below
 
 ### Initialise the base conda environment
-Ensure that the all settings in `install_config.sh` are correct. There are a handful of items that need hard-coded paths in the installation, and they will all be derived from the values in `install_config.sh`. Them install an analysis environment. If the base conda environment does not exist, it will be created when the first analysis environment is installed.
+Ensure that all settings in `install_config.sh` are correct. There are a handful of items that need hard-coded paths in the installation, and they will all be derived from the values in `install_config.sh`. Then install an analysis environment. If the base conda environment does not exist, it will be created when the first analysis environment is installed.
 
 ### Install a new analysis environment
 Ensure that `environment.yml` is correct and creates a valid conda environment. In `install_config.sh`, set `VERSION_TO_MODIFY` to a new value that does not exist in the current `envs` directory (e.g. 23.01 at time of writing). Push the updated `install_config.sh` to the repository. The new environment, including all modules and scripts, will be automatically created by Jenkins.
@@ -118,7 +118,7 @@ The backup must be *moved*, not copied. Using `mv` makes the change between envi
 
 ## Technical Details
 
-The key difference between a standard conda environment setup and the `hh5` conda is the `envs` directory. In a standard conda environment setup, the envs directory contains a series of directories corresponding to each environment. Each of these directories is a fully self-contained environment, often comprising in excess of 250,000 individual files. Though these files are usually [hardlinked to central package caches](https://www.anaconda.com/blog/understanding-and-improving-condas-performance), this is not reflected in filesystem quotas, and hardlinked files are multiply counted for the purposes of quota enforcement on NCI systems. In the `hh5` environment, the `envs` directory appears as follows:
+The key difference between a standard conda environment setup and the `hh5` conda is the `envs` directory. In a standard conda environment setup, the envs directory contains a series of directories corresponding to each environment. Each of these directories is a fully self-contained environment, often comprising more than 250,000 individual files. Though these files are usually [hardlinked to central package caches](https://www.anaconda.com/blog/understanding-and-improving-condas-performance), this is not reflected in filesystem quotas, and hardlinked files are multiply counted for the purposes of quota enforcement on NCI systems. In the `hh5` environment, the `envs` directory appears as follows:
 ```
 $ ls -l /g/data/hh5/public/apps/miniconda3/envs
 lrwxrwxrwx  1 hh5_apps hh5         15 Dec 23 11:12 analysis3 -> analysis3-22.07
