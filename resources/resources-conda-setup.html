@@ -573,12 +573,117 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usage">
+   Usage
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gadi-command-line">
+     Gadi Command Line
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#are">
+     ARE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-shbang-line">
+     Python shbang line
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivation">
+   Motivation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#components">
+     Components
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#layout">
+     Layout
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-launcher-script">
+     The launcher script
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#maintenance">
+   Maintenance
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialise-the-base-conda-environment">
+     Initialise the base conda environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-a-new-analysis-environment">
+     Install a new analysis environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-a-new-package-to-an-existing-analysis-environment">
+     Add a new package to an existing analysis environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#update-stable-unstable-environment-links-modules">
+     Update stable/unstable environment links/modules
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#revert-a-bad-update">
+     Revert a bad update
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#technical-details">
+   Technical Details
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -590,6 +695,100 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#usage">
+   Usage
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gadi-command-line">
+     Gadi Command Line
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#are">
+     ARE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-shbang-line">
+     Python shbang line
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#motivation">
+   Motivation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#components">
+     Components
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#layout">
+     Layout
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-launcher-script">
+     The launcher script
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#maintenance">
+   Maintenance
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialise-the-base-conda-environment">
+     Initialise the base conda environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-a-new-analysis-environment">
+     Install a new analysis environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-a-new-package-to-an-existing-analysis-environment">
+     Add a new package to an existing analysis environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#update-stable-unstable-environment-links-modules">
+     Update stable/unstable environment links/modules
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#revert-a-bad-update">
+     Revert a bad update
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#technical-details">
+   Technical Details
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -599,6 +798,171 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="conda-hh5-environment-setup">
 <h1>Conda hh5 environment setup<a class="headerlink" href="#conda-hh5-environment-setup" title="Permalink to this headline">#</a></h1>
+<p>The next-generation of the <code class="docutils literal notranslate"><span class="pre">hh5</span></code> conda environment takes advantage of containerisation in order to reduce inode usage and increase performance of the small file operations associated with some actions in python (e.g. <code class="docutils literal notranslate"><span class="pre">import</span></code>-ing packages with many dependencies). Rather than packaging a conda environment within a container, this environment takes advantage of singularity’s ability to manage overlay and <a class="reference external" href="https://en.wikipedia.org/wiki/SquashFS">squashfs</a> filesystems. This allows the ‘container’ to be flexible and extensible in a way that a pure container-based system cannot be. Each <code class="docutils literal notranslate"><span class="pre">analysis</span></code> conda environment is packaged in a squashfs instead of in the container directly, and one or more of these squashfs environments is mounted into a bare-bones container at runtime.</p>
+<p>The concept combines ideas from <a class="reference external" href="https://singularity-hpc.readthedocs.io/en/latest/">Singularity Registry HPC</a>, <a class="reference external" href="https://doi.org/10.1145/3311790.3401776">Rioux et al. <em>PEARC ‘20: Practice and Experience in Advanced Research Computing, July 2020, Pages 72–76</em></a> and the current <code class="docutils literal notranslate"><span class="pre">hh5</span></code> environment in order to improve the deployment, maintenance, accessibility and performance of managed conda environments provided for Climate and Weather researchers on NCI systems.</p>
+<p>This page is structured with usage information first, then details on the setup and configuration below that.</p>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
+<section id="gadi-command-line">
+<h3>Gadi Command Line<a class="headerlink" href="#gadi-command-line" title="Permalink to this headline">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">hh5</span></code> conda environment can be loaded in the same way the legacy environments are:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ module use /g/data/hh5/public/modules
+$ module load conda/analysis3-22.10
+</pre></div>
+</div>
+<p>The stable/unstable structure will continue to be maintained, with new unstable releases every 3 months, roughly coinciding with NCI maintenance periods.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The module takes up to 30 seconds to load, do not Ctrl-C the <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span></code>, it is working.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">analysis3-22.10</span></code> does not work at time of writing. Loading the module performs the equivalent of a <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code>.</p>
+</div>
+</section>
+<section id="are">
+<h3>ARE<a class="headerlink" href="#are" title="Permalink to this headline">#</a></h3>
+<p>A special module is provided for the ARE that allows interactive access to all conda environments via a jupyter notebook and activates the current stable environment. To use it, change the following settings on the ARE launch page:</p>
+<p><img alt="conda-are-settings" src="../_images/conda-are-settings.png" /></p>
+</section>
+<section id="python-shbang-line">
+<h3>Python shbang line<a class="headerlink" href="#python-shbang-line" title="Permalink to this headline">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">python3</span></code> symlink in an environment’s script directory can be used as the shebang on a python script. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/g/data/hh5/public/apps/conda-scripts/analysis-22.10.d/bin/python3</span>
+
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>This will launch the script using the in-container python3 binary. The module does not need to be loaded for this to work, however it is advisable to load the module in advance as there are many other settings in the module file that may be required for your particular workflow.</p>
+</section>
+</section>
+<section id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">#</a></h2>
+<p>The primary motivation of this work is to reduce the inode usage of the <code class="docutils literal notranslate"><span class="pre">hh5</span></code> conda environments. Presently, one of these environments can comprise over 250,000 files, directories and symlinks. This means that maintaining more than a handful of these environments can have a significant impact on the relatively small inode quotas on Gadi, potentially preventing <code class="docutils literal notranslate"><span class="pre">hh5</span></code> from being used for its originally intended purposes. By using a squashfs to contain each conda environment, the total inode count for the entire environment is reduced to one. When combined with the necessary supporting scripts, symlinks and modules, the number of inodes required for an entire analysis environment is reduced by a factor of 100-200 over a standard installation. The total inode count for a base installation with the <code class="docutils literal notranslate"><span class="pre">analysis-22.07</span></code> and <code class="docutils literal notranslate"><span class="pre">analysis-22.10</span></code> environments installed is 13,738, compared to 795,313 inodes for the same environments under the current <code class="docutils literal notranslate"><span class="pre">hh5</span></code> installation.</p>
+<p>There are other, less immediate benefits to deploying conda environments in this manner. The first is the performance benefit achieved by having the entire environment in a single large file. This should improve access times for many of the small file operations required for e.g. python <code class="docutils literal notranslate"><span class="pre">import</span></code> statements, as there is only one file to open, the squashfs file. This reduces the number of IO operations associated with these small file operations, therefore improving performance. Another, less obvious benefit is the ability to atomically update the conda environment. By manipulating mountpoints within singularity, it is possible to update a conda environment in a different directory, or even a different file system to where it deployed. This means that, should an update fail, it can simply be discarded instead of reverted. It also means that updates are atomic, meaning that a user cannot load an environment in an intermediate state, which should improve stability.</p>
+</section>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
+<section id="components">
+<h3>Components<a class="headerlink" href="#components" title="Permalink to this headline">#</a></h3>
+<p>The containerised conda environment is comprised of the following components:</p>
+<ul class="simple">
+<li><p>An uncontainerised ‘base’ conda environment that exists only to install the analysis environments</p></li>
+<li><p>One squashfs for each analysis environment.</p></li>
+<li><p>In the conda <code class="docutils literal notranslate"><span class="pre">envs</span></code> directory, a symlink to each in-container conda environment path</p></li>
+<li><p>A launcher script that runs commands from inside the containerised environment</p></li>
+<li><p>A <code class="docutils literal notranslate"><span class="pre">scripts</span></code> directory that contains an entry for every file on <code class="docutils literal notranslate"><span class="pre">$PATH</span></code> within the squashfs environment.</p></li>
+<li><p>A TCL environment module for each conda environment.</p></li>
+<li><p>A base container used as a launch platform for the squashfs environments</p></li>
+<li><p>An install script designed to be run by a CI implementation that will install and update squashfs environments</p></li>
+<li><p>An initialisation script that will create the base environment.</p></li>
+</ul>
+<p>All these components (apart from the squashfs themselves) can be found in the <code class="docutils literal notranslate"><span class="pre">cms-conda-singularity</span></code> repository on the coecms github.</p>
+</section>
+<section id="layout">
+<h3>Layout<a class="headerlink" href="#layout" title="Permalink to this headline">#</a></h3>
+<p>The above components are installed into the <code class="docutils literal notranslate"><span class="pre">/g/data/hh5/public</span></code> area as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -l /g/data/hh5/public
+drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 apps
+drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 modules
+$ ls -l /g/data/hh5/public/apps
+drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 miniconda3
+drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 conda-scripts
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is the ideal case, the file ownership displayed is contingent on the availability of a service user to use for software deployment. This caveat will apply every time the <code class="docutils literal notranslate"><span class="pre">hh5_apps</span></code> user appears on this page</p>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">apps</span></code> directory contains the base, uncontainerised conda environment, the squashfs files containing each analysis environment (in the <code class="docutils literal notranslate"><span class="pre">miniconda3</span></code> subdirectory) and the machinery that enables commands to be executed inside the container as necessary (in the <code class="docutils literal notranslate"><span class="pre">conda-scripts</span></code> directory). The <code class="docutils literal notranslate"><span class="pre">modules</span></code> directory contains the environment modules needed to load the conda environments.</p>
+</section>
+<section id="the-launcher-script">
+<h3>The launcher script<a class="headerlink" href="#the-launcher-script" title="Permalink to this headline">#</a></h3>
+<p>The launcher script is designed to be the interface between the standard Gadi user environment and the contents of a conda environment squashfs file. It performs several checks in order to generate the correct <code class="docutils literal notranslate"><span class="pre">singularity</span></code> launcher line from outside the container or run the correct command directly if it is invoked from inside the container. Its workflow is as follows:</p>
+<ul class="simple">
+<li><p>Source its configuration script - There are some settings that are loaded at runtime, these are derived from a script named <code class="docutils literal notranslate"><span class="pre">launcher_conf.sh</span></code> that resides in the same directory as <code class="docutils literal notranslate"><span class="pre">launcher.sh</span></code>.</p></li>
+<li><p>Parse out its own command line arguments - <code class="docutils literal notranslate"><span class="pre">launcher.sh</span></code> has some dedicated command line arguments to supply information to it in the case of the environment not being able to be set beforehand (e.g. when invoking <code class="docutils literal notranslate"><span class="pre">ssh</span></code>). Since <code class="docutils literal notranslate"><span class="pre">launcher.sh</span></code> can invoke arbitrary commands, these arguments must be processed and removed from the list of arguments to launch</p></li>
+<li><p>Determine the path to the <code class="docutils literal notranslate"><span class="pre">singularity</span></code> binary - Usually this will be in the conf script or provided by a command line argument. If neither of those things has happened, it will attempt to load the <code class="docutils literal notranslate"><span class="pre">singularity</span></code> module and query the location using the <code class="docutils literal notranslate"><span class="pre">which</span></code> command.</p></li>
+<li><p>Determine whether it is running a command or being invoked directly - if a command linked to <code class="docutils literal notranslate"><span class="pre">launcher.sh</span></code> has been run, the full argument list, minus the <code class="docutils literal notranslate"><span class="pre">launcher.sh</span></code>-specific arguments will be passed to <code class="docutils literal notranslate"><span class="pre">singularity</span> <span class="pre">exec</span></code>. If <code class="docutils literal notranslate"><span class="pre">launcher.sh</span></code> has been invoked directly, the program to run and its arguments are assumed to be in the arguments following <code class="docutils literal notranslate"><span class="pre">launcher.sh</span></code>.</p></li>
+<li><p>Determine if it is being invoked from within a container - if <code class="docutils literal notranslate"><span class="pre">launcher.sh</span></code> determines that it is already inside a singularity container, it will substitute the real path to the binary in place of its own path and run the binary directly.</p></li>
+<li><p>Determine if there is an override script for the command being run - If there is, run this instead of <code class="docutils literal notranslate"><span class="pre">singularity</span> <span class="pre">exec</span></code></p></li>
+<li><p>Determine which squashfs environment(s) are required, and configure the singularity launch options as appropriate.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">singularity</span> <span class="pre">exec</span></code> with all the configuration gathered during the launch process.</p></li>
+</ul>
+</section>
+</section>
+<section id="maintenance">
+<h2>Maintenance<a class="headerlink" href="#maintenance" title="Permalink to this headline">#</a></h2>
+<p>This conda environment is designed to be deployed and maintained entirely by a CI system. This includes its initial deployment. The <code class="docutils literal notranslate"><span class="pre">install.sh</span></code> script handles every action that may need to occur over the lifetime of the <code class="docutils literal notranslate"><span class="pre">hh5</span></code> conda environment. The procedure to perform common operations is detailed below</p>
+<section id="initialise-the-base-conda-environment">
+<h3>Initialise the base conda environment<a class="headerlink" href="#initialise-the-base-conda-environment" title="Permalink to this headline">#</a></h3>
+<p>Ensure that all settings in <code class="docutils literal notranslate"><span class="pre">install_config.sh</span></code> are correct. There are a handful of items that need hard-coded paths in the installation, and they will all be derived from the values in <code class="docutils literal notranslate"><span class="pre">install_config.sh</span></code>. Then install an analysis environment. If the base conda environment does not exist, it will be created when the first analysis environment is installed.</p>
+</section>
+<section id="install-a-new-analysis-environment">
+<h3>Install a new analysis environment<a class="headerlink" href="#install-a-new-analysis-environment" title="Permalink to this headline">#</a></h3>
+<p>Ensure that <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> is correct and creates a valid conda environment. In <code class="docutils literal notranslate"><span class="pre">install_config.sh</span></code>, set <code class="docutils literal notranslate"><span class="pre">VERSION_TO_MODIFY</span></code> to a new value that does not exist in the current <code class="docutils literal notranslate"><span class="pre">envs</span></code> directory (e.g. 23.01 at time of writing). Push the updated <code class="docutils literal notranslate"><span class="pre">install_config.sh</span></code> to the repository. The new environment, including all modules and scripts, will be automatically created by Jenkins.</p>
+</section>
+<section id="add-a-new-package-to-an-existing-analysis-environment">
+<h3>Add a new package to an existing analysis environment<a class="headerlink" href="#add-a-new-package-to-an-existing-analysis-environment" title="Permalink to this headline">#</a></h3>
+<p>Add the new package to the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file in the <code class="docutils literal notranslate"><span class="pre">scripts</span></code> directory in the repository. Test the installation by setting the <code class="docutils literal notranslate"><span class="pre">$CONDA_BASE</span></code> environment variable to the path of a test environment and run <code class="docutils literal notranslate"><span class="pre">install.sh</span></code>. If the tests pass interactively, push the updated <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> to the repository. The update to the production installation will be automatically deployed by Jenkins.</p>
+</section>
+<section id="update-stable-unstable-environment-links-modules">
+<h3>Update stable/unstable environment links/modules<a class="headerlink" href="#update-stable-unstable-environment-links-modules" title="Permalink to this headline">#</a></h3>
+<p>In <code class="docutils literal notranslate"><span class="pre">install_config.sh</span></code>, change the <code class="docutils literal notranslate"><span class="pre">STABLE_VERSION</span></code> and/or <code class="docutils literal notranslate"><span class="pre">UNSTABLE_VERSION</span></code> variables to the conda environments that are becoming the stable and unstable variants. Push the updated <code class="docutils literal notranslate"><span class="pre">install_config.sh</span></code>, the symlinks and module aliases will be
+automatically updated by Jenkins.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This will also trigger an update for the a analysis environment corresponding to the <code class="docutils literal notranslate"><span class="pre">VERSION_TO_MODIFY</span></code> variable.</p>
+</div>
+</section>
+<section id="revert-a-bad-update">
+<h3>Revert a bad update<a class="headerlink" href="#revert-a-bad-update" title="Permalink to this headline">#</a></h3>
+<p>In most cases, if an update fails, it will be discarded and the original retained. If the build and all tests pass, but a user discovers a problem after the new update is deployed, the old one is backed up in the <code class="docutils literal notranslate"><span class="pre">admin</span></code> directory. Restore it as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mv /g/data/hh5/admin/analysis-22.10.sqsh.bak /g/data/hh5/public/apps/miniconda3/envs/analysis-22.10.sqsh
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The backup must be <em>moved</em>, not copied. Using <code class="docutils literal notranslate"><span class="pre">mv</span></code> makes the change between environments atomic, whereas copying will cause a partially written squashfs to be present for the duration of the copy.</p>
+</div>
+</section>
+</section>
+<section id="technical-details">
+<h2>Technical Details<a class="headerlink" href="#technical-details" title="Permalink to this headline">#</a></h2>
+<p>The key difference between a standard conda environment setup and the <code class="docutils literal notranslate"><span class="pre">hh5</span></code> conda is the <code class="docutils literal notranslate"><span class="pre">envs</span></code> directory. In a standard conda environment setup, the envs directory contains a series of directories corresponding to each environment. Each of these directories is a fully self-contained environment, often comprising more than 250,000 individual files. Though these files are usually <a class="reference external" href="https://www.anaconda.com/blog/understanding-and-improving-condas-performance">hardlinked to central package caches</a>, this is not reflected in filesystem quotas. Each path to a hardlinked inode is treated as a separate inode for the purposes of quota enforcement. In the <code class="docutils literal notranslate"><span class="pre">hh5</span></code> environment, the <code class="docutils literal notranslate"><span class="pre">envs</span></code> directory appears as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -l /g/data/hh5/public/apps/miniconda3/envs
+lrwxrwxrwx  1 hh5_apps hh5         15 Dec 23 11:12 analysis3 -&gt; analysis3-22.07
+lrwxrwxrwx  1 hh5_apps hh5         26 Dec 23 11:12 analysis3-22.07 -&gt; /opt/conda/analysis3-22.07
+-rw-rwx---+ 1 hh5_apps hh5 8624431104 Dec 23 11:12 analysis3-22.07.sqsh
+lrwxrwxrwx  1 hh5_apps hh5         26 Jan 12 13:23 analysis3-22.10 -&gt; /opt/conda/analysis3-22.10
+-rw-rwx---+ 1 hh5_apps hh5 9634836480 Jan 12 13:23 analysis3-22.10.sqsh
+lrwxrwxrwx  1 hh5_apps hh5         15 Dec 23 11:12 analysis3-unstable -&gt; analysis3-22.10
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The symlink targets refer to paths that only exist inside the corresponding <code class="docutils literal notranslate"><span class="pre">.sqsh</span></code> files, and as such, they appear broken unless inspected from inside the container with the correct squashfs mounted.</p>
+</div>
+<p>On loading an <code class="docutils literal notranslate"><span class="pre">analysis3-xx.yy</span></code> module (after running <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">use</span> <span class="pre">/g/data/hh5/public/modules</span></code>), a <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code> command is run from inside the container in order to set the environment outside of the container to what would be expected had a <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code> command been run on an uncontainerised environment. The exception is that the <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory inside the environment is translated to the appropriate subdirectory of <code class="docutils literal notranslate"><span class="pre">scripts</span></code>. For example, the path:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">g</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">hh5</span><span class="o">/</span><span class="n">public</span><span class="o">/</span><span class="n">apps</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">analysis3</span><span class="o">-</span><span class="mf">22.10</span><span class="o">/</span><span class="nb">bin</span>
+</pre></div>
+</div>
+<p>becomes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">g</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">hh5</span><span class="o">/</span><span class="n">public</span><span class="o">/</span><span class="n">apps</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">scripts</span><span class="o">/</span><span class="n">analysis3</span><span class="o">-</span><span class="mf">22.10</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="nb">bin</span>
+</pre></div>
+</div>
+<p>The module also sets the <code class="docutils literal notranslate"><span class="pre">SINGULARITYENV_PREPEND_PATH</span></code> environment variable. This variable is modifies the linux <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable only within the container, and is required to ensure the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> inside the container matches <code class="docutils literal notranslate"><span class="pre">PATH</span></code> outside of the container.</p>
+<p>Every entry in the in-container <code class="docutils literal notranslate"><span class="pre">envs/analysis3-22.10/bin</span></code> directory is symlinked to the launcher script placed in the <code class="docutils literal notranslate"><span class="pre">analysis3-22.10.d/bin</span></code> directory. These links are programmatically generated during installation, and invoke singularity with the correct squashfs mounted, and then inspect the link name to determine which command execute the command from within the container. The launcher script also has provisions for command overrides and configuration to alter the behaviour of commands in the container if necessary. The launcher script can also be invoked directly to run arbitrary commands inside the container. For example, running <code class="docutils literal notranslate"><span class="pre">launcher.sh</span> <span class="pre">bash</span></code> will launch an interactive shell inside the container with all correct bind, overlay and squashfs mounts in place.</p>
+<p>The actual container used as the base of the environment contains only enough components to create a functional environment. The container does not contain its own operating system, instead, it is comprised of a series of empty directories and symlinks. The necessary components of Gadi’s operating systems are bind-mounted in at launch time through the launcher script. Though this does make the environment entirely unportable, which goes against the philosophy of containerisation, the container itself only needs to be constructed once for any given system, and reconstruction is trivial. The advantage of this approach is that the conda environment is separate to the container, and therefore multiple conda environments can be present ‘in’ the same container. This also means that the container can never be out of sync as Gadi’s OS receives updates. This allows us to make modifications to the conda environment after installation that enhance the functionality of the environment.</p>
+<p>As a part of the installation process, the <code class="docutils literal notranslate"><span class="pre">openssh</span></code> packages are removed from the conda installation, which forces use of the system <code class="docutils literal notranslate"><span class="pre">ssh</span></code> and, more importantly, its configuration. The <code class="docutils literal notranslate"><span class="pre">openmpi</span></code> package is also replaced by an  <code class="docutils literal notranslate"><span class="pre">openmpi</span></code> distribution installed in <code class="docutils literal notranslate"><span class="pre">/apps</span></code> on Gadi.</p>
+<div class="tip admonition">
+<p class="admonition-title">OpenMPI in Conda</p>
+<p>This means that conda environment has a fully compatible MPI distribution with the Gadi, which solves the problem of conda installing incorrectly configured MPI distributions, and addresses the drawbacks outlined in the <a class="reference external" href="https://docs.sylabs.io/guides/3.3/user-guide/mpi.html">Singularity documentation</a>.</p>
+</div>
+<p>Some external programs are also linked into the scripts directory to modify their behaviour to take into account the containerised environments. For example <code class="docutils literal notranslate"><span class="pre">pbs_tmrsh</span></code>, if invoked when a conda environment is loaded, is modified to load the environment on the remote node before executing the command to be run. In time, <code class="docutils literal notranslate"><span class="pre">ssh</span></code> will also be modified to do this, however, this is significantly more complicated. There is a generic framework to add commands, remove OS packages and symlink <code class="docutils literal notranslate"><span class="pre">/apps</span></code> packages into the squashfs conda environments, determined by the contents of arrays in the <code class="docutils literal notranslate"><span class="pre">install_config.sh</span></code> file.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
