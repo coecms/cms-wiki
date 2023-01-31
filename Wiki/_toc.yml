@@ -56,6 +56,7 @@ parts:
     - file: resources/resources-list.md
     - file: resources/resources-policy.md
     - file: resources/resources-vscode.md
+    - file: resources/resources-grafana-alert.md
     - file: resources/wrf-deprecated.md
   - caption: FAQS 
     chapters:
