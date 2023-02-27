@@ -15,9 +15,6 @@ $ module load conda_concept/analysis3-22.10
 ```
 The stable/unstable structure will continue to be maintained, with new unstable releases every 3 months, roughly coinciding with NCI maintenance periods. 
 ```{note}
-The module takes up to 30 seconds to load, do not Ctrl-C the `module load`, it is working.
-```
-```{note}
 `conda activate analysis3-22.10` does not work at time of writing. Loading the module performs the equivalent of a `conda activate`.
 ```
 
@@ -30,7 +27,7 @@ A special module is provided for the ARE that allows interactive access to all c
 ### Python shbang line
 The `python3` symlink in an environment's script directory can be used as the shebang on a python script. For example:
 ```
-#!/g/data/hh5/public/apps/conda_scripts/analysis-22.10.d/bin/python3
+#!/g/data/hh5/public/apps/cms_conda_scripts/analysis-22.10.d/bin/python3
 
 import sys
 import os
@@ -68,13 +65,13 @@ drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 apps
 drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 modules
 $ ls -l /g/data/hh5/public/apps
 drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 cms_conda
-drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 conda_scripts
+drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 cms_conda_scripts
 ```
 ```{note}
 This is the ideal case, the file ownership displayed is contingent on the availability of a service user to use for software deployment. This caveat will apply every time the `hh5_apps` user appears on this page
 ```
 
-The `apps` directory contains the base, uncontainerised conda environment, the squashfs files containing each analysis environment (in the `cms_conda` subdirectory) and the machinery that enables commands to be executed inside the container as necessary (in the `conda_scripts` directory). The `modules` directory contains the environment modules needed to load the conda environments.
+The `apps` directory contains the base, uncontainerised conda environment, the squashfs files containing each analysis environment (in the `cms_conda` subdirectory) and the machinery that enables commands to be executed inside the container as necessary (in the `cms_conda_scripts` directory). The `modules` directory contains the environment modules needed to load the conda environments.
 
 ### The launcher script
 The launcher script is designed to be the interface between the standard Gadi user environment and the contents of a conda environment squashfs file. It performs several checks in order to generate the correct `singularity` launcher line from outside the container or run the correct command directly if it is invoked from inside the container. Its workflow is as follows:
@@ -134,11 +131,11 @@ The symlink targets refer to paths that only exist inside the corresponding `.sq
 
 On loading an `analysis3-xx.yy` module (after running `module use /g/data/hh5/public/modules`), a `conda activate` command is run from inside the container in order to set the environment outside of the container to what would be expected had a `conda activate` command been run on an uncontainerised environment. The exception is that the `bin` directory inside the environment is translated to the appropriate subdirectory of `scripts`. For example, the path:
 ```
-/g/data/hh5/public/apps/miniconda3/envs/analysis3-22.10/bin
+/g/data/hh5/public/apps/cms_conda/envs/analysis3-22.10/bin
 ```
 becomes
 ```
-/g/data/hh5/public/apps/conda_scripts/analysis3-22.10.d/bin
+/g/data/hh5/public/apps/cms_conda_scripts/analysis3-22.10.d/bin
 ```
 The module also sets the `SINGULARITYENV_PREPEND_PATH` environment variable. This variable is modifies the linux `PATH` environment variable only within the container, and is required to ensure the `PATH` inside the container matches `PATH` outside of the container.
 
@@ -149,7 +146,7 @@ The actual container used as the base of the environment contains only enough co
 As a part of the installation process, the `openssh` packages are removed from the conda installation, which forces use of the system `ssh` and, more importantly, its configuration. The `openmpi` package is also replaced by an  `openmpi` distribution installed in `/apps` on Gadi. 
 ```{admonition} OpenMPI in Conda
 :class: tip
-This means that conda environment has a fully compatible MPI distribution with the Gadi, which solves the problem of conda installing incorrectly configured MPI distributions, and addresses the drawbacks outlined in the [Singularity documentation](https://docs.sylabs.io/guides/3.3/user-guide/mpi.html).
+This means that conda environment has a fully compatible MPI distribution with the Gadi, which solves the problem of conda installing incorrectly configured MPI distributions, and addresses the drawbacks outlined in the [Singularity documentation](https://docs.sylabs.io/guides/3.7/user-guide/mpi.html).
 ```
 
 Some external programs are also linked into the scripts directory to modify their behaviour to take into account the containerised environments. For example `pbs_tmrsh`, if invoked when a conda environment is loaded, is modified to load the environment on the remote node before executing the command to be run. In time, `ssh` will also be modified to do this, however, this is significantly more complicated. There is a generic framework to add commands, remove OS packages and symlink `/apps` packages into the squashfs conda environments, determined by the contents of arrays in the `install_config.sh` file.
