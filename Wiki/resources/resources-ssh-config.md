@@ -1,7 +1,7 @@
 # The recommended SSH config file
 We recommend that in order to use ssh to connect to gadi and/or accessdev, you should use this file as the basis for your ssh configuration file, located in `.ssh/config` on your Desktop/Laptop:
 
-Note that the `UseKeychain` keyword only works on Macbooks and must be omitted on other operating systems.
+Note that the `UseKeychain` keyword only works on MacOS and must be omitted on other operating systems.
 
 ```
 Host *
@@ -23,7 +23,7 @@ Host accessdev
 ```
 
 The explanation of the keywords:
-- `Host` a section header declaring for which connections which settings should be used. `Host *` means that these options should be used for all ssh connections. Then we have 3 specific sections, one for **gadi** and **accessdev** and then one each for them individually.
+- `Host` is a section header declaring for which connections which settings should be used. `Host *` means that these options should be used for all ssh connections. Then we have 3 specific sections, one for both **gadi** and **accessdev** and then one each for them individually.
 - `AddKeysToAgent` means that decrypted ssh keys should automatically be added to the running agent. That way you are no longer asked for the decryption key while the agent is running (usually until reboot).
 - `UseKeychain` is only available on Macbooks. Using this option stores the unencrypted key in the MacOS key chain which is automatically unlocked when you log into your computer. That way you never have to enter the passphrase again.
 - `HostName` the full name of the host. `%h` in this case gets replaced with the short form, for example when running `ssh gadi`, this will equate to `HostName gadi.nci.org.au`
