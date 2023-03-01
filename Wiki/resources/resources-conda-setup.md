@@ -18,12 +18,6 @@ The stable/unstable structure will continue to be maintained, with new unstable 
 `conda activate analysis3-22.10` does not work at time of writing. Loading the module performs the equivalent of a `conda activate`.
 ```
 
-### ARE
-A special module is provided for the ARE that allows interactive access to all conda environments via a jupyter notebook and activates the current stable environment. To use it, change the following settings on the ARE launch page:
-
-![conda-are-settings](../Images/conda-are-settings.png)
-
-
 ### Python shbang line
 The `python3` symlink in an environment's script directory can be used as the shebang on a python script. For example:
 ```
