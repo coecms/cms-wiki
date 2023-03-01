@@ -57,6 +57,7 @@ parts:
     - file: resources/resources-policy.md
     - file: resources/resources-vscode.md
     - file: resources/wrf-deprecated.md
+    - file: resources/resources-ssh-config.md
   - caption: FAQS 
     chapters:
     - file: faqs/faqs-models
