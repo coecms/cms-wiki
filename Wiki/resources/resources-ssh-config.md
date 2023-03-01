@@ -1,8 +1,9 @@
 # The recommended SSH config file
 We recommend that in order to use ssh to connect to gadi and/or accessdev, you should use this file as the basis for your ssh configuration file, located in `.ssh/config` on your Desktop/Laptop:
 
-Note that the `UseKeychain` keyword only works on MacOS and must be omitted on other operating systems.
-
+```{note}
+The `UseKeychain` keyword only works on MacOS and must be omitted on other operating systems.
+```
 ```
 Host *
     AddKeysToAgent yes
