@@ -27,8 +27,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
@@ -59,7 +59,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Data FAQs" href="faqs-data.html" />
-    <link rel="prev" title="WRF porting to NCI machine (Deprecated)" href="../resources/wrf-deprecated.html" />
+    <link rel="prev" title="The recommended SSH config file" href="../resources/resources-ssh-config.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -374,6 +374,11 @@ const thebe_selector_output = ".output, .cell_output"
    WRF porting to NCI machine (Deprecated)
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/resources-ssh-config.html">
+   The recommended SSH config file
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -639,8 +644,8 @@ title="Print to PDF"
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
 <div class="sd-tab-set docutils">
-<input checked="checked" id="81714a26-f384-4cb6-8f22-6355d298b325" name="456586e1-e646-447e-b35b-6542cb7dfdf6" type="radio">
-</input><label class="sd-tab-label" for="81714a26-f384-4cb6-8f22-6355d298b325">
+<input checked="checked" id="39065fc5-663e-4316-8c80-3259be64af9b" name="bc2af746-8517-4263-98dd-ced8344ab31a" type="radio">
+</input><label class="sd-tab-label" for="39065fc5-663e-4316-8c80-3259be64af9b">
 Extracting</label><div class="sd-tab-content docutils">
 <p class="sd-card-text">When compiling the UM, the first step is for the UMUI(x) to extract the source code. If an error occurs, check for these things:</p>
 <ol class="simple">
@@ -678,18 +683,18 @@ If you are using bash, add this line to your <code class="docutils literal notra
 </div>
 <p class="sd-card-text">Then log out of accessdev and log back in, open up umuix again, and check whether the error went away.</p>
 </div>
-<input id="d57e6eda-1dd5-427c-a061-ba49fa787b9c" name="456586e1-e646-447e-b35b-6542cb7dfdf6" type="radio">
-</input><label class="sd-tab-label" for="d57e6eda-1dd5-427c-a061-ba49fa787b9c">
+<input id="aa502041-f7ac-4dda-b3aa-e25f8d351616" name="bc2af746-8517-4263-98dd-ced8344ab31a" type="radio">
+</input><label class="sd-tab-label" for="aa502041-f7ac-4dda-b3aa-e25f8d351616">
 Submiting</label><div class="sd-tab-content docutils">
 <p class="sd-card-text">My second tab</p>
 </div>
-<input id="8b32f32c-ddec-45f2-b14c-bdb0a132448c" name="456586e1-e646-447e-b35b-6542cb7dfdf6" type="radio">
-</input><label class="sd-tab-label" for="8b32f32c-ddec-45f2-b14c-bdb0a132448c">
+<input id="f437b680-12b8-4380-801b-289a709255db" name="bc2af746-8517-4263-98dd-ced8344ab31a" type="radio">
+</input><label class="sd-tab-label" for="f437b680-12b8-4380-801b-289a709255db">
 Compiling</label><div class="sd-tab-content docutils">
 <p class="sd-card-text">My third tab</p>
 </div>
-<input id="0d2d9bed-288a-44fe-ba8d-78a980a1d225" name="456586e1-e646-447e-b35b-6542cb7dfdf6" type="radio">
-</input><label class="sd-tab-label" for="0d2d9bed-288a-44fe-ba8d-78a980a1d225">
+<input id="8a866030-ac41-480f-9777-363d95308be9" name="bc2af746-8517-4263-98dd-ced8344ab31a" type="radio">
+</input><label class="sd-tab-label" for="8a866030-ac41-480f-9777-363d95308be9">
 Running</label><div class="sd-tab-content docutils">
 <p class="sd-card-text"><strong>REPLANCA: PP HEADERS ON ANCILLARY FILE DO NOT MATCH</strong></p>
 <p class="sd-card-text">The model is trying to update an ancillary field, but it is looking for a date that is past the end of the ancillary file. For instance, say an ancillary file is valid for dates between 1850-01-01 and 2001-01-01 and the model is trying to update fields for the date 2001-02-01. The model can’t find this data in the file, so it crashes.</p>
@@ -971,7 +976,7 @@ AssertionError
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./faqs"
         },
         predefinedOutput: true
@@ -986,11 +991,11 @@ AssertionError
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../resources/wrf-deprecated.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../resources/resources-ssh-config.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">WRF porting to NCI machine (Deprecated)</p>
+            <p class="prev-next-title">The recommended SSH config file</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="faqs-data.html" title="next page">

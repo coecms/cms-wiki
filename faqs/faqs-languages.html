@@ -27,8 +27,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
@@ -374,6 +374,11 @@ const thebe_selector_output = ".output, .cell_output"
    WRF porting to NCI machine (Deprecated)
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../resources/resources-ssh-config.html">
+   The recommended SSH config file
+  </a>
+ </li>
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
@@ -600,8 +605,8 @@ title="Print to PDF"
   <section class="tex2jax_ignore mathjax_ignore" id="coding-language-s-faqs">
 <h1>Coding Language’s FAQs<a class="headerlink" href="#coding-language-s-faqs" title="Permalink to this headline">#</a></h1>
 <div class="sd-tab-set docutils">
-<input checked="checked" id="24be98e8-21c7-40cd-b40b-5f9c38404934" name="626cd716-6bb2-486e-a959-78d19baa168d" type="radio">
-</input><label class="sd-tab-label" for="24be98e8-21c7-40cd-b40b-5f9c38404934">
+<input checked="checked" id="b0c8f6ce-e842-43a0-a0f6-dbabc1a3b256" name="9d174b36-63f8-47af-93a8-23cc724864a7" type="radio">
+</input><label class="sd-tab-label" for="b0c8f6ce-e842-43a0-a0f6-dbabc1a3b256">
 Python</label><div class="sd-tab-content docutils">
 <p><strong>1.How to transform 1D lat/lon arrays into 2D lat/lon arrays with Python</strong></p>
 <p>If using numpy or masked arrays, one can use the resize() method. Assuming slat and slon are 1D latitude and longitude arrays, do this:</p>
@@ -619,18 +624,18 @@ Python</label><div class="sd-tab-content docutils">
 </div>
 <p>-1 means that the <code class="docutils literal notranslate"><span class="pre">time</span></code> dimension size will be used as chunk size. If you have 100 timesteps, it would be equivalent to set the new chunks as <code class="docutils literal notranslate"><span class="pre">{time=100}</span></code>.</p>
 </div>
-<input id="9156576b-b594-43ac-85a8-b72c2ad4c101" name="626cd716-6bb2-486e-a959-78d19baa168d" type="radio">
-</input><label class="sd-tab-label" for="9156576b-b594-43ac-85a8-b72c2ad4c101">
+<input id="56336989-9864-4348-a6c4-a949f6a4a3b4" name="9d174b36-63f8-47af-93a8-23cc724864a7" type="radio">
+</input><label class="sd-tab-label" for="56336989-9864-4348-a6c4-a949f6a4a3b4">
 Fortan</label><div class="sd-tab-content docutils">
 <p>stuff</p>
 </div>
-<input id="9054c4cc-8073-4d56-a3f3-5fd429bd4f39" name="626cd716-6bb2-486e-a959-78d19baa168d" type="radio">
-</input><label class="sd-tab-label" for="9054c4cc-8073-4d56-a3f3-5fd429bd4f39">
+<input id="ed4c413b-4491-446a-9bf2-8c763862b5da" name="9d174b36-63f8-47af-93a8-23cc724864a7" type="radio">
+</input><label class="sd-tab-label" for="ed4c413b-4491-446a-9bf2-8c763862b5da">
 C++</label><div class="sd-tab-content docutils">
 <p>stuff</p>
 </div>
-<input id="d671de89-fa5c-4b0d-8c80-1ee381a1e74e" name="626cd716-6bb2-486e-a959-78d19baa168d" type="radio">
-</input><label class="sd-tab-label" for="d671de89-fa5c-4b0d-8c80-1ee381a1e74e">
+<input id="9838f3aa-d79e-40cc-8e90-775fc533f4c7" name="9d174b36-63f8-47af-93a8-23cc724864a7" type="radio">
+</input><label class="sd-tab-label" for="9838f3aa-d79e-40cc-8e90-775fc533f4c7">
 Bash</label><div class="sd-tab-content docutils">
 <p>stuff</p>
 </div>
@@ -649,7 +654,7 @@ Bash</label><div class="sd-tab-content docutils">
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./faqs"
         },
         predefinedOutput: true
