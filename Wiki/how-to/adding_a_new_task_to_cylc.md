@@ -1,5 +1,7 @@
+# Adding a new task to a rose suite
+
 ## Issue
-In this example, we want to add an additional task before every instance of the coupler to update the sea surface temperature ancillary file.
+In this example, we want to add an additional task to an ACCESS-CM2 run, to be executed before every instance of the coupler to update the sea surface temperature ancillary file.
 
 ## Step 0: Make a copy of the ACCESS-CM2 suite
 Run this command on accessdev to make a copy of the **ACCESS-CM2** suite:
