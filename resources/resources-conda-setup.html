@@ -1,54 +1,65 @@
 
+
 <!DOCTYPE html>
 
-<html>
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Conda hh5 environment setup &#8212; CLEX CMS Wiki</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
     <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script src="../_static/tabs.js"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -56,61 +67,93 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'resources/resources-conda-setup';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Resources" href="resources-list.html" />
-    <link rel="prev" title="Datasets" href="../data/data-datasets.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
-    
-
-    <!-- Google Analytics -->
-    
+    <link rel="prev" title="Adding a new task to a rose suite" href="../how-to/adding_a_new_task_to_cylc.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../introduction.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/CLEX-logo.jpg" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">CLEX CMS Wiki</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../_static/CLEX-logo.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/CLEX-logo.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -119,697 +162,332 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  CMS team
- </span>
-</p>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">CMS team</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../team.html">
-   CMS team
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../team.html">CMS team</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Services
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Services</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../services/services-intro.html">
-   Services provided
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../services/services-help.html">
-   CMS help
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../services/services-one-on-one.html">
-   One-on-one Meetings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../services/services-codebreak.html">
-   Codebreak
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../services/services-conda.html">
-   Conda Python Environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../services/services-conda-updates.html">
-   Conda environments update history
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../services/services-projects.html">
-   NCI project management guidelines
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../services/services-intro.html">Services provided</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../services/services-help.html">CMS help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../services/services-one-on-one.html">One-on-one Meetings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../services/services-codebreak.html">Codebreak</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../services/services-conda.html">Conda Python Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../services/services-conda-updates.html">Conda environments update history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../services/services-projects.html">NCI project management guidelines</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Training
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Training</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../training/training-intro.html">
-   Training offered
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../training/training-intro.html">Training offered</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Getting started
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting started</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../starting/starting-intro.html">
-   Working …
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../starting/starting-gadi.html">
-   Working on Gadi
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../starting/starting-gadi-scratch.html">
-     NCI
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       scratch
-      </span>
-     </code>
-     file management policy
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../starting/starting-laptop.html">
-   Starting on personal computer
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../starting/starting-data.html">
-   Climate data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../starting/starting-leaving.html">
-   Leaving CLEX guidelines
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../starting/starting-resources.html">
-   Resources
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/starting-intro.html">Working …</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../starting/starting-gadi.html">Working on Gadi</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../starting/starting-gadi-scratch.html">NCI <code class="docutils literal notranslate"><span class="pre">scratch</span></code> file management policy</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Models
- </span>
-</p>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/starting-laptop.html">Starting on personal computer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/starting-data.html">Climate data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/starting-leaving.html">Leaving CLEX guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/starting-resources.html">Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Models</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../models/models-intro.html">
-   Models
-  </a>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../models/models-access.html">
-   ACCESS
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../models/models-um.html">
-     UM
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../models/models-mom.html">
-     MOM
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../models/models-cable.html">
-     CABLE
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../models/models-wrf.html">
-   WRF
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../models/models-wrf-1.html">
-     How to run WRF
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../models/models-wrf-2.html">
-     How to run WRF with ERA-Interim data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../models/models-wrf-3.html">
-     How to run WRF with inputs in netcdf format
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../models/models-wrf-4.html">
-     Tips and Tricks
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../models/models-wrf-5.html">
-     WRF performance
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../models/models-wrf-6.html">
-     Current WRF porting to NCI
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../models/models-intro.html">Models</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../models/models-access.html">ACCESS</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-um.html">UM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-mom.html">MOM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-cable.html">CABLE</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Data
- </span>
-</p>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../models/models-wrf.html">WRF</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-wrf-1.html">How to run WRF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-wrf-2.html">How to run WRF with ERA-Interim data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-wrf-3.html">How to run WRF with inputs in netcdf format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-wrf-4.html">Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-wrf-5.html">WRF performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-wrf-6.html">Current WRF porting to NCI</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../data/data-intro.html">
-   Data
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../data/data-resources.html">
-   Resources
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../data/data-datasets.html">
-   Datasets
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../data/data-intro.html">Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/data-resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/data-datasets.html">Datasets</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Resources
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">How-Tos</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../how-to/adding_a_new_task_to_cylc.html">Adding a new task to a rose suite</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   Conda hh5 environment setup
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="resources-list.html">
-   Resources
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="resources-policy.html">
-   ARC Centre of Excellence for Climate Extremes: Data strategies
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="resources-vscode.html">
-   VS Code
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="wrf-deprecated.html">
-   WRF porting to NCI machine (Deprecated)
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="resources-ssh-config.html">
-   The recommended SSH config file
-  </a>
- </li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Conda hh5 environment setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources-list.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources-policy.html">ARC Centre of Excellence for Climate Extremes: Data strategies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources-vscode.html">VS Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrf-deprecated.html">WRF porting to NCI machine (Deprecated)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resources-ssh-config.html">The recommended SSH config file</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  FAQS
- </span>
-</p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FAQS</span></p>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../faqs/faqs-models.html">
-   Model’s FAQs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../faqs/faqs-data.html">
-   Data FAQs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../faqs/faqs-languages.html">
-   Coding Language’s FAQs
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../faqs/faqs-gadi.html">
-   Gadi FAQs
-  </a>
- </li>
+<li class="toctree-l1"><a class="reference internal" href="../faqs/faqs-models.html">Model’s FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faqs/faqs-data.html">Data FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faqs/faqs-languages.html">Coding Language’s FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faqs/faqs-gadi.html">Gadi FAQs</a></li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coecms/cms-wiki" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coecms/cms-wiki/edit/main/Wiki/resources/resources-conda-setup.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coecms/cms-wiki/issues/new?title=Issue%20on%20page%20%2Fresources/resources-conda-setup.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
 </div>
 
 
-          
-
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
-<div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
 
 
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/resources/resources-conda-setup.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
   </span>
-
-</label>
-
-        
-    </div>
-    <div class="header-article__right">
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/coecms/cms-wiki"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/coecms/cms-wiki/issues/new?title=Issue%20on%20page%20%2Fresources/resources-conda-setup.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/coecms/cms-wiki/edit/main/Wiki/resources/resources-conda-setup.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Edit this page"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-pencil-alt"></i>
-  </span>
-<span class="headerbtn__text-container">suggest edit</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/resources/resources-conda-setup.md"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.md</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#usage">
-   Usage
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gadi-command-line">
-     Gadi Command Line
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#are">
-     ARE
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#python-shbang-line">
-     Python shbang line
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#motivation">
-   Motivation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#components">
-     Components
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#layout">
-     Layout
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-launcher-script">
-     The launcher script
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#maintenance">
-   Maintenance
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#initialise-the-base-conda-environment">
-     Initialise the base conda environment
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#install-a-new-analysis-environment">
-     Install a new analysis environment
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-a-new-package-to-an-existing-analysis-environment">
-     Add a new package to an existing analysis environment
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#update-stable-unstable-environment-links-modules">
-     Update stable/unstable environment links/modules
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#revert-a-bad-update">
-     Revert a bad update
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#technical-details">
-   Technical Details
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Conda hh5 environment setup</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#usage">
-   Usage
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#gadi-command-line">
-     Gadi Command Line
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#are">
-     ARE
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#python-shbang-line">
-     Python shbang line
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#motivation">
-   Motivation
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#overview">
-   Overview
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#components">
-     Components
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#layout">
-     Layout
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-launcher-script">
-     The launcher script
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#maintenance">
-   Maintenance
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#initialise-the-base-conda-environment">
-     Initialise the base conda environment
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#install-a-new-analysis-environment">
-     Install a new analysis environment
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#add-a-new-package-to-an-existing-analysis-environment">
-     Add a new package to an existing analysis environment
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#update-stable-unstable-environment-links-modules">
-     Update stable/unstable environment links/modules
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#revert-a-bad-update">
-     Revert a bad update
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#technical-details">
-   Technical Details
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Conda hh5 environment setup</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gadi-command-line">Gadi Command Line</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#are">ARE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-shbang-line">Python shbang line</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#components">Components</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout">Layout</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-launcher-script">The launcher script</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maintenance">Maintenance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initialise-the-base-conda-environment">Initialise the base conda environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-a-new-analysis-environment">Install a new analysis environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-new-package-to-an-existing-analysis-environment">Add a new package to an existing analysis environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-stable-unstable-environment-links-modules">Update stable/unstable environment links/modules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#revert-a-bad-update">Revert a bad update</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-details">Technical Details</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
   <section class="tex2jax_ignore mathjax_ignore" id="conda-hh5-environment-setup">
-<h1>Conda hh5 environment setup<a class="headerlink" href="#conda-hh5-environment-setup" title="Permalink to this headline">#</a></h1>
+<h1>Conda hh5 environment setup<a class="headerlink" href="#conda-hh5-environment-setup" title="Permalink to this heading">#</a></h1>
 <p>The next-generation of the <code class="docutils literal notranslate"><span class="pre">hh5</span></code> conda environment takes advantage of containerisation in order to reduce inode usage and increase performance of the small file operations associated with some actions in python (e.g. <code class="docutils literal notranslate"><span class="pre">import</span></code>-ing packages with many dependencies). Rather than packaging a conda environment within a container, this environment takes advantage of singularity’s ability to manage overlay and <a class="reference external" href="https://en.wikipedia.org/wiki/SquashFS">squashfs</a> filesystems. This allows the ‘container’ to be flexible and extensible in a way that a pure container-based system cannot be. Each <code class="docutils literal notranslate"><span class="pre">analysis</span></code> conda environment is packaged in a squashfs instead of in the container directly, and one or more of these squashfs environments is mounted into a bare-bones container at runtime.</p>
 <p>The concept combines ideas from <a class="reference external" href="https://singularity-hpc.readthedocs.io/en/latest/">Singularity Registry HPC</a>, <a class="reference external" href="https://doi.org/10.1145/3311790.3401776">Rioux et al. <em>PEARC ‘20: Practice and Experience in Advanced Research Computing, July 2020, Pages 72–76</em></a> and the current <code class="docutils literal notranslate"><span class="pre">hh5</span></code> environment in order to improve the deployment, maintenance, accessibility and performance of managed conda environments provided for Climate and Weather researchers on NCI systems.</p>
 <p>This page is structured with usage information first, then details on the setup and configuration below that.</p>
 <section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">#</a></h2>
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h2>
 <section id="gadi-command-line">
-<h3>Gadi Command Line<a class="headerlink" href="#gadi-command-line" title="Permalink to this headline">#</a></h3>
+<h3>Gadi Command Line<a class="headerlink" href="#gadi-command-line" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">hh5</span></code> conda environment can be loaded in the same way the legacy environments are:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ module use /g/data/hh5/public/modules
 $ module load conda/analysis3-22.10
@@ -826,12 +504,12 @@ $ module load conda/analysis3-22.10
 </div>
 </section>
 <section id="are">
-<h3>ARE<a class="headerlink" href="#are" title="Permalink to this headline">#</a></h3>
+<h3>ARE<a class="headerlink" href="#are" title="Permalink to this heading">#</a></h3>
 <p>A special module is provided for the ARE that allows interactive access to all conda environments via a jupyter notebook and activates the current stable environment. To use it, change the following settings on the ARE launch page:</p>
 <p><img alt="conda-are-settings" src="../_images/conda-are-settings.png" /></p>
 </section>
 <section id="python-shbang-line">
-<h3>Python shbang line<a class="headerlink" href="#python-shbang-line" title="Permalink to this headline">#</a></h3>
+<h3>Python shbang line<a class="headerlink" href="#python-shbang-line" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">python3</span></code> symlink in an environment’s script directory can be used as the shebang on a python script. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/g/data/hh5/public/apps/conda-scripts/analysis-22.10.d/bin/python3</span>
 
@@ -844,14 +522,14 @@ $ module load conda/analysis3-22.10
 </section>
 </section>
 <section id="motivation">
-<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">#</a></h2>
+<h2>Motivation<a class="headerlink" href="#motivation" title="Permalink to this heading">#</a></h2>
 <p>The primary motivation of this work is to reduce the inode usage of the <code class="docutils literal notranslate"><span class="pre">hh5</span></code> conda environments. Presently, one of these environments can comprise over 250,000 files, directories and symlinks. This means that maintaining more than a handful of these environments can have a significant impact on the relatively small inode quotas on Gadi, potentially preventing <code class="docutils literal notranslate"><span class="pre">hh5</span></code> from being used for its originally intended purposes. By using a squashfs to contain each conda environment, the total inode count for the entire environment is reduced to one. When combined with the necessary supporting scripts, symlinks and modules, the number of inodes required for an entire analysis environment is reduced by a factor of 100-200 over a standard installation. The total inode count for a base installation with the <code class="docutils literal notranslate"><span class="pre">analysis-22.07</span></code> and <code class="docutils literal notranslate"><span class="pre">analysis-22.10</span></code> environments installed is 13,738, compared to 795,313 inodes for the same environments under the current <code class="docutils literal notranslate"><span class="pre">hh5</span></code> installation.</p>
 <p>There are other, less immediate benefits to deploying conda environments in this manner. The first is the performance benefit achieved by having the entire environment in a single large file. This should improve access times for many of the small file operations required for e.g. python <code class="docutils literal notranslate"><span class="pre">import</span></code> statements, as there is only one file to open, the squashfs file. This reduces the number of IO operations associated with these small file operations, therefore improving performance. Another, less obvious benefit is the ability to atomically update the conda environment. By manipulating mountpoints within singularity, it is possible to update a conda environment in a different directory, or even a different file system to where it deployed. This means that, should an update fail, it can simply be discarded instead of reverted. It also means that updates are atomic, meaning that a user cannot load an environment in an intermediate state, which should improve stability.</p>
 </section>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">#</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
 <section id="components">
-<h3>Components<a class="headerlink" href="#components" title="Permalink to this headline">#</a></h3>
+<h3>Components<a class="headerlink" href="#components" title="Permalink to this heading">#</a></h3>
 <p>The containerised conda environment is comprised of the following components:</p>
 <ul class="simple">
 <li><p>An uncontainerised ‘base’ conda environment that exists only to install the analysis environments</p></li>
@@ -867,7 +545,7 @@ $ module load conda/analysis3-22.10
 <p>All these components (apart from the squashfs themselves) can be found in the <code class="docutils literal notranslate"><span class="pre">cms-conda-singularity</span></code> repository on the coecms github.</p>
 </section>
 <section id="layout">
-<h3>Layout<a class="headerlink" href="#layout" title="Permalink to this headline">#</a></h3>
+<h3>Layout<a class="headerlink" href="#layout" title="Permalink to this heading">#</a></h3>
 <p>The above components are installed into the <code class="docutils literal notranslate"><span class="pre">/g/data/hh5/public</span></code> area as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -l /g/data/hh5/public
 drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 apps
@@ -884,7 +562,7 @@ drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 conda-scripts
 <p>The <code class="docutils literal notranslate"><span class="pre">apps</span></code> directory contains the base, uncontainerised conda environment, the squashfs files containing each analysis environment (in the <code class="docutils literal notranslate"><span class="pre">miniconda3</span></code> subdirectory) and the machinery that enables commands to be executed inside the container as necessary (in the <code class="docutils literal notranslate"><span class="pre">conda-scripts</span></code> directory). The <code class="docutils literal notranslate"><span class="pre">modules</span></code> directory contains the environment modules needed to load the conda environments.</p>
 </section>
 <section id="the-launcher-script">
-<h3>The launcher script<a class="headerlink" href="#the-launcher-script" title="Permalink to this headline">#</a></h3>
+<h3>The launcher script<a class="headerlink" href="#the-launcher-script" title="Permalink to this heading">#</a></h3>
 <p>The launcher script is designed to be the interface between the standard Gadi user environment and the contents of a conda environment squashfs file. It performs several checks in order to generate the correct <code class="docutils literal notranslate"><span class="pre">singularity</span></code> launcher line from outside the container or run the correct command directly if it is invoked from inside the container. Its workflow is as follows:</p>
 <ul class="simple">
 <li><p>Source its configuration script - There are some settings that are loaded at runtime, these are derived from a script named <code class="docutils literal notranslate"><span class="pre">launcher_conf.sh</span></code> that resides in the same directory as <code class="docutils literal notranslate"><span class="pre">launcher.sh</span></code>.</p></li>
@@ -899,22 +577,22 @@ drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 conda-scripts
 </section>
 </section>
 <section id="maintenance">
-<h2>Maintenance<a class="headerlink" href="#maintenance" title="Permalink to this headline">#</a></h2>
+<h2>Maintenance<a class="headerlink" href="#maintenance" title="Permalink to this heading">#</a></h2>
 <p>This conda environment is designed to be deployed and maintained entirely by a CI system. This includes its initial deployment. The <code class="docutils literal notranslate"><span class="pre">install.sh</span></code> script handles every action that may need to occur over the lifetime of the <code class="docutils literal notranslate"><span class="pre">hh5</span></code> conda environment. The procedure to perform common operations is detailed below</p>
 <section id="initialise-the-base-conda-environment">
-<h3>Initialise the base conda environment<a class="headerlink" href="#initialise-the-base-conda-environment" title="Permalink to this headline">#</a></h3>
+<h3>Initialise the base conda environment<a class="headerlink" href="#initialise-the-base-conda-environment" title="Permalink to this heading">#</a></h3>
 <p>Ensure that all settings in <code class="docutils literal notranslate"><span class="pre">install_config.sh</span></code> are correct. There are a handful of items that need hard-coded paths in the installation, and they will all be derived from the values in <code class="docutils literal notranslate"><span class="pre">install_config.sh</span></code>. Then install an analysis environment. If the base conda environment does not exist, it will be created when the first analysis environment is installed.</p>
 </section>
 <section id="install-a-new-analysis-environment">
-<h3>Install a new analysis environment<a class="headerlink" href="#install-a-new-analysis-environment" title="Permalink to this headline">#</a></h3>
+<h3>Install a new analysis environment<a class="headerlink" href="#install-a-new-analysis-environment" title="Permalink to this heading">#</a></h3>
 <p>Ensure that <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> is correct and creates a valid conda environment. In <code class="docutils literal notranslate"><span class="pre">install_config.sh</span></code>, set <code class="docutils literal notranslate"><span class="pre">VERSION_TO_MODIFY</span></code> to a new value that does not exist in the current <code class="docutils literal notranslate"><span class="pre">envs</span></code> directory (e.g. 23.01 at time of writing). Push the updated <code class="docutils literal notranslate"><span class="pre">install_config.sh</span></code> to the repository. The new environment, including all modules and scripts, will be automatically created by Jenkins.</p>
 </section>
 <section id="add-a-new-package-to-an-existing-analysis-environment">
-<h3>Add a new package to an existing analysis environment<a class="headerlink" href="#add-a-new-package-to-an-existing-analysis-environment" title="Permalink to this headline">#</a></h3>
+<h3>Add a new package to an existing analysis environment<a class="headerlink" href="#add-a-new-package-to-an-existing-analysis-environment" title="Permalink to this heading">#</a></h3>
 <p>Add the new package to the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file in the <code class="docutils literal notranslate"><span class="pre">scripts</span></code> directory in the repository. Test the installation by setting the <code class="docutils literal notranslate"><span class="pre">$CONDA_BASE</span></code> environment variable to the path of a test environment and run <code class="docutils literal notranslate"><span class="pre">install.sh</span></code>. If the tests pass interactively, push the updated <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> to the repository. The update to the production installation will be automatically deployed by Jenkins.</p>
 </section>
 <section id="update-stable-unstable-environment-links-modules">
-<h3>Update stable/unstable environment links/modules<a class="headerlink" href="#update-stable-unstable-environment-links-modules" title="Permalink to this headline">#</a></h3>
+<h3>Update stable/unstable environment links/modules<a class="headerlink" href="#update-stable-unstable-environment-links-modules" title="Permalink to this heading">#</a></h3>
 <p>In <code class="docutils literal notranslate"><span class="pre">install_config.sh</span></code>, change the <code class="docutils literal notranslate"><span class="pre">STABLE_VERSION</span></code> and/or <code class="docutils literal notranslate"><span class="pre">UNSTABLE_VERSION</span></code> variables to the conda environments that are becoming the stable and unstable variants. Push the updated <code class="docutils literal notranslate"><span class="pre">install_config.sh</span></code>, the symlinks and module aliases will be
 automatically updated by Jenkins.</p>
 <div class="admonition note">
@@ -923,7 +601,7 @@ automatically updated by Jenkins.</p>
 </div>
 </section>
 <section id="revert-a-bad-update">
-<h3>Revert a bad update<a class="headerlink" href="#revert-a-bad-update" title="Permalink to this headline">#</a></h3>
+<h3>Revert a bad update<a class="headerlink" href="#revert-a-bad-update" title="Permalink to this heading">#</a></h3>
 <p>In most cases, if an update fails, it will be discarded and the original retained. If the build and all tests pass, but a user discovers a problem after the new update is deployed, the old one is backed up in the <code class="docutils literal notranslate"><span class="pre">admin</span></code> directory. Restore it as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mv /g/data/hh5/admin/analysis-22.10.sqsh.bak /g/data/hh5/public/apps/miniconda3/envs/analysis-22.10.sqsh
 </pre></div>
@@ -935,7 +613,7 @@ automatically updated by Jenkins.</p>
 </section>
 </section>
 <section id="technical-details">
-<h2>Technical Details<a class="headerlink" href="#technical-details" title="Permalink to this headline">#</a></h2>
+<h2>Technical Details<a class="headerlink" href="#technical-details" title="Permalink to this heading">#</a></h2>
 <p>The key difference between a standard conda environment setup and the <code class="docutils literal notranslate"><span class="pre">hh5</span></code> conda is the <code class="docutils literal notranslate"><span class="pre">envs</span></code> directory. In a standard conda environment setup, the envs directory contains a series of directories corresponding to each environment. Each of these directories is a fully self-contained environment, often comprising more than 250,000 individual files. Though these files are usually <a class="reference external" href="https://www.anaconda.com/blog/understanding-and-improving-condas-performance">hardlinked to central package caches</a>, this is not reflected in filesystem quotas. Each path to a hardlinked inode is treated as a separate inode for the purposes of quota enforcement. In the <code class="docutils literal notranslate"><span class="pre">hh5</span></code> environment, the <code class="docutils literal notranslate"><span class="pre">envs</span></code> directory appears as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -l /g/data/hh5/public/apps/miniconda3/envs
 lrwxrwxrwx  1 hh5_apps hh5         15 Dec 23 11:12 analysis3 -&gt; analysis3-22.07
@@ -990,50 +668,126 @@ lrwxrwxrwx  1 hh5_apps hh5         15 Dec 23 11:12 analysis3-unstable -&gt; anal
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="../data/data-datasets.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Datasets</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../how-to/adding_a_new_task_to_cylc.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Adding a new task to a rose suite</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="resources-list.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="resources-list.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Resources</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
-</div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
-  
-    By CLEX-CMS<br/>
-  
-      &copy; Copyright 2022.<br/>
-</p>
-        </footer>
-    </div>
-    
-</div>
-
-
       </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gadi-command-line">Gadi Command Line</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#are">ARE</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-shbang-line">Python shbang line</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#components">Components</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#layout">Layout</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-launcher-script">The launcher script</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maintenance">Maintenance</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initialise-the-base-conda-environment">Initialise the base conda environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#install-a-new-analysis-environment">Install a new analysis environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#add-a-new-package-to-an-existing-analysis-environment">Add a new package to an existing analysis environment</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#update-stable-unstable-environment-links-modules">Update stable/unstable environment links/modules</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#revert-a-bad-update">Revert a bad update</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-details">Technical Details</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CLEX-CMS
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

@@ -1,0 +1,753 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Adding a new task to a rose suite &#8212; CLEX CMS Wiki</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'how-to/adding_a_new_task_to_cylc';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Conda hh5 environment setup" href="../resources/resources-conda-setup.html" />
+    <link rel="prev" title="Datasets" href="../data/data-datasets.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../introduction.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/CLEX-logo.jpg" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/CLEX-logo.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../introduction.html">
+                    CMS Wiki
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">CMS team</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../team.html">CMS team</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Services</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../services/services-intro.html">Services provided</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../services/services-help.html">CMS help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../services/services-one-on-one.html">One-on-one Meetings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../services/services-codebreak.html">Codebreak</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../services/services-conda.html">Conda Python Environments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../services/services-conda-updates.html">Conda environments update history</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../services/services-projects.html">NCI project management guidelines</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Training</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../training/training-intro.html">Training offered</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Getting started</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../starting/starting-intro.html">Working …</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../starting/starting-gadi.html">Working on Gadi</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../starting/starting-gadi-scratch.html">NCI <code class="docutils literal notranslate"><span class="pre">scratch</span></code> file management policy</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/starting-laptop.html">Starting on personal computer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/starting-data.html">Climate data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/starting-leaving.html">Leaving CLEX guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../starting/starting-resources.html">Resources</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Models</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../models/models-intro.html">Models</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../models/models-access.html">ACCESS</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-um.html">UM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-mom.html">MOM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-cable.html">CABLE</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../models/models-wrf.html">WRF</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-wrf-1.html">How to run WRF</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-wrf-2.html">How to run WRF with ERA-Interim data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-wrf-3.html">How to run WRF with inputs in netcdf format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-wrf-4.html">Tips and Tricks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-wrf-5.html">WRF performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-wrf-6.html">Current WRF porting to NCI</a></li>
+</ul>
+</li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../data/data-intro.html">Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/data-resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data/data-datasets.html">Datasets</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">How-Tos</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Adding a new task to a rose suite</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../resources/resources-conda-setup.html">Conda hh5 environment setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/resources-list.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/resources-policy.html">ARC Centre of Excellence for Climate Extremes: Data strategies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/resources-vscode.html">VS Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/wrf-deprecated.html">WRF porting to NCI machine (Deprecated)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/resources-ssh-config.html">The recommended SSH config file</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">FAQS</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../faqs/faqs-models.html">Model’s FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faqs/faqs-data.html">Data FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faqs/faqs-languages.html">Coding Language’s FAQs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faqs/faqs-gadi.html">Gadi FAQs</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/coecms/cms-wiki" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coecms/cms-wiki/edit/main/Wiki/how-to/adding_a_new_task_to_cylc.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/coecms/cms-wiki/issues/new?title=Issue%20on%20page%20%2Fhow-to/adding_a_new_task_to_cylc.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/how-to/adding_a_new_task_to_cylc.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Adding a new task to a rose suite</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#issue">Issue</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-0-make-a-copy-of-the-access-cm2-suite">Step 0: Make a copy of the ACCESS-CM2 suite</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-make-a-shell-script-to-update-the-sst-files">Step 1: Make a shell script to update the SST files:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-an-option-for-running-the-task">Step 2: Create an option for running the task</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2a-create-metadata-for-the-new-option">Step 2a: Create Metadata for the new option</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-add-the-configuration-for-the-task">Step 3: Add the configuration for the task</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3a-add-the-metadata-for-the-task">Step 3a: Add the metadata for the task</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-create-the-environment-for-the-new-task">Step 4: Create the environment for the new task</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-add-the-task-into-the-graph">Step 5: Add the task into the graph.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-check-in-your-changes">Step 6: Check in your changes.</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="adding-a-new-task-to-a-rose-suite">
+<h1>Adding a new task to a rose suite<a class="headerlink" href="#adding-a-new-task-to-a-rose-suite" title="Permalink to this heading">#</a></h1>
+<section id="issue">
+<h2>Issue<a class="headerlink" href="#issue" title="Permalink to this heading">#</a></h2>
+<p>In this example, we want to add an additional task to an ACCESS-CM2 run, to be executed before every instance of the coupler to update the sea surface temperature ancillary file.</p>
+</section>
+<section id="step-0-make-a-copy-of-the-access-cm2-suite">
+<h2>Step 0: Make a copy of the ACCESS-CM2 suite<a class="headerlink" href="#step-0-make-a-copy-of-the-access-cm2-suite" title="Permalink to this heading">#</a></h2>
+<p>Run this command on accessdev to make a copy of the <strong>ACCESS-CM2</strong> suite:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosie<span class="w"> </span>copy<span class="w"> </span>u-br565
+</pre></div>
+</div>
+<p>This command will create a copy of the original ACCESS-CM2 suite with a new suite-id that we can modify and track without interfering with the original suite.</p>
+<p>“Suite Directory” from now on will mean the directory <code class="docutils literal notranslate"><span class="pre">${HOME}/roses/&lt;suite-id&gt;</span></code>.</p>
+</section>
+<section id="step-1-make-a-shell-script-to-update-the-sst-files">
+<h2>Step 1: Make a shell script to update the SST files:<a class="headerlink" href="#step-1-make-a-shell-script-to-update-the-sst-files" title="Permalink to this heading">#</a></h2>
+<p>Create a file called <code class="docutils literal notranslate"><span class="pre">update_sst.sh</span></code> and located in the directory <code class="docutils literal notranslate"><span class="pre">apps/update_sst/bin</span></code> under your rose suite directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+
+<span class="c1"># Ensure that the relevant variables are set:</span>
+
+<span class="nb">test</span><span class="w"> </span>-z<span class="w"> </span><span class="si">${</span><span class="nv">FILE_TEMPLATE</span><span class="si">}</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">1</span>
+<span class="nb">test</span><span class="w"> </span>-z<span class="w"> </span><span class="si">${</span><span class="nv">SST_FILE</span><span class="si">}</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">2</span>
+<span class="nb">test</span><span class="w"> </span>-z<span class="w"> </span><span class="si">${</span><span class="nv">YEAR</span><span class="si">}</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">3</span>
+
+<span class="c1"># Obtain current model year f</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">YEAR_FILE</span><span class="o">=</span><span class="si">${</span><span class="nv">FILE_TEMPLATE</span><span class="p">/YEAR/</span><span class="si">${</span><span class="nv">YEAR</span><span class="si">}}</span>
+<span class="nb">echo</span><span class="w"> </span><span class="o">===============================================</span>
+<span class="nb">echo</span><span class="w"> </span>Running<span class="w"> </span>script<span class="w"> </span>to<span class="w"> </span>update<span class="w"> </span>Sea<span class="w"> </span>Surface<span class="w"> </span>Temparatures
+<span class="nb">echo</span><span class="w"> </span>Input<span class="w"> </span>file:<span class="w"> </span><span class="si">${</span><span class="nv">YEAR_FILE</span><span class="si">}</span>
+<span class="nb">echo</span><span class="w"> </span>Output<span class="w"> </span>file:<span class="w"> </span><span class="si">${</span><span class="nv">SST_FILE</span><span class="si">}</span>
+<span class="nb">echo</span><span class="w"> </span><span class="o">===============================================</span>
+
+<span class="nv">CMD</span><span class="o">=</span><span class="s2">&quot;cp </span><span class="si">${</span><span class="nv">YEAR_FILE</span><span class="si">}</span><span class="s2"> </span><span class="si">${</span><span class="nv">SST_FILE</span><span class="si">}</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="nv">$CMD</span>
+<span class="nv">$CMD</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">exit</span><span class="w"> </span><span class="m">4</span>
+<span class="nb">echo</span><span class="w"> </span><span class="o">===============================================</span>
+</pre></div>
+</div>
+<p>Make sure that the script is executable by running the command:
+<code class="docutils literal notranslate"><span class="pre">chmod</span> <span class="pre">+x</span> <span class="pre">update_sst.sh</span></code></p>
+</section>
+<section id="step-2-create-an-option-for-running-the-task">
+<h2>Step 2: Create an option for running the task<a class="headerlink" href="#step-2-create-an-option-for-running-the-task" title="Permalink to this heading">#</a></h2>
+<p>Modify the file <code class="docutils literal notranslate"><span class="pre">rose-suite.conf</span></code> in your suite directory:
+Somewhere in the section <code class="docutils literal notranslate"><span class="pre">[jinja2:suite.rc]</span></code> (which should be the only section in this file), add the line:</p>
+<div class="highlight-jinja2 notranslate"><div class="highlight"><pre><span></span>UPDATE_SST=true
+</pre></div>
+</div>
+<section id="step-2a-create-metadata-for-the-new-option">
+<h3>Step 2a: Create Metadata for the new option<a class="headerlink" href="#step-2a-create-metadata-for-the-new-option" title="Permalink to this heading">#</a></h3>
+<p>Modify the file <code class="docutils literal notranslate"><span class="pre">meta/rose-meta.conf</span></code> and add this block:</p>
+<div class="highlight-jinja2 notranslate"><div class="highlight"><pre><span></span>[jinja2:suite.rc=UPDATE_SST]
+compulsory=true
+description=Run a script to update the SST files every run
+help=
+title=Update SST
+ns=Build and Run
+sort-key=3
+type=boolean
+</pre></div>
+</div>
+<p>More info on the metadata can be found on the <a class="reference external" href="https://metomi.github.io/rose/doc/html/api/configuration/metadata.html">Rose Documentation on Metadata</a></p>
+<p>What’s important is that this will add the option to switch the task on and off to the <code class="docutils literal notranslate"><span class="pre">suite</span> <span class="pre">conf</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Build</span> <span class="pre">and</span> <span class="pre">Run</span></code> window in <strong>rose</strong>.</p>
+</section>
+</section>
+<section id="step-3-add-the-configuration-for-the-task">
+<h2>Step 3: Add the configuration for the task<a class="headerlink" href="#step-3-add-the-configuration-for-the-task" title="Permalink to this heading">#</a></h2>
+<p>Create a new subdirectory <code class="docutils literal notranslate"><span class="pre">app/update_sst</span></code> and in this directory, create the file <code class="docutils literal notranslate"><span class="pre">rose-app.conf</span></code>:</p>
+<div class="highlight-jinja2 notranslate"><div class="highlight"><pre><span></span>[command]
+default=update_sst.sh
+[env]
+FILE_TEMPLATE=/PATH/TO/SST_FILES/sst_YEAR_something.nc
+SST_FILE=work/ocean/INPUT/temp_sfc_restore.nc
+</pre></div>
+</div>
+<p>Note that these are the default values.
+There is an option to change these values in the rose editor.</p>
+<section id="step-3a-add-the-metadata-for-the-task">
+<h3>Step 3a: Add the metadata for the task<a class="headerlink" href="#step-3a-add-the-metadata-for-the-task" title="Permalink to this heading">#</a></h3>
+<p>Create a new subdirectory <code class="docutils literal notranslate"><span class="pre">app/update_sst/meta</span></code>.
+In this subdirectory, create the following file <code class="docutils literal notranslate"><span class="pre">rose-meta.conf</span></code>:</p>
+<div class="highlight-jinja2 notranslate"><div class="highlight"><pre><span></span>[env=FILE_TEMPLATE]
+description=All SST Files
+help=Template of the files that contain the sea surface temperatures by year.
+    =the term YEAR will be replaced with the actual year.
+compulsory=true
+pattern=^.*YEAR.*$
+
+[env=SST_FILE]
+description=SST File
+help=SST file expected by model
+compulsory=true
+</pre></div>
+</div>
+</section>
+</section>
+<section id="step-4-create-the-environment-for-the-new-task">
+<h2>Step 4: Create the environment for the new task<a class="headerlink" href="#step-4-create-the-environment-for-the-new-task" title="Permalink to this heading">#</a></h2>
+<p>Edit the file <code class="docutils literal notranslate"><span class="pre">suite.rc</span></code></p>
+<p>Search for the entry <code class="docutils literal notranslate"><span class="pre">[[coupled]]</span></code>, create a new section directly before that called <code class="docutils literal notranslate"><span class="pre">[[update_sst]]</span></code>:</p>
+<div class="highlight-jinja2 notranslate"><div class="highlight"><pre><span></span>    [[update_sst]]
+        inherit = None, NCI, SHARE
+        script = rose task-run --verbose
+        [[[remote]]]
+            host = {{ COMPUTE_HOST }}
+        [[[job]]]
+            batch system = background
+        [[[environment]]]
+            YEAR = $(cylc cyclepoint --print-year)
+</pre></div>
+</div>
+<p>The line <code class="docutils literal notranslate"><span class="pre">batch</span> <span class="pre">system</span> <span class="pre">=</span> <span class="pre">background</span></code> overwrites the setting <code class="docutils literal notranslate"><span class="pre">batch</span> <span class="pre">system</span></code> setting of <code class="docutils literal notranslate"><span class="pre">[[NCI]]</span></code> and makes the job run on the login node, which means it will run directly and not spend time in the queue. That’s possible because it’s a very short and straightforward job.</p>
+<p>If it were more complicated, we’d omit the <code class="docutils literal notranslate"><span class="pre">[[[job]]]</span></code> section so that it inherits the PBS settings from <code class="docutils literal notranslate"><span class="pre">[[NCI]]</span></code> and runs as a queued job.</p>
+</section>
+<section id="step-5-add-the-task-into-the-graph">
+<h2>Step 5: Add the task into the graph.<a class="headerlink" href="#step-5-add-the-task-into-the-graph" title="Permalink to this heading">#</a></h2>
+<p>We now need to add the <code class="docutils literal notranslate"><span class="pre">update_sst</span></code> task to the task graph, if <code class="docutils literal notranslate"><span class="pre">UPDATE_SST</span></code> is true.
+The graph is described in two sections, <code class="docutils literal notranslate"><span class="pre">[[[</span> <span class="pre">R1</span> <span class="pre">]]]</span></code> for the initial run, and <code class="docutils literal notranslate"><span class="pre">[[[</span> <span class="pre">{RESUB}</span> <span class="pre">]]]</span></code> for successive runs.</p>
+<p>The second is easier to read, so we start there.</p>
+<p>On line 86, we <em>add</em> the new part graph:</p>
+<div class="highlight-jinja2 notranslate"><div class="highlight"><pre><span></span>{% if UPDATE_SST %} 
+filemove[-{{RESUB}}] =&gt; update_sst =&gt; coupled 
+{% endif %}
+</pre></div>
+</div>
+<p>The central location in the graph for <code class="docutils literal notranslate"><span class="pre">[[[</span> <span class="pre">R1</span> <span class="pre">]]]</span></code> is harder to parse, manual folding of <code class="docutils literal notranslate"><span class="pre">if</span></code> and <code class="docutils literal notranslate"><span class="pre">endifs</span></code> is needed to deduce that the central graph for running the model is in line 72 and reads:</p>
+<div class="highlight-jinja2 notranslate"><div class="highlight"><pre><span></span>install_ancil =&gt; coupled
+</pre></div>
+</div>
+<p>We <em>insert</em> our task in this line like this:</p>
+<div class="highlight-jinja2 notranslate"><div class="highlight"><pre><span></span>install_ancil =&gt; {{ &quot;update_sst =&gt; &quot; if UPDATE_SST else &quot;&quot; }} coupled
+</pre></div>
+</div>
+</section>
+<section id="step-6-check-in-your-changes">
+<h2>Step 6: Check in your changes.<a class="headerlink" href="#step-6-check-in-your-changes" title="Permalink to this heading">#</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>svn<span class="w"> </span>add<span class="w"> </span>app/update_sst
+svn<span class="w"> </span>ci<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;include script to update SST files&#39;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./how-to"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../data/data-datasets.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Datasets</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../resources/resources-conda-setup.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Conda hh5 environment setup</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#issue">Issue</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-0-make-a-copy-of-the-access-cm2-suite">Step 0: Make a copy of the ACCESS-CM2 suite</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-make-a-shell-script-to-update-the-sst-files">Step 1: Make a shell script to update the SST files:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-create-an-option-for-running-the-task">Step 2: Create an option for running the task</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2a-create-metadata-for-the-new-option">Step 2a: Create Metadata for the new option</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-add-the-configuration-for-the-task">Step 3: Add the configuration for the task</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3a-add-the-metadata-for-the-task">Step 3a: Add the metadata for the task</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-create-the-environment-for-the-new-task">Step 4: Create the environment for the new task</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-add-the-task-into-the-graph">Step 5: Add the task into the graph.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-6-check-in-your-changes">Step 6: Check in your changes.</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By CLEX-CMS
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
