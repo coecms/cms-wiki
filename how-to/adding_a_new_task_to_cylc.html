@@ -475,7 +475,10 @@ document.write(`
 <h1>Adding a new task to a rose suite<a class="headerlink" href="#adding-a-new-task-to-a-rose-suite" title="Permalink to this heading">#</a></h1>
 <section id="issue">
 <h2>Issue<a class="headerlink" href="#issue" title="Permalink to this heading">#</a></h2>
-<p>In this example, we want to add an additional task to an ACCESS-CM2 run, to be executed before every instance of the coupler to update the sea surface temperature ancillary file.</p>
+<p>In this example, we need to update the SST ancillary file in an otherwise normal ACCESS-CM2 run regularly.
+In a separate directory, we have the specific annual SST files, and before each model year, we need to copy over the correct file to the location.</p>
+<p>This requires an additional task in the ACCESS-CM2 suite, to be run just before the model itself.
+This how-to guides us through the process.</p>
 </section>
 <section id="step-0-make-a-copy-of-the-access-cm2-suite">
 <h2>Step 0: Make a copy of the ACCESS-CM2 suite<a class="headerlink" href="#step-0-make-a-copy-of-the-access-cm2-suite" title="Permalink to this heading">#</a></h2>
@@ -488,7 +491,7 @@ document.write(`
 </section>
 <section id="step-1-make-a-shell-script-to-update-the-sst-files">
 <h2>Step 1: Make a shell script to update the SST files:<a class="headerlink" href="#step-1-make-a-shell-script-to-update-the-sst-files" title="Permalink to this heading">#</a></h2>
-<p>Create a file called <code class="docutils literal notranslate"><span class="pre">update_sst.sh</span></code> and located in the directory <code class="docutils literal notranslate"><span class="pre">apps/update_sst/bin</span></code> under your rose suite directory:</p>
+<p>Create a file called <code class="docutils literal notranslate"><span class="pre">update_sst.sh</span></code> in the directory <code class="docutils literal notranslate"><span class="pre">apps/update_sst/bin</span></code> under your rose suite directory:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
 <span class="c1"># Ensure that the relevant variables are set:</span>
@@ -500,7 +503,7 @@ document.write(`
 <span class="c1"># Obtain current model year f</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">YEAR_FILE</span><span class="o">=</span><span class="si">${</span><span class="nv">FILE_TEMPLATE</span><span class="p">/YEAR/</span><span class="si">${</span><span class="nv">YEAR</span><span class="si">}}</span>
 <span class="nb">echo</span><span class="w"> </span><span class="o">===============================================</span>
-<span class="nb">echo</span><span class="w"> </span>Running<span class="w"> </span>script<span class="w"> </span>to<span class="w"> </span>update<span class="w"> </span>Sea<span class="w"> </span>Surface<span class="w"> </span>Temparatures
+<span class="nb">echo</span><span class="w"> </span>Running<span class="w"> </span>script<span class="w"> </span>to<span class="w"> </span>update<span class="w"> </span>Sea<span class="w"> </span>Surface<span class="w"> </span>Temperatures
 <span class="nb">echo</span><span class="w"> </span>Input<span class="w"> </span>file:<span class="w"> </span><span class="si">${</span><span class="nv">YEAR_FILE</span><span class="si">}</span>
 <span class="nb">echo</span><span class="w"> </span>Output<span class="w"> </span>file:<span class="w"> </span><span class="si">${</span><span class="nv">SST_FILE</span><span class="si">}</span>
 <span class="nb">echo</span><span class="w"> </span><span class="o">===============================================</span>
