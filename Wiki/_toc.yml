@@ -50,6 +50,9 @@ parts:
     - file: data/data-intro
     - file: data/data-resources
     - file: data/data-datasets
+  - caption: How-Tos
+    chapters:
+    - file: how-to/adding_a_new_task_to_cylc.md
   - caption: Resources 
     chapters:
     - file: resources/resources-conda-setup.md
