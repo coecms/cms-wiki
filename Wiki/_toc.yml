@@ -32,12 +32,12 @@ parts:
   - caption: Models
     chapters:
     - file: models/models-intro
-    - file: models/models-aus2200
     - file: models/models-access
-      sections:
-      - file: models/models-um
-      - file: models/models-mom
-      - file: models/models-cable
+    - file: models/models-um
+      sections: 
+      - file: models/models-aus2200
+    - file: models/models-mom
+    - file: models/models-cable
     - file: models/models-wrf
       sections:
       - file: models/models-wrf-1.md

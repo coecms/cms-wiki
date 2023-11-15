@@ -22,7 +22,11 @@ This page assumes a familiarity with the general structure of rose-cylc suites a
 ## Task descriptions
 Though derived from the standard Regional Nested Suite (see e.g. [Regional Practical 2023](https://code.metoffice.gov.uk/trac/jumps/wiki/RegionaPractical2023)), the AUS2200 suite contains a number of changes designed to optimise the suite workflow. The model runs, whether continuous or restarted, are divided into 6 hour cycles, with the task graph for each cycle represented in the following image
 
-[![](../Images/AUS2200/suite-overview.png)](../Images/AUS2200/suite-overview.png)
+```{image} ../Images/AUS2200/suite-overview.png
+:alt: suite overview
+:width: 700px
+:align: center
+```
 
 ### Cold start tasks
 The tasks `install_cold_idl` and `install_cold_hpc` symlink the appropriate STASH master, ancil configurations and prebuilt software into the suite share directory. In this version of the suite, the `install_ec_startdata` task does nothing as the initial conditions are derived from data already present on disk.
