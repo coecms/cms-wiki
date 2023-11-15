@@ -32,6 +32,7 @@ parts:
   - caption: Models
     chapters:
     - file: models/models-intro
+    - file: models/models-aus2200
     - file: models/models-access
       sections:
       - file: models/models-um
