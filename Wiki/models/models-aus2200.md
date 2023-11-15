@@ -20,17 +20,16 @@ This page assumes a familiarity with the general structure of rose-cylc suites a
  * Run suite
 
 ## Task descriptions
-Though derived from the standard Regional Nested Suite (see e.g. [Regional Practical 2023](https://code.metoffice.gov.uk/trac/jumps/wiki/RegionaPractical2023) (MOSRS account required)), the AUS2200 suite contains a number of changes designed to optimise the suite workflow. The model runs, whether continuous or restarted, are divided into 6 hour cycles, with the task graph for each cycle represented in the following image
+Though derived from the standard Regional Nested Suite (see e.g. [Regional Practical 2023](https://code.metoffice.gov.uk/trac/jumps/wiki/RegionaPractical2023)), the AUS2200 suite contains a number of changes designed to optimise the suite workflow. The model runs, whether continuous or restarted, are divided into 6 hour cycles, with the task graph for each cycle represented in the following image
+
 [![](../Images/AUS2200/suite-overview.png)](../Images/AUS2200/suite-overview.png)
 
 ### Cold start tasks
-The tasks `install_cold_idl` and `install_cold_hpc` symlink the appropriate STASHmaster, ancil configurations and prebuilt software into the suite share directory.
-
-### `install_ec_startdata`
-In this version of the suite, this task does nothing as the initial conditions are derived from data already present on disk.
+The tasks `install_cold_idl` and `install_cold_hpc` symlink the appropriate STASH master, ancil configurations and prebuilt software into the suite share directory. In this version of the suite, the `install_ec_startdata` task does nothing as the initial conditions are derived from data already present on disk.
 
 ### `fcm_make_um`
 This task builds the Unified Model in the rose suite share directory. It is recommended to only run this task once, and have every other variant of the AUS2200 suite use the existing initial build. This can be configured in 'General run options' section of the rose config editor.
+
 ![disable um build](../Images/AUS2200/disable-um-build.png)
 
 ### `get_lbc_from_archive`
@@ -38,7 +37,12 @@ This task attempts to retrieve the spatial boundary conditions for the upcoming 
 ```
 ARCHIVE_DIR = {{BC_ARCHIVE_DIR}}/{{mod["lbc_freq"][0]}}/{{NLBC_TIMES}}
 ```
-Where `{{BC_ARCHIVE_DIR}}` is a top-level directory specified in `rose-suite.conf`, `{{mod["lbc_freq"][0]}}` is the frequency with which the boundary is synchronised with the top-level domain run in seconds, and `{{NLBC_TIMES}}` is the number of times the boundary conditions will be syncrhonised within a model run. This is to ensure that should the run length or boundary synchronisation periods are modified at any time, the incorrect boundary conditions will not be re-used. 
+Where 
+ * `{{BC_ARCHIVE_DIR}}` is a top-level directory specified in `rose-suite.conf`
+* `{{mod["lbc_freq"][0]}}` is the frequency with which the boundary is synchronised with the top-level domain run in seconds
+* `{{NLBC_TIMES}}` is the number of times the boundary conditions will be syncrhonised within a model run. 
+
+This is to ensure that should the run length or boundary synchronisation periods are modified at any time, the incorrect boundary conditions will not be re-used. 
 
 This task is used to determine whether to generate boundary conditions at all. If the boundary conditions are successfully retrieved from the archive directory, the tasks associated with the driving model required to create the boundary conditions will not run. The exception to this is in the initial cycle point, where a new input dump also needs to be created from the driving model. 
 
@@ -48,11 +52,12 @@ This task will fail if the boundary conditions do not exist. **This is intention
 Should the boundary conditions not be present, this task will be marked as failed and the driving model tasks will run. Once the driving model tasks are completed, the failed `get_lbc_from_archive` task is deleted and the workflow can proceed. This task is not run if `Archive LBCS` is set to false in the 'Driving model setup' section of the rose suite configuration (`{{ARCHIVE_LBCS}}` in `rose-suite.conf`)
 
 ### `nci_era5grib`
-This task converts ERA5 and ERA5Land data to GRIB format in order to be used as input into the driving model reconfiguration tasks. This task will run on the initial cycle point of a suite, and when archived boundary conditions have not been found in any other cycle point. By default, this task saves the converted grib files to a central working directory outside of the cylc-run directory. This acts as an archiving step, and the converted grib files will not be re-created if they already exist. This directory is given by `{{dm_ec_ic_lbc_dir}}` in both `rose-suite.conf` and the rose suite configuration.
+This task converts ERA5 and ERA5Land data to GRIB format in order to be used as input into the driving model reconfiguration tasks. This task will run on the initial cycle point of a suite, and when archived boundary conditions have not been found in any other cycle point. By default, this task saves the converted grib files to a central working directory outside of the cylc-run directory. This acts as an archiving task, and the converted grib files will not be re-created if they already exist. This directory is given by `{{dm_ec_ic_lbc_dir}}` in both `rose-suite.conf` and the rose suite configuration.
 
 The runtime for this task is variable, if all grib files are already present, then it completes in a few seconds. If none of the grib files are present, this task can take from 10 minutes to almost an hour. Unfortunately the cause of this variability is not known. 
 
 The configuration settings for this task and for `get_lbc_from_archive` can be found in the 'Driving model setup' section of the rose config editor
+
 ![driving model setup](../Images/AUS2200/driving-model-setup.png)
 
 ### `ec_recon_nnn`
@@ -68,16 +73,21 @@ This task archives the boundary conditions created by `aus2200_d0198_RA3_um_crea
 
 ### `recover_sst`
 This task retrieves the sea-surface temperature from input dump file created by the `ec_recon_000` task. This is necessary as there is an error in the sea ice concentration in the dump file caused by the interpolation from the low-resolution ERA5 dataset, combined with the `era5grib` library's handling of missing values. This can be summarised visually in the following images (Right image created by Martin Dix)
+
 ![suspicious sea ice](../Images/AUS2200/suspicious-sea-ice.png)
 
-Any of the large resolution pixels that the reconfiguration step has determined to contain more than some fraction of ocean is treated as an ocean point with a sea ice fraction of about 14%. This error is rectified by restoring the sea ice fraction from the ancillary files, however the UM cannot do this without also loading the sea surface temperature from an ancillary file. This step ensures the sea surface temperature is not modified. The addition of these ancillary files into the input dump is controlled by the `2` and `3` entries under 'Configure ancils and initialise dump fields' section of the rose suite configuration
+Any of the large resolution pixels that the reconfiguration task has determined to contain more than some fraction of ocean is treated as an ocean point with a sea ice fraction of about 14%. This error is rectified by restoring the sea ice fraction from the ancillary files, however the UM cannot do this without also loading the sea surface temperature from an ancillary file. This task ensures the sea surface temperature is not modified. The addition of these ancillary files into the input dump is controlled by the `2` and `3` entries under 'Configure ancils and initialise dump fields' section of the rose suite configuration
+
 ![recover sst](../Images/AUS2200/recover-sst.png)
 
 ### `create_soil_moisture_ancil`
-This step is used to carry over soil moisture from a previous run of the suite. When performing restart runs, it is advisable to carry the soil moisture through the entire run, as soil moisture has a much longer spin-up time than atmospheric processes. The restart run procedure is explained in more detail in the [Restart and Spinup](#restart-and-spinup) section below. This task is used to partially serialise restart runs, it can be submitted at any time and will wait until the correct dump file has been created from a previous run of the suite before creating the soil moisture ancillary file. The addition of this ancillary file into the input dump is controlled by the `1` entry under 'Configure ancils and initialise dump fields'.
+This task is used to carry over soil moisture from a previous run of the suite. When performing restart runs, it is advisable to carry the soil moisture through the entire run, as soil moisture has a much longer spin-up time than atmospheric processes. The restart run procedure is explained in more detail in the [Restart and Spinup](#restart-and-spinup) section below. This task is used to partially serialise restart runs, it can be submitted at any time and will wait until the correct dump file has been created from a previous run of the suite before creating the soil moisture ancillary file. The addition of this ancillary file into the input dump is controlled by the `1` entry under 'Configure ancils and initialise dump fields'.
+
 ![soil moisture ancil](../Images/AUS2200/spinup-soil-mositure.png)
 
- The creation of this ancillary file is controlled by the `SOIL_MOISTURE_CARRYOVER` setting under 'Cycling options' under the 'Nesting Suite' area in the rose suite configuration. Note that if this is set to false, the addition of the soil moisture field must be removed from the input dump. This is done by right-clicking on the row in the 'Configure ancils and initialise dump fields' area and selecting 'Ignore this section'.
+ The creation of this ancillary file is controlled by the `SOIL_MOISTURE_CARRYOVER` setting under 'Cycling options' under the 'Nesting Suite' area in the rose suite configuration.
+ 
+ Note that if this is set to false, the addition of the soil moisture field must be removed from the input dump. This is done by right-clicking on the row in the 'Configure ancils and initialise dump fields' area and selecting 'Ignore this section'.
 
 ### `aus2200_d0198_RA3_um_recon`
 This is the main reconfiguration task for creating the model input dump. It is run once per suite, and for the remainder of the cycle points, the output dump is fed directly into the model as the input dump for the next cycle. This job is configured to run on 2 sapphire rapids nodes (`normalsr` queue, 208 cores) and runs for approximately 38 minutes.
@@ -95,22 +105,25 @@ This is a standard task in all UM suites that archives logs and cleans working d
 
 ### `convert_to_nc`
 
-This task converts the raw UM output from the previous cycle to netCDF format. It is advised to retain this step, as the converted netCDF output tales up around 1/6th the disk space of the raw UM output. This step can also act as a 'copy output to final location' step. This task is only run when 'Convert output to netCDF' is set to true under 'General Run Options' (`{{CONVERT_TO_NETCDF}}` in `rose-suite.conf`). The final location of the netCDF files is set in the 'Path to converted netCDF files' configuration option (`{{NC_OUTPUT_PATH}}` in `rose-suite.conf`)
+This task converts the raw UM output from the previous cycle to netCDF format. It is advised to retain this task, as the converted netCDF output takes up around 1/6th the disk space of the raw UM output. This task removes the need to run the ACCESS-Archiver and can be used to move the output to its final location. This task is only run when 'Convert output to netCDF' is set to true under 'General Run Options' (`{{CONVERT_TO_NETCDF}}` in `rose-suite.conf`). The final location of the netCDF files is set in the 'Path to converted netCDF files' configuration option (`{{NC_OUTPUT_PATH}}` in `rose-suite.conf`)
+
 ![convert to netcdf](../Images/AUS2200/convert-netcdf.png)
-The netCDF files are created by the `um2netcdf4` python package, which uses `iris` to create the netCDF files. This step runs on 26 sapphire rapids cores (`normalsr` queue) and completes in about 20 minutes.
+
+The netCDF files are created by the `um2netcdf4` python package, which uses `iris` to create the netCDF files. This task runs on 26 sapphire rapids cores (`normalsr` queue) and completes in about 20 minutes.
 
 ### `verify_nc`
-This task uses `iris` and `xarray` to verify that the netCDF files created in the `convert_to_nc` step are correct. This step runs on one Sapphire Rapids node (`normalsr` queue, 104 cpus) and completes in about 10 minutes.
+This task uses `iris` and `xarray` to verify that the netCDF files created in the `convert_to_nc` task are correct. This task runs on one Sapphire Rapids node (`normalsr` queue, 104 cpus) and completes in about 10 minutes.
 
 ## Restart and Spinup
 
 There are two different run styles for the AUS2200 suite used in experiments, they are the 'continuous' and 'restart' style runs. The continuous run style is fairly straight forward. All that is necessary to configure is the `INITIAL_CYCLE_POINT` and `FINAL_CYCLE_POINT`, and the model will run in 6-hour cycle points between those two time stamps. 
 
 Restart style runs are more complex, as each restart may require spin-up time, and output fields may need to be carried over between overlapping suite runs.The AUS2200 suite has the ability to manage this, specifically for soil moisture fields. The suite can be configured to carry over soil moisture data between 24-hour restart runs. This is controlled by a combination of the `create_soil_moisture_ancil` task, and the input into the `aus2200_d0198_RA3_um_recon` task. To enable soil moisture carry-over, set `SOIL_MOISTURE_CARRYOVER` to true, and set `SPINUP_HOURS` to an integer values 
+
 ![soil moisture carryover](../Images/AUS2200/soil-moisture-carryover.PNG).
 
 Spin up hours is only used in restart runs, and determines how many hours of the model run are estimated to be required to 'spin-up' the atmosphere model. Typically, the model is restarted every 24 hours, and run for `24 + SPINUP_HOURS` model hours,  with the first `SPINUP_HOURS` discarded. In order for the soil moisture carryover to work, the suites must adhere to a strict naming convention that allows the `create_soil_moisture_ancil` task to derive the name of the previous restart suite. The convention is as follows:
-```{note}
+```{admonition} Suite naming convention
 For a suite named u-ab123 with an initial cycle point of 20010101T0000 with `SPINUP_HOURS` set to 24, and set to run for 48 hours, the soil moisture will be carried over from the model dump created at cycle point 20001231T1800 of the cylc suite named `u-ab123-20001231T0000`. The `rose date` function is used to calculate the date stamps for the previous suite, but this does rely on `SPINUP_HOURS` being set correctly.
 ```
 The `create_soil_moisture_ancil` task is configured to wait for the completion of the `aus2200_d0198_RA3_um_fcst_000` task from the previous suite. Therefore, it is possible to run multiple versions of the AUS2200 suite that rely on soil moisture carryover simultaneously. This will allow initial and boundary conditions to be created and cached ahead of time, whilst the reconfiguration and model run tasks will only commence when the data required is present. This saves a significant amount of resources, as it is typical for model runs to overlap due to the required spinup time. Later model runs can therefore use cache boundary conditions created for earlier cases.
