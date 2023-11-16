@@ -19,12 +19,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -37,14 +37,15 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/basic.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/admonitions.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystyle.css" />
     <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
@@ -82,6 +83,15 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
@@ -142,13 +152,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+  
     
     
       
     
     
-    <img src="../_static/CLEX-logo.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/CLEX-logo.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/CLEX-logo.jpg" class="logo__image only-light" alt="CLEX CMS Wiki - Home"/>
+    <script>document.write(`<img src="../_static/CLEX-logo.jpg" class="logo__image only-dark" alt="CLEX CMS Wiki - Home"/>`);</script>
   
   
 </a></div>
@@ -195,12 +206,13 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Models</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../models/models-intro.html">Models</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../models/models-access.html">ACCESS</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/models-um.html">UM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/models-mom.html">MOM</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/models-cable.html">CABLE</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/models-access.html">ACCESS</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../models/models-um.html">UM</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/models-aus2200.html">AUS2200 - A complete guide</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../models/models-mom.html">MOM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../models/models-cable.html">CABLE</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../models/models-wrf.html">WRF</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="../models/models-wrf-1.html">How to run WRF</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/models-wrf-2.html">How to run WRF with ERA-Interim data</a></li>
@@ -408,10 +420,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
   </button>
 `);
 </script>
@@ -419,7 +431,7 @@ document.write(`
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
@@ -448,7 +460,6 @@ document.write(`
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gadi-command-line">Gadi Command Line</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#are">ARE</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-shbang-line">Python shbang line</a></li>
 </ul>
 </li>
@@ -496,22 +507,13 @@ $ module load conda/analysis3-22.10
 <p>The stable/unstable structure will continue to be maintained, with new unstable releases every 3 months, roughly coinciding with NCI maintenance periods.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The module takes up to 30 seconds to load, do not Ctrl-C the <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span></code>, it is working.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
 <p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">analysis3-22.10</span></code> does not work at time of writing. Loading the module performs the equivalent of a <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code>.</p>
 </div>
-</section>
-<section id="are">
-<h3>ARE<a class="headerlink" href="#are" title="Permalink to this heading">#</a></h3>
-<p>A special module is provided for the ARE that allows interactive access to all conda environments via a jupyter notebook and activates the current stable environment. To use it, change the following settings on the ARE launch page:</p>
-<p><img alt="conda-are-settings" src="../_images/conda-are-settings.png" /></p>
 </section>
 <section id="python-shbang-line">
 <h3>Python shbang line<a class="headerlink" href="#python-shbang-line" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">python3</span></code> symlink in an environment’s script directory can be used as the shebang on a python script. For example:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/g/data/hh5/public/apps/conda-scripts/analysis-22.10.d/bin/python3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/g/data/hh5/public/apps/cms_conda_scripts/analysis-22.10.d/bin/python3</span>
 
 <span class="kn">import</span> <span class="nn">sys</span>
 <span class="kn">import</span> <span class="nn">os</span>
@@ -548,18 +550,14 @@ $ module load conda/analysis3-22.10
 <h3>Layout<a class="headerlink" href="#layout" title="Permalink to this heading">#</a></h3>
 <p>The above components are installed into the <code class="docutils literal notranslate"><span class="pre">/g/data/hh5/public</span></code> area as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -l /g/data/hh5/public
-drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 apps
-drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 modules
-$ ls -l /g/data/hh5/public/apps
-drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 miniconda3
-drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 conda-scripts
+drwxrwxr-x+  2 hh5_apps hh5  4096 Dec 14 22:31 apps
+drwxrwxr-x+  2 hh5_apps hh5  4096 Dec 14 22:31 modules
+$ ls -ld /g/data/hh5/public/apps
+drwxrws---+ 18 hh5_apps hh5 4096 Jun 13 10:33 cms_conda
+drwxrws---+  8 hh5_apps hh5 4096 Aug 28 16:57 cms_conda_scripts
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is the ideal case, the file ownership displayed is contingent on the availability of a service user to use for software deployment. This caveat will apply every time the <code class="docutils literal notranslate"><span class="pre">hh5_apps</span></code> user appears on this page</p>
-</div>
-<p>The <code class="docutils literal notranslate"><span class="pre">apps</span></code> directory contains the base, uncontainerised conda environment, the squashfs files containing each analysis environment (in the <code class="docutils literal notranslate"><span class="pre">miniconda3</span></code> subdirectory) and the machinery that enables commands to be executed inside the container as necessary (in the <code class="docutils literal notranslate"><span class="pre">conda-scripts</span></code> directory). The <code class="docutils literal notranslate"><span class="pre">modules</span></code> directory contains the environment modules needed to load the conda environments.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">apps</span></code> directory contains the base, uncontainerised conda environment, the squashfs files containing each analysis environment (in the <code class="docutils literal notranslate"><span class="pre">cms_conda</span></code> subdirectory) and the machinery that enables commands to be executed inside the container as necessary (in the <code class="docutils literal notranslate"><span class="pre">cms_conda_scripts</span></code> directory). The <code class="docutils literal notranslate"><span class="pre">modules</span></code> directory contains the environment modules needed to load the conda environments.</p>
 </section>
 <section id="the-launcher-script">
 <h3>The launcher script<a class="headerlink" href="#the-launcher-script" title="Permalink to this heading">#</a></h3>
@@ -603,7 +601,7 @@ automatically updated by Jenkins.</p>
 <section id="revert-a-bad-update">
 <h3>Revert a bad update<a class="headerlink" href="#revert-a-bad-update" title="Permalink to this heading">#</a></h3>
 <p>In most cases, if an update fails, it will be discarded and the original retained. If the build and all tests pass, but a user discovers a problem after the new update is deployed, the old one is backed up in the <code class="docutils literal notranslate"><span class="pre">admin</span></code> directory. Restore it as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mv /g/data/hh5/admin/analysis-22.10.sqsh.bak /g/data/hh5/public/apps/miniconda3/envs/analysis-22.10.sqsh
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mv /g/data/hh5/admin/analysis-22.10.sqsh.bak /g/data/hh5/public/apps/cms_conda/envs/analysis-22.10.sqsh
 </pre></div>
 </div>
 <div class="admonition warning">
@@ -615,12 +613,12 @@ automatically updated by Jenkins.</p>
 <section id="technical-details">
 <h2>Technical Details<a class="headerlink" href="#technical-details" title="Permalink to this heading">#</a></h2>
 <p>The key difference between a standard conda environment setup and the <code class="docutils literal notranslate"><span class="pre">hh5</span></code> conda is the <code class="docutils literal notranslate"><span class="pre">envs</span></code> directory. In a standard conda environment setup, the envs directory contains a series of directories corresponding to each environment. Each of these directories is a fully self-contained environment, often comprising more than 250,000 individual files. Though these files are usually <a class="reference external" href="https://www.anaconda.com/blog/understanding-and-improving-condas-performance">hardlinked to central package caches</a>, this is not reflected in filesystem quotas. Each path to a hardlinked inode is treated as a separate inode for the purposes of quota enforcement. In the <code class="docutils literal notranslate"><span class="pre">hh5</span></code> environment, the <code class="docutils literal notranslate"><span class="pre">envs</span></code> directory appears as follows:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -l /g/data/hh5/public/apps/miniconda3/envs
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -l /g/data/hh5/public/apps/cms_conda/envs
 lrwxrwxrwx  1 hh5_apps hh5         15 Dec 23 11:12 analysis3 -&gt; analysis3-22.07
 lrwxrwxrwx  1 hh5_apps hh5         26 Dec 23 11:12 analysis3-22.07 -&gt; /opt/conda/analysis3-22.07
--rw-rwx---+ 1 hh5_apps hh5 8624431104 Dec 23 11:12 analysis3-22.07.sqsh
+-rw-rw----+ 1 hh5_apps hh5 8624431104 Dec 23 11:12 analysis3-22.07.sqsh
 lrwxrwxrwx  1 hh5_apps hh5         26 Jan 12 13:23 analysis3-22.10 -&gt; /opt/conda/analysis3-22.10
--rw-rwx---+ 1 hh5_apps hh5 9634836480 Jan 12 13:23 analysis3-22.10.sqsh
+-rw-rw----+ 1 hh5_apps hh5 9634836480 Jan 12 13:23 analysis3-22.10.sqsh
 lrwxrwxrwx  1 hh5_apps hh5         15 Dec 23 11:12 analysis3-unstable -&gt; analysis3-22.10
 </pre></div>
 </div>
@@ -629,11 +627,11 @@ lrwxrwxrwx  1 hh5_apps hh5         15 Dec 23 11:12 analysis3-unstable -&gt; anal
 <p>The symlink targets refer to paths that only exist inside the corresponding <code class="docutils literal notranslate"><span class="pre">.sqsh</span></code> files, and as such, they appear broken unless inspected from inside the container with the correct squashfs mounted.</p>
 </div>
 <p>On loading an <code class="docutils literal notranslate"><span class="pre">analysis3-xx.yy</span></code> module (after running <code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">use</span> <span class="pre">/g/data/hh5/public/modules</span></code>), a <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code> command is run from inside the container in order to set the environment outside of the container to what would be expected had a <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span></code> command been run on an uncontainerised environment. The exception is that the <code class="docutils literal notranslate"><span class="pre">bin</span></code> directory inside the environment is translated to the appropriate subdirectory of <code class="docutils literal notranslate"><span class="pre">scripts</span></code>. For example, the path:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">g</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">hh5</span><span class="o">/</span><span class="n">public</span><span class="o">/</span><span class="n">apps</span><span class="o">/</span><span class="n">miniconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">analysis3</span><span class="o">-</span><span class="mf">22.10</span><span class="o">/</span><span class="nb">bin</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">g</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">hh5</span><span class="o">/</span><span class="n">public</span><span class="o">/</span><span class="n">apps</span><span class="o">/</span><span class="n">cms_conda</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">analysis3</span><span class="o">-</span><span class="mf">22.10</span><span class="o">/</span><span class="nb">bin</span>
 </pre></div>
 </div>
 <p>becomes</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">g</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">hh5</span><span class="o">/</span><span class="n">public</span><span class="o">/</span><span class="n">apps</span><span class="o">/</span><span class="n">conda</span><span class="o">-</span><span class="n">scripts</span><span class="o">/</span><span class="n">analysis3</span><span class="o">-</span><span class="mf">22.10</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="nb">bin</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">g</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">hh5</span><span class="o">/</span><span class="n">public</span><span class="o">/</span><span class="n">apps</span><span class="o">/</span><span class="n">cms_conda_scripts</span><span class="o">/</span><span class="n">analysis3</span><span class="o">-</span><span class="mf">22.10</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="nb">bin</span>
 </pre></div>
 </div>
 <p>The module also sets the <code class="docutils literal notranslate"><span class="pre">SINGULARITYENV_PREPEND_PATH</span></code> environment variable. This variable is modifies the linux <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable only within the container, and is required to ensure the <code class="docutils literal notranslate"><span class="pre">PATH</span></code> inside the container matches <code class="docutils literal notranslate"><span class="pre">PATH</span></code> outside of the container.</p>
@@ -673,11 +671,10 @@ lrwxrwxrwx  1 hh5_apps hh5         15 Dec 23 11:12 analysis3-unstable -&gt; anal
 
               
               
-                <footer class="bd-footer-article">
-                  
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../how-to/adding_a_new_task_to_cylc.html"
@@ -697,10 +694,7 @@ lrwxrwxrwx  1 hh5_apps hh5         15 Dec 23 11:12 analysis3-unstable -&gt; anal
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -717,7 +711,6 @@ lrwxrwxrwx  1 hh5_apps hh5         15 Dec 23 11:12 analysis3-unstable -&gt; anal
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usage">Usage</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#gadi-command-line">Gadi Command Line</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#are">ARE</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-shbang-line">Python shbang line</a></li>
 </ul>
 </li>
@@ -784,8 +777,8 @@ By CLEX-CMS
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
 
   <footer class="bd-footer">
   </footer>

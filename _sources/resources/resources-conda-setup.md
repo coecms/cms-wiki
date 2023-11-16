@@ -15,22 +15,14 @@ $ module load conda/analysis3-22.10
 ```
 The stable/unstable structure will continue to be maintained, with new unstable releases every 3 months, roughly coinciding with NCI maintenance periods. 
 ```{note}
-The module takes up to 30 seconds to load, do not Ctrl-C the `module load`, it is working.
-```
-```{note}
 `conda activate analysis3-22.10` does not work at time of writing. Loading the module performs the equivalent of a `conda activate`.
 ```
-
-### ARE
-A special module is provided for the ARE that allows interactive access to all conda environments via a jupyter notebook and activates the current stable environment. To use it, change the following settings on the ARE launch page:
-
-![conda-are-settings](../Images/conda-are-settings.png)
 
 
 ### Python shbang line
 The `python3` symlink in an environment's script directory can be used as the shebang on a python script. For example:
 ```
-#!/g/data/hh5/public/apps/conda-scripts/analysis-22.10.d/bin/python3
+#!/g/data/hh5/public/apps/cms_conda_scripts/analysis-22.10.d/bin/python3
 
 import sys
 import os
@@ -64,17 +56,14 @@ All these components (apart from the squashfs themselves) can be found in the `c
 The above components are installed into the `/g/data/hh5/public` area as follows:
 ```
 $ ls -l /g/data/hh5/public
-drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 apps
-drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 modules
-$ ls -l /g/data/hh5/public/apps
-drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 miniconda3
-drwxrwxr-x+ 2 hh5_apps hh5  4096 Dec 14 22:31 conda-scripts
-```
-```{note}
-This is the ideal case, the file ownership displayed is contingent on the availability of a service user to use for software deployment. This caveat will apply every time the `hh5_apps` user appears on this page
+drwxrwxr-x+  2 hh5_apps hh5  4096 Dec 14 22:31 apps
+drwxrwxr-x+  2 hh5_apps hh5  4096 Dec 14 22:31 modules
+$ ls -ld /g/data/hh5/public/apps
+drwxrws---+ 18 hh5_apps hh5 4096 Jun 13 10:33 cms_conda
+drwxrws---+  8 hh5_apps hh5 4096 Aug 28 16:57 cms_conda_scripts
 ```
 
-The `apps` directory contains the base, uncontainerised conda environment, the squashfs files containing each analysis environment (in the `miniconda3` subdirectory) and the machinery that enables commands to be executed inside the container as necessary (in the `conda-scripts` directory). The `modules` directory contains the environment modules needed to load the conda environments.
+The `apps` directory contains the base, uncontainerised conda environment, the squashfs files containing each analysis environment (in the `cms_conda` subdirectory) and the machinery that enables commands to be executed inside the container as necessary (in the `cms_conda_scripts` directory). The `modules` directory contains the environment modules needed to load the conda environments.
 
 ### The launcher script
 The launcher script is designed to be the interface between the standard Gadi user environment and the contents of a conda environment squashfs file. It performs several checks in order to generate the correct `singularity` launcher line from outside the container or run the correct command directly if it is invoked from inside the container. Its workflow is as follows:
@@ -110,7 +99,7 @@ This will also trigger an update for the a analysis environment corresponding to
 ### Revert a bad update
 In most cases, if an update fails, it will be discarded and the original retained. If the build and all tests pass, but a user discovers a problem after the new update is deployed, the old one is backed up in the `admin` directory. Restore it as follows:
 ```
-$ mv /g/data/hh5/admin/analysis-22.10.sqsh.bak /g/data/hh5/public/apps/miniconda3/envs/analysis-22.10.sqsh
+$ mv /g/data/hh5/admin/analysis-22.10.sqsh.bak /g/data/hh5/public/apps/cms_conda/envs/analysis-22.10.sqsh
 ```
 ```{warning}
 The backup must be *moved*, not copied. Using `mv` makes the change between environments atomic, whereas copying will cause a partially written squashfs to be present for the duration of the copy.
@@ -120,12 +109,12 @@ The backup must be *moved*, not copied. Using `mv` makes the change between envi
 
 The key difference between a standard conda environment setup and the `hh5` conda is the `envs` directory. In a standard conda environment setup, the envs directory contains a series of directories corresponding to each environment. Each of these directories is a fully self-contained environment, often comprising more than 250,000 individual files. Though these files are usually [hardlinked to central package caches](https://www.anaconda.com/blog/understanding-and-improving-condas-performance), this is not reflected in filesystem quotas. Each path to a hardlinked inode is treated as a separate inode for the purposes of quota enforcement. In the `hh5` environment, the `envs` directory appears as follows:
 ```
-$ ls -l /g/data/hh5/public/apps/miniconda3/envs
+$ ls -l /g/data/hh5/public/apps/cms_conda/envs
 lrwxrwxrwx  1 hh5_apps hh5         15 Dec 23 11:12 analysis3 -> analysis3-22.07
 lrwxrwxrwx  1 hh5_apps hh5         26 Dec 23 11:12 analysis3-22.07 -> /opt/conda/analysis3-22.07
--rw-rwx---+ 1 hh5_apps hh5 8624431104 Dec 23 11:12 analysis3-22.07.sqsh
+-rw-rw----+ 1 hh5_apps hh5 8624431104 Dec 23 11:12 analysis3-22.07.sqsh
 lrwxrwxrwx  1 hh5_apps hh5         26 Jan 12 13:23 analysis3-22.10 -> /opt/conda/analysis3-22.10
--rw-rwx---+ 1 hh5_apps hh5 9634836480 Jan 12 13:23 analysis3-22.10.sqsh
+-rw-rw----+ 1 hh5_apps hh5 9634836480 Jan 12 13:23 analysis3-22.10.sqsh
 lrwxrwxrwx  1 hh5_apps hh5         15 Dec 23 11:12 analysis3-unstable -> analysis3-22.10
 ```
 ```{note}
@@ -134,11 +123,11 @@ The symlink targets refer to paths that only exist inside the corresponding `.sq
 
 On loading an `analysis3-xx.yy` module (after running `module use /g/data/hh5/public/modules`), a `conda activate` command is run from inside the container in order to set the environment outside of the container to what would be expected had a `conda activate` command been run on an uncontainerised environment. The exception is that the `bin` directory inside the environment is translated to the appropriate subdirectory of `scripts`. For example, the path:
 ```
-/g/data/hh5/public/apps/miniconda3/envs/analysis3-22.10/bin
+/g/data/hh5/public/apps/cms_conda/envs/analysis3-22.10/bin
 ```
 becomes
 ```
-/g/data/hh5/public/apps/conda-scripts/analysis3-22.10.d/bin
+/g/data/hh5/public/apps/cms_conda_scripts/analysis3-22.10.d/bin
 ```
 The module also sets the `SINGULARITYENV_PREPEND_PATH` environment variable. This variable is modifies the linux `PATH` environment variable only within the container, and is required to ensure the `PATH` inside the container matches `PATH` outside of the container.
 
