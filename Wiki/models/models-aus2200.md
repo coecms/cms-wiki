@@ -4,23 +4,31 @@
 
 ## Background
 
-The AUS2200 model is a 0.0198 degree (2.2km at the equator) Unified Model vn12.2 configuration
+The AUS2200 model is a 0.0198 degree (2.2km at the equator) Unified Model vn12.2 (RAL3) or vn13.0 (RAL3.2) configuration
 
 This page assumes a familiarity with the general structure of rose-cylc suites and is not intended as a rose-cylc tutorial. 
 
 ## Setup
- * MOSRS access
- * Projects to join
-    * rt52 - ERA5 data
-    * zz93 - ERA5-Land data
-    * hh5 - analysis software environment
-    * access - `$UMDIR` and um2netcdf4 library
- * Ancil suite
- * Resource Requirements
- * Run suite
+In order to start running AUS2200, the user must have access to the UKMO Shared Repository Service (MOSRS). The user must also have access to the following projects:
 
-## Task descriptions
-Though derived from the standard Regional Nested Suite (see e.g. [Regional Practical 2023](https://code.metoffice.gov.uk/trac/jumps/wiki/RegionaPractical2023)), the AUS2200 suite contains a number of changes designed to optimise the suite workflow. The model runs, whether continuous or restarted, are divided into 6 hour cycles, with the task graph for each cycle represented in the following image
+* `rt52` - ERA5 data
+* `zz93` - ERA5-Land data
+* `hh5` - analysis software environment
+* `access` - `$UMDIR` and um2netcdf4 library
+
+### Ancillary files
+The ancillary suite has the ID `u-cp145`. This suite determines the domain and resolution of the model. The suite produces two sets of ancillaries, one for the primary model domain and a second for the region encapsulating the frames used as the spatial boundary conditions. The centre of the model domain can be set in the "Nested region 1 setup" section of the rose config editor
+![region centre](../Images/AUS2200/region-centre.png)
+and the size of the boundary domain and model domain can be configured in the "Resolution 1" and "Resolution 2" respectively.
+![model resolution](../Images/AUS2200/region-resolution.png)
+
+The values in the screenshots above show the settings for the production AUS2200 domain. The ancillary suite output requires approximately 1.5TB of storage and completes in around 2 hours. Once complete, the ancillaries can be found in `~/cylc-run/u-cp145/share/data/ancils`. Note that this will be a symlink onto `/scratch`, so the appropriate `-lstorage=` flag will needed to be added to the model suite in order to ensure access to the ancillaries.
+
+### Resource requirements
+Before committing to any production runs, it is important to ensure that adequate resources are in place. The full AUS2200 domain requires approximately 16kSU and 300GB of permanent storage per model day. In addition, it is advisable to keep at least 5TB available for interim storage for boundary conditions and UM format output files.
+
+## The AUS2200 suite
+The reference AUS2200 suite has the ID `u-cs142`. Though derived from the standard Regional Nested Suite (see e.g. [Regional Practical 2023](https://code.metoffice.gov.uk/trac/jumps/wiki/RegionaPractical2023)), the AUS2200 suite contains a number of changes designed to optimise the suite workflow. The model runs, whether continuous or restarted, are divided into 6 hour cycles, with the task graph for each cycle represented in the following image
 
 ```{image} ../Images/AUS2200/suite-overview.png
 :alt: suite overview
@@ -134,11 +142,11 @@ The `create_soil_moisture_ancil` task is configured to wait for the completion o
 
 ### Typical restart workflow
 
-A typical daily restart run will require multiple copies of the AUS2200 suite to run simultaneously. The following encapsulates the workflow for the AUS2200 model run described [here](https://forum.access-hive.org.au/t/experiment-proposal-simulating-east-coast-low-complex-in-early-june-2016-using-aus2200/1507). The simulations took place over 2-9 June 2016 with a 2-day soil moisture spinup preceding the full simulation. The simulation will be restarted every day, and run with a 24 hour spin-up time. This means that a total of 9 variants of the AUS2200 suite will be run.
+A typical daily restart run will require multiple copies of the AUS2200 suite to run simultaneously. The following encapsulates the workflow for the AUS2200 model run described [here](https://forum.access-hive.org.au/t/experiment-proposal-simulating-east-coast-low-complex-in-early-june-2016-using-aus2200/1507). The simulations took place over 2-9 June 2016 with a 2-day soil moisture spinup preceding the full simulation. The simulation was restarted every day, and run with a 24 hour spin-up time. This means that a total of 9 variants of the AUS2200 suite were run.
 
 ![simulation-diag](../Images/AUS2200/simulation-times.png)
 
-Therefore, the full model run needs to start on the 30th of May 2016. For this initial simulation, `SOIL_MOISTURE_CARRYOVER` must be false, item `1` in the 'Configure ancils and initialise dump fields' section of the `um` task must be set to ignored, `INITIAL_CYCLE_POINT` must be set to 20160530T0000Z, and `FINAL_CYCLE_POINT` must be set to 20160503T1800Z. Submit this suite with `rose suite-run`.
+Therefore, the full model run needs to start on the 30th of May 2016. For this initial simulation, `SOIL_MOISTURE_CARRYOVER` must be false, item `1` in the 'Configure ancils and initialise dump fields' section of the `um` task must be set to ignored, `INITIAL_CYCLE_POINT` must be set to 20160530T0000Z, and `FINAL_CYCLE_POINT` must be set to 20160531T1800Z. Submit this suite with `rose suite-run`.
 
 In your `~/roses` directory, make a copy of the AUS2200 suite, following the naming convention outlined [above](#restart-and-spinup). This example uses `u-cs142` for the original suite id.
 <terminal-window lineDelay=0>
@@ -153,8 +161,7 @@ With the rose config editor window open, change `INITIAL_CYCLE_POINT` to match t
 
 Once this is done, the suite can now be started with `rose suite-run`. At this point, the driving model reconfiguration tasks and and `create_soil_moisture_ancil` will run. As a 24 hour spinup time has been requested, `create_soil_moisture_ancil` will expect the file `$HOME/cylc-run/u-cs142-20160531T0000/share/cycle/20160531T1800Z/aus2200/d0198/RA3/ics/umnsaa_d006` to exist in order to extract the soil moisture fields. Create a symlink with the following name in your `~/cylc-run` directory
 <terminal-window lineDelay=0>
-    <terminal-line data="output"><span style="color:#A6CE39">cylc-run</span><span style="color:#FAA619">\$&nbsp;</span>
-    ln -s u-cs142 u-cs142-20160531T0000</terminal-line>
+    <terminal-line data="output"><span style="color:#A6CE39">cylc-run</span><span style="color:#FAA619">\$&nbsp;</span>ln -s u-cs142 u-cs142-20160531T0000</terminal-line>
 </terminal-window>
 From this point, create a copy of `u-cs142-20160601T0000` and move `INITIAL_CYCLE_POINT` and `FINAL_CYCLE_POINT` forward by one day. 
 <terminal-window lineDelay=0>
@@ -171,18 +178,72 @@ There have been three different driving model configurations used in AUS2200 exp
 
 ### ERA5Land + ERA5
 
-Typically, ERA5Land + ERA5 data will be used as the driving model. This is facilitated by the `nci_era5grib` task, which combines ERA5Land and ERA5 data into GRIB forecast fields which can then be read by the [driving model reconfiguration tasks](#nci_era5grib).
+Typically, ERA5Land + ERA5 data will be used as the driving model. This is facilitated by the `nci_era5grib` task, which combines ERA5Land and ERA5 data into GRIB forecast fields which can then be read by the [driving model reconfiguration tasks](#nci-era5grib).
 
 ### ERA5Land + BARRA2 soil
 
+Initialising with ERA5Land + BARRA2 soil is currently a fairly non-trivial process. The first step is to request the level 0A BARRA2 data for the starting day of the simulation spinup. Typically, this will be 3 days before the beginning of the output window to allow 2 days to spinup the soil moisture, and a further day to spinup the atmosphere. Once downloaded, configure the suite copy as follows:
+![barra2 soil config](../Images/AUS2200/barra2-soil-init.png)
+The key settings are:
+ * `dm_name` : UM global model
+ * `dm_ic_file`: Set this to the path to the downloaded BARRA2 data, note that the downloaded data will come in a directory with a name corresponding to the ISO timestamp of the data. This ISO data must be replaced with `YYmmddTHHMMZ`
+ * It is not necessary to modify `dm_lbc_files` for this configuration.
+ * Disable the `1`, `2` and `3` entries under 'Configure ancils and initialise dump fields' as per the [`create_soil_moisture_ancil`](#create-soil-moisture-ancil) section.
 
+ Start the suite as follows:
+
+ <terminal-window lineDelay=0>
+    <terminal-line data="output"><span style="color:#A6CE39">u-cs142-barraic</span><span style="color:#FAA619">$&nbsp;</span>rose suite-run --no-strict -- --hold</terminal-line>
+</terminal-window>
+
+The suite in its current state fails strict validation, and only 4 tasks within the suite need to run. Once the cylc gui appears, release the `install_cold_idl`, `install_cold_hpc` and `install_glm_startdata` tasks. Once these tasks have completed, right click the `aus2200_d0198_RA3_um_recon` task and select 'Trigger (run now)'
+
+![barra2 release tasks](../Images/AUS2200/start-barra-smc.gif)
+
+In order to have the spinup suite automatically create the soil moisture ancil, use the soil moisture carryover machinery. In a new copy of the original suite, enable `SOIL_MOISTURE_CARRYOVER` as per the [`create_soil_moisture_ancil`](#create-soil-moisture-ancil) section and create the following symlinks. Note that the dates are carried over from the [Typical restart workflow](#typical-restart-workflow) section (2-9 June 2016)
+
+ <terminal-window lineDelay=0>
+    <terminal-line data="output"><span style="color:#A6CE39">cylc-run</span><span style="color:#FAA619">$&nbsp;</span>cd u-cs142-barraic/share/cycle/20160530T0000Z/aus2200/d0198/RA3/ics</terminal-line>
+    <terminal-line data="output"><span style="color:#A6CE39">ics</span><span style="color:#FAA619">$&nbsp;</span>ln -s RA3_astart umnsaa_da006</terminal-line>
+    <terminal-line data="output"><span style="color:#A6CE39">ics</span><span style="color:#FAA619">$&nbsp;</span>cd ~/cylc-run</terminal-line>
+    <terminal-line data="output"><span style="color:#A6CE39">cylc-run</span><span style="color:#FAA619">$&nbsp;</span>ln -s u-cs142-barraic u-cs142-20160529T0000</terminal-line>
+</terminal-window>
+
+This will cause the `create_soil_moisture_ancil` task to believe that the `astart` file generated from the BARRA2 reconfiguration task is actually a restart file from the `u-cs142` suite run for 29th May 2016, one day before the start of the spinup time. This does not affect any other part of the spinup suite and avoids the need to manually create the soil moisture ancillary. From there, enable `1` in 'Configure ancils and initialise dump fields' for the initial 2 day soil moisture spinup suite, and run the remainder of the suites as per the [Typical restart workflow](#typical-restart-workflow) section.
 
 ### BARRA2
 
+The standard RNS suite contains the ability to run with BARRA2 initial conditions, though using this data for AUS2200 simulations requires minor file structure changes. The first step is to request the level 0A BARRA2 data for the entire duration of the model run. Once the data has been retrieved, unzip all of the `frames-a.tar.gz` files from within each of the directories:
+<terminal-window lineDelay=0>
+    <terminal-line data="output"><span style="color:#A6CE39">BARRA2</span><span style="color:#FAA619">$&nbsp;</span>for i in *; do pushd \$i; tar -xzf frames-a.tar.gz; popd; done</terminal-line>
+</terminal-window>
 
+Once this command is complete, clone the git repository at github.com/coecms/AUS2200_postprocessing and modify the script `separate_ancil.py` to point to the top directory containing all of the relevant BARRA2 data. Then run the script with the conda/analysis3 and um modules loaded
+<terminal-window lineDelay=0>
+    <terminal-line data="output"><span style="color:#A6CE39">AUS2200_postprocessing</span><span style="color:#FAA619">\$&nbsp;</span>module use /g/data/hh5/public/modules</terminal-line>
+    <terminal-line data="output"><span style="color:#A6CE39">AUS2200_postprocessing</span><span style="color:#FAA619">\$&nbsp;</span>module use ~access/modules</terminal-line>
+    <terminal-line data="output"><span style="color:#A6CE39">AUS2200_postprocessing</span><span style="color:#FAA619">\$&nbsp;</span>module load conda/analysis3 um</terminal-line>
+    <terminal-line data="output"><span style="color:#A6CE39">AUS2200_postprocessing</span><span style="color:#FAA619">\$&nbsp;</span>./separate_ancil.py</terminal-line>
+</terminal-window>
 
-## netCDF conversion post-processing
+Once this is complete disable soil moisture carry over, the `1`, `2` and `3` entries under 'Configure ancils and initialise dump fields' as per the [`create_soil_moisture_ancil`](#create-soil-moisture-ancil) section and ensure the that the driving model section of the suite has the following settings:
 
+![barra2 driving model](../Images/AUS2200/barra2-dm-setup.png)
 
-### Acknowledgements
+```{note}
+It is advisable to disable boundary condition archiving (the `Archive LBCS` step above) as BARRA2 boundary conditions are much cheaper and faster to generate than ERA5 boundary conditions.
+```
+
+Run the suite with the `--no-strict` option enabled:
+<terminal-window lineDelay=0>
+    <terminal-line data="output"><span style="color:#A6CE39">u-cs142-barraic</span><span style="color:#FAA619">$&nbsp;</span>rose suite-run --no-strict</terminal-line>
+</terminal-window>
+
+The `barra_um_recon_1` task will fail, as there is no corresponding rose application for it. Once this task has failed, reset its state to succeeded, and the model will proceed without further intervention.
+
+![set to succeeded](../Images/AUS2200/set-task-succeeded.gif)
+
+The BARRA2 configuration can be run continuously or in restart mode with or without soil moisture carry over in the same way that the ERA5-driven configuration can. 
+
+## Acknowledgements
 Thanks to Davide Marchegiani for [animated-terminal.js](https://github.com/atteggiani/animated-terminal.js). Thanks to Martin Dix and Scott Wales for resolving issues with the model.
