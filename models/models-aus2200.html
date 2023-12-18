@@ -463,8 +463,12 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-descriptions">Task descriptions</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ancillary-files">Ancillary files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resource-requirements">Resource requirements</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-aus2200-suite">The AUS2200 suite</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cold-start-tasks">Cold start tasks</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fcm-make-um"><code class="docutils literal notranslate"><span class="pre">fcm_make_um</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-lbc-from-archive"><code class="docutils literal notranslate"><span class="pre">get_lbc_from_archive</span></code></a></li>
@@ -491,10 +495,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#barra2">BARRA2</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#netcdf-conversion-post-processing">netCDF conversion post-processing</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
 </ul>
             </nav>
         </div>
@@ -511,29 +512,34 @@ document.write(`
 <h1>AUS2200 - A complete guide<a class="headerlink" href="#aus2200-a-complete-guide" title="Permalink to this heading">#</a></h1>
 <section id="background">
 <h2>Background<a class="headerlink" href="#background" title="Permalink to this heading">#</a></h2>
-<p>The AUS2200 model is a 0.0198 degree (2.2km at the equator) Unified Model vn12.2 configuration</p>
+<p>The AUS2200 model is a 0.0198 degree (2.2km at the equator) Unified Model vn12.2 (RAL3) or vn13.0 (RAL3.2) configuration</p>
 <p>This page assumes a familiarity with the general structure of rose-cylc suites and is not intended as a rose-cylc tutorial.</p>
 </section>
 <section id="setup">
 <h2>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">#</a></h2>
+<p>In order to start running AUS2200, the user must have access to the UKMO Shared Repository Service (MOSRS). The user must also have access to the following projects:</p>
 <ul class="simple">
-<li><p>MOSRS access</p></li>
-<li><p>Projects to join</p>
-<ul>
-<li><p>rt52 - ERA5 data</p></li>
-<li><p>zz93 - ERA5-Land data</p></li>
-<li><p>hh5 - analysis software environment</p></li>
-<li><p>access - <code class="docutils literal notranslate"><span class="pre">$UMDIR</span></code> and um2netcdf4 library</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rt52</span></code> - ERA5 data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zz93</span></code> - ERA5-Land data</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hh5</span></code> - analysis software environment</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">access</span></code> - <code class="docutils literal notranslate"><span class="pre">$UMDIR</span></code> and um2netcdf4 library</p></li>
 </ul>
-</li>
-<li><p>Ancil suite</p></li>
-<li><p>Resource Requirements</p></li>
-<li><p>Run suite</p></li>
-</ul>
+<section id="ancillary-files">
+<h3>Ancillary files<a class="headerlink" href="#ancillary-files" title="Permalink to this heading">#</a></h3>
+<p>The ancillary suite has the ID <code class="docutils literal notranslate"><span class="pre">u-cp145</span></code>. This suite determines the domain and resolution of the model. The suite produces two sets of ancillaries, one for the primary model domain and a second for the region encapsulating the frames used as the spatial boundary conditions. The centre of the model domain can be set in the “Nested region 1 setup” section of the rose config editor
+<img alt="region centre" src="../_images/region-centre.png" />
+and the size of the boundary domain and model domain can be configured in the “Resolution 1” and “Resolution 2” respectively.
+<img alt="model resolution" src="../_images/region-resolution.png" /></p>
+<p>The values in the screenshots above show the settings for the production AUS2200 domain. The ancillary suite output requires approximately 1.5TB of storage and completes in around 2 hours. Once complete, the ancillaries can be found in <code class="docutils literal notranslate"><span class="pre">~/cylc-run/u-cp145/share/data/ancils</span></code>. Note that this will be a symlink onto <code class="docutils literal notranslate"><span class="pre">/scratch</span></code>, so the appropriate <code class="docutils literal notranslate"><span class="pre">-lstorage=</span></code> flag will needed to be added to the model suite in order to ensure access to the ancillaries.</p>
 </section>
-<section id="task-descriptions">
-<h2>Task descriptions<a class="headerlink" href="#task-descriptions" title="Permalink to this heading">#</a></h2>
-<p>Though derived from the standard Regional Nested Suite (see e.g. <a class="reference external" href="https://code.metoffice.gov.uk/trac/jumps/wiki/RegionaPractical2023">Regional Practical 2023</a>), the AUS2200 suite contains a number of changes designed to optimise the suite workflow. The model runs, whether continuous or restarted, are divided into 6 hour cycles, with the task graph for each cycle represented in the following image</p>
+<section id="resource-requirements">
+<h3>Resource requirements<a class="headerlink" href="#resource-requirements" title="Permalink to this heading">#</a></h3>
+<p>Before committing to any production runs, it is important to ensure that adequate resources are in place. The full AUS2200 domain requires approximately 16kSU and 300GB of permanent storage per model day. In addition, it is advisable to keep at least 5TB available for interim storage for boundary conditions and UM format output files.</p>
+</section>
+</section>
+<section id="the-aus2200-suite">
+<h2>The AUS2200 suite<a class="headerlink" href="#the-aus2200-suite" title="Permalink to this heading">#</a></h2>
+<p>The reference AUS2200 suite has the ID <code class="docutils literal notranslate"><span class="pre">u-cs142</span></code>. Though derived from the standard Regional Nested Suite (see e.g. <a class="reference external" href="https://code.metoffice.gov.uk/trac/jumps/wiki/RegionaPractical2023">Regional Practical 2023</a>), the AUS2200 suite contains a number of changes designed to optimise the suite workflow. The model runs, whether continuous or restarted, are divided into 6 hour cycles, with the task graph for each cycle represented in the following image</p>
 <a class="reference internal image-reference" href="../_images/suite-overview.png"><img alt="suite overview" class="align-center" src="../_images/suite-overview.png" style="width: 700px;" /></a>
 <section id="cold-start-tasks">
 <h3>Cold start tasks<a class="headerlink" href="#cold-start-tasks" title="Permalink to this heading">#</a></h3>
@@ -636,9 +642,9 @@ document.write(`
 <p>The <code class="docutils literal notranslate"><span class="pre">create_soil_moisture_ancil</span></code> task is configured to wait for the completion of the <code class="docutils literal notranslate"><span class="pre">aus2200_d0198_RA3_um_fcst_000</span></code> task from the previous suite. Therefore, it is possible to run multiple versions of the AUS2200 suite that rely on soil moisture carryover simultaneously. This will allow initial and boundary conditions to be created and cached ahead of time, whilst the reconfiguration and model run tasks will only commence when the data required is present. This saves a significant amount of resources, as it is typical for model runs to overlap due to the required spinup time. Later model runs can therefore use cache boundary conditions created for earlier cases.</p>
 <section id="typical-restart-workflow">
 <h3>Typical restart workflow<a class="headerlink" href="#typical-restart-workflow" title="Permalink to this heading">#</a></h3>
-<p>A typical daily restart run will require multiple copies of the AUS2200 suite to run simultaneously. The following encapsulates the workflow for the AUS2200 model run described <a class="reference external" href="https://forum.access-hive.org.au/t/experiment-proposal-simulating-east-coast-low-complex-in-early-june-2016-using-aus2200/1507">here</a>. The simulations took place over 2-9 June 2016 with a 2-day soil moisture spinup preceding the full simulation. The simulation will be restarted every day, and run with a 24 hour spin-up time. This means that a total of 9 variants of the AUS2200 suite will be run.</p>
+<p>A typical daily restart run will require multiple copies of the AUS2200 suite to run simultaneously. The following encapsulates the workflow for the AUS2200 model run described <a class="reference external" href="https://forum.access-hive.org.au/t/experiment-proposal-simulating-east-coast-low-complex-in-early-june-2016-using-aus2200/1507">here</a>. The simulations took place over 2-9 June 2016 with a 2-day soil moisture spinup preceding the full simulation. The simulation was restarted every day, and run with a 24 hour spin-up time. This means that a total of 9 variants of the AUS2200 suite were run.</p>
 <p><img alt="simulation-diag" src="../_images/simulation-times.png" /></p>
-<p>Therefore, the full model run needs to start on the 30th of May 2016. For this initial simulation, <code class="docutils literal notranslate"><span class="pre">SOIL_MOISTURE_CARRYOVER</span></code> must be false, item <code class="docutils literal notranslate"><span class="pre">1</span></code> in the ‘Configure ancils and initialise dump fields’ section of the <code class="docutils literal notranslate"><span class="pre">um</span></code> task must be set to ignored, <code class="docutils literal notranslate"><span class="pre">INITIAL_CYCLE_POINT</span></code> must be set to 20160530T0000Z, and <code class="docutils literal notranslate"><span class="pre">FINAL_CYCLE_POINT</span></code> must be set to 20160503T1800Z. Submit this suite with <code class="docutils literal notranslate"><span class="pre">rose</span> <span class="pre">suite-run</span></code>.</p>
+<p>Therefore, the full model run needs to start on the 30th of May 2016. For this initial simulation, <code class="docutils literal notranslate"><span class="pre">SOIL_MOISTURE_CARRYOVER</span></code> must be false, item <code class="docutils literal notranslate"><span class="pre">1</span></code> in the ‘Configure ancils and initialise dump fields’ section of the <code class="docutils literal notranslate"><span class="pre">um</span></code> task must be set to ignored, <code class="docutils literal notranslate"><span class="pre">INITIAL_CYCLE_POINT</span></code> must be set to 20160530T0000Z, and <code class="docutils literal notranslate"><span class="pre">FINAL_CYCLE_POINT</span></code> must be set to 20160531T1800Z. Submit this suite with <code class="docutils literal notranslate"><span class="pre">rose</span> <span class="pre">suite-run</span></code>.</p>
 <p>In your <code class="docutils literal notranslate"><span class="pre">~/roses</span></code> directory, make a copy of the AUS2200 suite, following the naming convention outlined <span class="xref myst">above</span>. This example uses <code class="docutils literal notranslate"><span class="pre">u-cs142</span></code> for the original suite id.
 <terminal-window lineDelay=0>
 <terminal-line data="output"><span style="color:#A6CE39">u-cs142</span><span style="color:#FAA619">$ </span>cd ..</terminal-line>
@@ -650,8 +656,7 @@ With the rose config editor window open, change <code class="docutils literal no
 <p><img alt="suite configuration" src="../_images/suite-config.gif" /></p>
 <p>Once this is done, the suite can now be started with <code class="docutils literal notranslate"><span class="pre">rose</span> <span class="pre">suite-run</span></code>. At this point, the driving model reconfiguration tasks and and <code class="docutils literal notranslate"><span class="pre">create_soil_moisture_ancil</span></code> will run. As a 24 hour spinup time has been requested, <code class="docutils literal notranslate"><span class="pre">create_soil_moisture_ancil</span></code> will expect the file <code class="docutils literal notranslate"><span class="pre">$HOME/cylc-run/u-cs142-20160531T0000/share/cycle/20160531T1800Z/aus2200/d0198/RA3/ics/umnsaa_d006</span></code> to exist in order to extract the soil moisture fields. Create a symlink with the following name in your <code class="docutils literal notranslate"><span class="pre">~/cylc-run</span></code> directory
 <terminal-window lineDelay=0>
-<terminal-line data="output"><span style="color:#A6CE39">cylc-run</span><span style="color:#FAA619">$ </span>
-ln -s u-cs142 u-cs142-20160531T0000</terminal-line>
+<terminal-line data="output"><span style="color:#A6CE39">cylc-run</span><span style="color:#FAA619">$ </span>ln -s u-cs142 u-cs142-20160531T0000</terminal-line>
 </terminal-window>
 From this point, create a copy of <code class="docutils literal notranslate"><span class="pre">u-cs142-20160601T0000</span></code> and move <code class="docutils literal notranslate"><span class="pre">INITIAL_CYCLE_POINT</span></code> and <code class="docutils literal notranslate"><span class="pre">FINAL_CYCLE_POINT</span></code> forward by one day.
 <terminal-window lineDelay=0>
@@ -672,17 +677,61 @@ Then run the newly modified suite with <code class="docutils literal notranslate
 </section>
 <section id="era5land-barra2-soil">
 <h3>ERA5Land + BARRA2 soil<a class="headerlink" href="#era5land-barra2-soil" title="Permalink to this heading">#</a></h3>
+<p>Initialising with ERA5Land + BARRA2 soil is currently a fairly non-trivial process. The first step is to request the level 0A BARRA2 data for the starting day of the simulation spinup. Typically, this will be 3 days before the beginning of the output window to allow 2 days to spinup the soil moisture, and a further day to spinup the atmosphere. Once downloaded, configure the suite copy as follows:
+<img alt="barra2 soil config" src="../_images/barra2-soil-init.png" />
+The key settings are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dm_name</span></code> : UM global model</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dm_ic_file</span></code>: Set this to the path to the downloaded BARRA2 data, note that the downloaded data will come in a directory with a name corresponding to the ISO timestamp of the data. This ISO data must be replaced with <code class="docutils literal notranslate"><span class="pre">YYmmddTHHMMZ</span></code></p></li>
+<li><p>It is not necessary to modify <code class="docutils literal notranslate"><span class="pre">dm_lbc_files</span></code> for this configuration.</p></li>
+<li><p>Disable the <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code> and <code class="docutils literal notranslate"><span class="pre">3</span></code> entries under ‘Configure ancils and initialise dump fields’ as per the <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">create_soil_moisture_ancil</span></code></span> section.</p></li>
+</ul>
+<p>Start the suite as follows:</p>
+ <terminal-window lineDelay=0>
+    <terminal-line data="output"><span style="color:#A6CE39">u-cs142-barraic</span><span style="color:#FAA619">$&nbsp;</span>rose suite-run --no-strict -- --hold</terminal-line>
+</terminal-window>
+<p>The suite in its current state fails strict validation, and only 4 tasks within the suite need to run. Once the cylc gui appears, release the <code class="docutils literal notranslate"><span class="pre">install_cold_idl</span></code>, <code class="docutils literal notranslate"><span class="pre">install_cold_hpc</span></code> and <code class="docutils literal notranslate"><span class="pre">install_glm_startdata</span></code> tasks. Once these tasks have completed, right click the <code class="docutils literal notranslate"><span class="pre">aus2200_d0198_RA3_um_recon</span></code> task and select ‘Trigger (run now)’</p>
+<p><img alt="barra2 release tasks" src="../_images/start-barra-smc.gif" /></p>
+<p>In order to have the spinup suite automatically create the soil moisture ancil, use the soil moisture carryover machinery. In a new copy of the original suite, enable <code class="docutils literal notranslate"><span class="pre">SOIL_MOISTURE_CARRYOVER</span></code> as per the <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">create_soil_moisture_ancil</span></code></span> section and create the following symlinks. Note that the dates are carried over from the <span class="xref myst">Typical restart workflow</span> section (2-9 June 2016)</p>
+ <terminal-window lineDelay=0>
+    <terminal-line data="output"><span style="color:#A6CE39">cylc-run</span><span style="color:#FAA619">$&nbsp;</span>cd u-cs142-barraic/share/cycle/20160530T0000Z/aus2200/d0198/RA3/ics</terminal-line>
+    <terminal-line data="output"><span style="color:#A6CE39">ics</span><span style="color:#FAA619">$&nbsp;</span>ln -s RA3_astart umnsaa_da006</terminal-line>
+    <terminal-line data="output"><span style="color:#A6CE39">ics</span><span style="color:#FAA619">$&nbsp;</span>cd ~/cylc-run</terminal-line>
+    <terminal-line data="output"><span style="color:#A6CE39">cylc-run</span><span style="color:#FAA619">$&nbsp;</span>ln -s u-cs142-barraic u-cs142-20160529T0000</terminal-line>
+</terminal-window>
+<p>This will cause the <code class="docutils literal notranslate"><span class="pre">create_soil_moisture_ancil</span></code> task to believe that the <code class="docutils literal notranslate"><span class="pre">astart</span></code> file generated from the BARRA2 reconfiguration task is actually a restart file from the <code class="docutils literal notranslate"><span class="pre">u-cs142</span></code> suite run for 29th May 2016, one day before the start of the spinup time. This does not affect any other part of the spinup suite and avoids the need to manually create the soil moisture ancillary. From there, enable <code class="docutils literal notranslate"><span class="pre">1</span></code> in ‘Configure ancils and initialise dump fields’ for the initial 2 day soil moisture spinup suite, and run the remainder of the suites as per the <span class="xref myst">Typical restart workflow</span> section.</p>
 </section>
 <section id="barra2">
 <h3>BARRA2<a class="headerlink" href="#barra2" title="Permalink to this heading">#</a></h3>
+<p>The standard RNS suite contains the ability to run with BARRA2 initial conditions, though using this data for AUS2200 simulations requires minor file structure changes. The first step is to request the level 0A BARRA2 data for the entire duration of the model run. Once the data has been retrieved, unzip all of the <code class="docutils literal notranslate"><span class="pre">frames-a.tar.gz</span></code> files from within each of the directories:
+<terminal-window lineDelay=0>
+<terminal-line data="output"><span style="color:#A6CE39">BARRA2</span><span style="color:#FAA619">$ </span>for i in *; do pushd $i; tar -xzf frames-a.tar.gz; popd; done</terminal-line>
+</terminal-window></p>
+<p>Once this command is complete, clone the git repository at <a class="reference external" href="http://github.com/coecms/AUS2200_postprocessing">github.com/coecms/AUS2200_postprocessing</a> and modify the script <code class="docutils literal notranslate"><span class="pre">separate_ancil.py</span></code> to point to the top directory containing all of the relevant BARRA2 data. Then run the script with the conda/analysis3 and um modules loaded
+<terminal-window lineDelay=0>
+<terminal-line data="output"><span style="color:#A6CE39">AUS2200_postprocessing</span><span style="color:#FAA619">$ </span>module use /g/data/hh5/public/modules</terminal-line>
+<terminal-line data="output"><span style="color:#A6CE39">AUS2200_postprocessing</span><span style="color:#FAA619">$ </span>module use ~access/modules</terminal-line>
+<terminal-line data="output"><span style="color:#A6CE39">AUS2200_postprocessing</span><span style="color:#FAA619">$ </span>module load conda/analysis3 um</terminal-line>
+<terminal-line data="output"><span style="color:#A6CE39">AUS2200_postprocessing</span><span style="color:#FAA619">$ </span>./separate_ancil.py</terminal-line>
+</terminal-window></p>
+<p>Once this is complete disable soil moisture carry over, the <code class="docutils literal notranslate"><span class="pre">1</span></code>, <code class="docutils literal notranslate"><span class="pre">2</span></code> and <code class="docutils literal notranslate"><span class="pre">3</span></code> entries under ‘Configure ancils and initialise dump fields’ as per the <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">create_soil_moisture_ancil</span></code></span> section and ensure the that the driving model section of the suite has the following settings:</p>
+<p><img alt="barra2 driving model" src="../_images/barra2-dm-setup.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is advisable to disable boundary condition archiving (the <code class="docutils literal notranslate"><span class="pre">Archive</span> <span class="pre">LBCS</span></code> step above) as BARRA2 boundary conditions are much cheaper and faster to generate than ERA5 boundary conditions.</p>
+</div>
+<p>Run the suite with the <code class="docutils literal notranslate"><span class="pre">--no-strict</span></code> option enabled:
+<terminal-window lineDelay=0>
+<terminal-line data="output"><span style="color:#A6CE39">u-cs142-barraic</span><span style="color:#FAA619">$ </span>rose suite-run –no-strict</terminal-line>
+</terminal-window></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">barra_um_recon_1</span></code> task will fail, as there is no corresponding rose application for it. Once this task has failed, reset its state to succeeded, and the model will proceed without further intervention.</p>
+<p><img alt="set to succeeded" src="../_images/set-task-succeeded.gif" /></p>
+<p>The BARRA2 configuration can be run continuously or in restart mode with or without soil moisture carry over in the same way that the ERA5-driven configuration can.</p>
 </section>
 </section>
-<section id="netcdf-conversion-post-processing">
-<h2>netCDF conversion post-processing<a class="headerlink" href="#netcdf-conversion-post-processing" title="Permalink to this heading">#</a></h2>
 <section id="acknowledgements">
-<h3>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this heading">#</a></h3>
+<h2>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this heading">#</a></h2>
 <p>Thanks to Davide Marchegiani for <a class="reference external" href="https://github.com/atteggiani/animated-terminal.js">animated-terminal.js</a>. Thanks to Martin Dix and Scott Wales for resolving issues with the model.</p>
-</section>
 </section>
 </section>
 
@@ -750,8 +799,12 @@ Then run the newly modified suite with <code class="docutils literal notranslate
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#background">Background</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-descriptions">Task descriptions</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup">Setup</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ancillary-files">Ancillary files</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#resource-requirements">Resource requirements</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-aus2200-suite">The AUS2200 suite</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cold-start-tasks">Cold start tasks</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fcm-make-um"><code class="docutils literal notranslate"><span class="pre">fcm_make_um</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#get-lbc-from-archive"><code class="docutils literal notranslate"><span class="pre">get_lbc_from_archive</span></code></a></li>
@@ -778,10 +831,7 @@ Then run the newly modified suite with <code class="docutils literal notranslate
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#barra2">BARRA2</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#netcdf-conversion-post-processing">netCDF conversion post-processing</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#acknowledgements">Acknowledgements</a></li>
 </ul>
   </nav></div>
 
