@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Resources &#8212; CLEX CMS Wiki</title>
+    <title>How to build a new ACCESS-ESM executable &#8212; CLEX CMS Wiki</title>
   
   
   
@@ -68,11 +68,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'resources/resources-list';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'how-to/create_new_ACCESS-ESM_executables';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ARC Centre of Excellence for Climate Extremes: Data strategies" href="resources-policy.html" />
-    <link rel="prev" title="Conda hh5 environment setup" href="resources-conda-setup.html" />
+    <link rel="next" title="Conda hh5 environment setup" href="../resources/resources-conda-setup.html" />
+    <link rel="prev" title="Adding a new task to a rose suite" href="adding_a_new_task_to_cylc.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -231,18 +231,18 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../data/data-datasets.html">Datasets</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">How-Tos</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../how-to/adding_a_new_task_to_cylc.html">Adding a new task to a rose suite</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../how-to/create_new_ACCESS-ESM_executables.html">How to build a new ACCESS-ESM executable</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="adding_a_new_task_to_cylc.html">Adding a new task to a rose suite</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">How to build a new ACCESS-ESM executable</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Resources</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="resources-conda-setup.html">Conda hh5 environment setup</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Resources</a></li>
-<li class="toctree-l1"><a class="reference internal" href="resources-policy.html">ARC Centre of Excellence for Climate Extremes: Data strategies</a></li>
-<li class="toctree-l1"><a class="reference internal" href="resources-vscode.html">VS Code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="wrf-deprecated.html">WRF porting to NCI machine (Deprecated)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="resources-ssh-config.html">The recommended SSH config file</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../resources/resources-conda-setup.html">Conda hh5 environment setup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/resources-list.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/resources-policy.html">ARC Centre of Excellence for Climate Extremes: Data strategies</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/resources-vscode.html">VS Code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/wrf-deprecated.html">WRF porting to NCI machine (Deprecated)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/resources-ssh-config.html">The recommended SSH config file</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">FAQS</span></p>
 <ul class="nav bd-sidenav">
@@ -321,7 +321,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/coecms/cms-wiki/edit/main/Wiki/resources/resources-list.md" target="_blank"
+      <li><a href="https://github.com/coecms/cms-wiki/edit/main/Wiki/how-to/create_new_ACCESS-ESM_executables.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -338,7 +338,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/coecms/cms-wiki/issues/new?title=Issue%20on%20page%20%2Fresources/resources-list.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/coecms/cms-wiki/issues/new?title=Issue%20on%20page%20%2Fhow-to/create_new_ACCESS-ESM_executables.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -368,7 +368,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/resources/resources-list.md" target="_blank"
+      <li><a href="../_sources/how-to/create_new_ACCESS-ESM_executables.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -439,7 +439,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -450,11 +452,24 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Resources</h1>
+    <h1>How to build a new ACCESS-ESM executable</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#situation">Situation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-check-out-the-build-environment">Step 1: Check out the build environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-make-a-copy-of-the-um-sources-since-we-need-to-modify-them">Step 2: Make a copy of the UM sources since we need to modify them</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-make-the-modification-to-the-source-code">Step 3: Make the modification to the source code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-make-the-executables">Step 4: Make the executables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-move-the-executables-to-where-they-can-be-used">Step 5: Move the executables to where they can be used.</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -464,34 +479,116 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="resources">
-<h1>Resources<a class="headerlink" href="#resources" title="Permalink to this heading">#</a></h1>
-<div class="admonition-these-are-just-a-few-examples admonition">
-<p class="admonition-title">These are just a few  examples !!!</p>
-<p>as for the rest of the book these are just here as an example of the contet that can be inserted</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="how-to-build-a-new-access-esm-executable">
+<h1>How to build a new ACCESS-ESM executable<a class="headerlink" href="#how-to-build-a-new-access-esm-executable" title="Permalink to this heading">#</a></h1>
+<section id="situation">
+<h2>Situation<a class="headerlink" href="#situation" title="Permalink to this heading">#</a></h2>
+<p>A student has come to me because they need executables for the ACCESS-ESM model with changed orbital parameters. They call the experiment ‘8.2ka_event’</p>
+<p>Here’s the list of orbital parameters they need:</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Parameter</p></th>
+<th class="head"><p>Value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>eccentricity</p></td>
+<td><p>0.019199</p></td>
+</tr>
+<tr class="row-odd"><td><p>obliquity</p></td>
+<td><p>24.222° x pi/180</p></td>
+</tr>
+<tr class="row-even"><td><p>perihelion-180°</p></td>
+<td><p>319.495° x pi/180</p></td>
+</tr>
+<tr class="row-odd"><td><p>Date of vernal equinox</p></td>
+<td><p>Mar 21st noon</p></td>
+</tr>
+<tr class="row-even"><td><p>Time of perihelion passage in days</p></td>
+<td><p>218.05</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="step-1-check-out-the-build-environment">
+<h2>Step 1: Check out the build environment<a class="headerlink" href="#step-1-check-out-the-build-environment" title="Permalink to this heading">#</a></h2>
+<p>In a suitable directory, preferably on <code class="docutils literal notranslate"><span class="pre">/scratch</span></code> on gadi, run the commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Clone the repository for the build environment</span>
+git<span class="w"> </span>clone<span class="w"> </span>https://github.com/coecms/access-esm-build-gadi.git
+<span class="nb">cd</span><span class="w"> </span>access-esm-build-gadi
+<span class="c1"># Create a new branch to ensure that changes don&#39;t go back up</span>
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;8.2ka_event&#39;</span>
+</pre></div>
 </div>
-<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="access-hive">
-<summary class="sd-summary-title sd-card-header">
-<strong>ACCESS-HIVE Australian Community Climate and Earth System Simulator portal</strong><div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text"><a class="reference external" href="https://access-hive.org.au/">ACCESS-Hive</a> is a portal to all documentation relevant to the Australian Community Climate and Earth System Simulator, ACCESS, and the wider ACCESS community. ACCESS-Hive is developed for and by the <a class="reference internal" href="#access-nri"><span class="std std-ref">ACCESS NRI</span></a> community following an open-source development model.</p>
-<p class="sd-card-text">ACCESS-Hive is part of an effort to design higher quality and more accessible documentation for ACCESS and its community. Providing a single access point to any relevant documentation improves the accessibility and visibility of the documentation. As a portal, ACCESS-Hive provides links to documentation hosted on other sites. It is not intended to host the documentation itself.</p>
-<p class="sd-card-text">ACCESS-Hive includes a <a class="reference external" href="https://forum.access-hive.org.au/">forum functionality</a>, a place for the ACCESS Community to come together, share information, have fruitful discussions, organise and plan shared activities.</p>
+</section>
+<section id="step-2-make-a-copy-of-the-um-sources-since-we-need-to-modify-them">
+<h2>Step 2: Make a copy of the UM sources since we need to modify them<a class="headerlink" href="#step-2-make-a-copy-of-the-um-sources-since-we-need-to-modify-them" title="Permalink to this heading">#</a></h2>
+<p>You can check the location of the UM repositories in the <code class="docutils literal notranslate"><span class="pre">Makefile</span></code>, but we need to now make a copy of it:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>svn<span class="w"> </span>cp<span class="w"> </span><span class="se">\</span>
+file:///g/data/access/access-svn/cmip5/branches/dev/jxs599/trunk_ESM1.5<span class="w"> </span><span class="se">\</span>
+file:///g/data/access/access-svn/cmip5/branches/dev/hxw599/8.2ka_event<span class="w"> </span><span class="se">\</span>
+-m<span class="w"> </span><span class="s1">&#39;create branch for 8.2ka event experiment&#39;</span>
+</pre></div>
 </div>
-</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" id="access-nri">
-<summary class="sd-summary-title sd-card-header">
-<strong>ACCESS-NRI Australian Earth System Simulator NRI</strong><div class="sd-summary-down docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
-<div class="sd-summary-up docutils">
-<svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
-</summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The <a class="reference external" href="https://www.access-nri.org.au">Australian Earth-System Simulator NRI</a> is a national research Infrastructure created to support development and research with the Australian Community Climate and Earth System Simulator (ACCESS) modelling system.
-This facility is a major collaborative undertaking between the Bureau of Meteorology, CSIRO and five Australian universities, in collaboration with national and international partners.</p>
+<p>Here, the target branch contains my username (<code class="docutils literal notranslate"><span class="pre">hxw599</span></code>) and a proper name (<code class="docutils literal notranslate"><span class="pre">8.2ka_event</span></code>). You will have to use your own values for that.</p>
+<p>We also need to change these values in the Makefile.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>vim<span class="w"> </span>Makefile
+</pre></div>
 </div>
-</details></section>
+<p>Edit line 6 from</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SUBMODELS_REPO</span><span class="o">=</span><span class="n">file</span><span class="p">:</span><span class="o">///</span><span class="n">g</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">access</span><span class="o">/</span><span class="n">access</span><span class="o">-</span><span class="n">svn</span><span class="o">/</span><span class="n">cmip5</span><span class="o">/</span><span class="n">branches</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">jxs599</span><span class="o">/</span><span class="n">trunk_ESM1</span><span class="mf">.5</span><span class="o">/</span><span class="n">submodels</span>
+</pre></div>
+</div>
+<p>to</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SUBMODELS_REPO</span><span class="o">=</span><span class="n">file</span><span class="p">:</span><span class="o">///</span><span class="n">g</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">access</span><span class="o">/</span><span class="n">access</span><span class="o">-</span><span class="n">svn</span><span class="o">/</span><span class="n">cmip5</span><span class="o">/</span><span class="n">branches</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">hxw599</span><span class="o">/</span><span class="mf">8.2</span><span class="n">ka_event</span><span class="o">/</span><span class="n">submodels</span>
+</pre></div>
+</div>
+<p>Then we need to check out the sources:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make<span class="w"> </span>src/UM
+</pre></div>
+</div>
+<p>(If we want to modify other submodels, we would need to check them out, but the orbital parameters only affect the UM.)</p>
+</section>
+<section id="step-3-make-the-modification-to-the-source-code">
+<h2>Step 3: Make the modification to the source code<a class="headerlink" href="#step-3-make-the-modification-to-the-source-code" title="Permalink to this heading">#</a></h2>
+<p>In this case the code modifications are quite minimal. There are just a few constants to change in a singe file.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>src/UM
+vim<span class="w"> </span>umbase_hg3/src/include/constant/astron.h
+</pre></div>
+</div>
+<p>Then check in the changes:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>svn<span class="w"> </span>ci<span class="w"> </span>-m<span class="w"> </span><span class="s1">&#39;change orbital parameters for 8.2ka experiment&#39;</span>
+<span class="nb">cd</span><span class="w"> </span>../..
+</pre></div>
+</div>
+</section>
+<section id="step-4-make-the-executables">
+<h2>Step 4: Make the executables<a class="headerlink" href="#step-4-make-the-executables" title="Permalink to this heading">#</a></h2>
+<p>In the directory that was created in the Step 1, run the command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>make
+</pre></div>
+</div>
+<p>This will check out all the sources that haven’t yet been checked out and compile the three executables. It will take a while.</p>
+</section>
+<section id="step-5-move-the-executables-to-where-they-can-be-used">
+<h2>Step 5: Move the executables to where they can be used.<a class="headerlink" href="#step-5-move-the-executables-to-where-they-can-be-used" title="Permalink to this heading">#</a></h2>
+<p>To keep some indications on which version of the UM source code the binary is based, I like to add the revision number to the file name.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>src/UM
+svn<span class="w"> </span>up
+Updating<span class="w"> </span><span class="s1">&#39;.&#39;</span>
+At<span class="w"> </span>revision<span class="w"> </span><span class="m">795</span>
+<span class="nb">cd</span><span class="w"> </span>../../bin
+mv<span class="w"> </span>um_hg3.exe-20230808<span class="w"> </span>um_hg3.exe-r795-20230808
+</pre></div>
+</div>
+<p>Ensure that the binaries are copied to where they are safe from <code class="docutils literal notranslate"><span class="pre">/scratch</span></code>’s  auto-removal. I’m copying them to a subdirectory on <code class="docutils literal notranslate"><span class="pre">/g/data/access</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp<span class="w"> </span>*<span class="w"> </span>/g/data/access/payu/access-esm/bin/coe/8.2ka/
+chown<span class="w"> </span>-R<span class="w"> </span><span class="nv">$USER</span>:access<span class="w"> </span>/g/data/access/payu/access-esm/bin/coe/8.2ka
+</pre></div>
+</div>
+<p>And now the new executables are available for general use.</p>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -506,7 +603,7 @@ This facility is a major collaborative undertaking between the Bureau of Meteoro
         },
         kernelOptions: {
             name: "python3",
-            path: "./resources"
+            path: "./how-to"
         },
         predefinedOutput: true
     }
@@ -524,20 +621,20 @@ This facility is a major collaborative undertaking between the Bureau of Meteoro
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="resources-conda-setup.html"
+       href="adding_a_new_task_to_cylc.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Conda hh5 environment setup</p>
+        <p class="prev-next-title">Adding a new task to a rose suite</p>
       </div>
     </a>
     <a class="right-next"
-       href="resources-policy.html"
+       href="../resources/resources-conda-setup.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">ARC Centre of Excellence for Climate Extremes: Data strategies</p>
+        <p class="prev-next-title">Conda hh5 environment setup</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -547,6 +644,25 @@ This facility is a major collaborative undertaking between the Bureau of Meteoro
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#situation">Situation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-check-out-the-build-environment">Step 1: Check out the build environment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-make-a-copy-of-the-um-sources-since-we-need-to-modify-them">Step 2: Make a copy of the UM sources since we need to modify them</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-make-the-modification-to-the-source-code">Step 3: Make the modification to the source code</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-make-the-executables">Step 4: Make the executables</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-5-move-the-executables-to-where-they-can-be-used">Step 5: Move the executables to where they can be used.</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
