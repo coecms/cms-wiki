@@ -54,6 +54,7 @@ parts:
   - caption: How-Tos
     chapters:
     - file: how-to/adding_a_new_task_to_cylc.md
+    - file: how-to/create_new_ACCESS-ESM_executables.md
   - caption: Resources 
     chapters:
     - file: resources/resources-conda-setup.md
