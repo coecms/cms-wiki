@@ -1,6 +1,6 @@
 # CMS Wiki
 
-The CMS Wiki is located at https://climate-cms.org/cms-wiki
+The CMS Wiki is located at https://coecms.github.io/cms-wiki
 
 ... introduction ...
 

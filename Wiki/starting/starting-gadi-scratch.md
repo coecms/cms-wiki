@@ -41,7 +41,7 @@ Below is a list of resources you might find useful to prepare for the automatic 
 
 * Archiving data at NCI
 
-* [Building a sustainable data workflow](https://climate-cms.org/posts/2022-04-26-storage-where-what-why-how.html) blog
+* [Building a sustainable data workflow](https://coecms.github.io/posts/2022-04-26-storage-where-what-why-how.html) blog
 
 * Description of the various filesystems at NCI
 
